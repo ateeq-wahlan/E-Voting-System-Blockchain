@@ -1,12 +1,12 @@
 """
 ================================================================================
-E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
+E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
 Module: Block.py — Cryptographic Block Structure & SHA-256 Hashing Engine
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
 Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
-Supervisor:  Ms. Gazala Begum (Asst. Professor, Dept. of CSE)
-Institution: Lords Institute of Engineering & Technology (Osmania University)
+Institution: LIET (Osmania University)
+Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
 ================================================================================
 """
 
@@ -19,9 +19,8 @@ from typing import Any, Dict, List, Optional
 class Block:
     """
     Represents a single immutable block in the E-Voting Blockchain Ledger.
-    Restores the exact specification from Chapter 6.2 (Block.py, p. 42) of the
-    Major Project Report while adding deterministic serialization and metadata
-    inspection helpers.
+    Implements the core specification from Chapter 6.2 (Block.py) with
+    deterministic JSON serialization and SHA-256 digest verification.
     """
 
     def __init__(

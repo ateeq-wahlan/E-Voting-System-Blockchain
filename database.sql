@@ -1,32 +1,35 @@
 -- ============================================================================
--- E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
+-- CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
 -- SQL Schema & Seed Data (MySQL & SQLite Compatible)
 -- ============================================================================
 -- Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
 -- Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
--- Supervisor:  Ms. Gazala Begum (Asst. Professor, Dept. of CSE)
--- Institution: Lords Institute of Engineering & Technology (Osmania University)
+-- Institution: LIET (Osmania University)
+-- Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
 -- ============================================================================
 
 CREATE DATABASE IF NOT EXISTS evoting;
 USE evoting;
 
 -- ----------------------------------------------------------------------------
--- 1. Original Implementation Tables (Presentation Slide 20 / Report Fig. 22)
+-- 1. Core Implementation Tables (`register` & `addparty`)
 -- ----------------------------------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS register (
     username VARCHAR(30) PRIMARY KEY,
+    full_name VARCHAR(80),
+    epic_id VARCHAR(30),
     password VARCHAR(64),
     contact VARCHAR(15),
     email VARCHAR(50),
     address VARCHAR(100),
-    profile_image VARCHAR(120) DEFAULT 'voter_default.svg',
+    profile_image VARCHAR(255) DEFAULT 'https://randomuser.me/api/portraits/men/32.jpg',
     face_signature VARCHAR(64),
     registered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS addparty (
+    id INT PRIMARY KEY AUTO_INCREMENT,
     candidatename VARCHAR(50),
     partyname VARCHAR(80),
     areaname VARCHAR(100),
@@ -36,13 +39,15 @@ CREATE TABLE IF NOT EXISTS addparty (
 );
 
 -- ----------------------------------------------------------------------------
--- 2. 3NF Normalized Relational Tables (Chapter 6.1 & 6.2, pp. 37-41)
+-- 2. 3NF Normalized Relational Tables (`Voter`, `Election`, `Ballot`, `Voting`)
 -- ----------------------------------------------------------------------------
 
 -- 1NF: Voter Table
 CREATE TABLE IF NOT EXISTS Voter (
     Voter_ID INT PRIMARY KEY AUTO_INCREMENT,
     Username VARCHAR(30) UNIQUE NOT NULL,
+    Full_Name VARCHAR(80),
+    EPIC_ID VARCHAR(30),
     Password VARCHAR(64) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     Address VARCHAR(100) NOT NULL,

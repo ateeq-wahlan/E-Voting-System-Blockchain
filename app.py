@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
+E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
 Module: app.py — Zero-Dependency HTTP/JSON & Static Web Application Server
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
 Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
-Supervisor:  Ms. Gazala Begum (Asst. Professor, Dept. of CSE)
-Institution: Lords Institute of Engineering & Technology (Osmania University)
+Institution: LIET (Osmania University)
+Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
 ================================================================================
 """
 
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import json
-import mimetypes
 import os
 import sys
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import urlparse
 import webbrowser
 
 from evoting_engine import EVotingEngine
@@ -28,8 +27,8 @@ ENGINE = EVotingEngine(BASE_DIR)
 
 class EVotingRequestHandler(SimpleHTTPRequestHandler):
     """
-    Serves both the modern interactive WahlanOS E-Voting Platform (`index.html`),
-    legacy report endpoints (`/Admin.html`, `/AddParty.html`, `/ViewParty`,
+    Serves the CivicChain E-Voting Blockchain Platform (`index.html`),
+    compatibility endpoints (`/Admin.html`, `/AddParty.html`, `/ViewParty`,
     `/Signup`, `/Login.html`, `/CastVote.html`, `/ValidateUser`, `/ViewVotes`),
     and REST JSON API endpoints (`/api/*`).
     """
@@ -103,7 +102,7 @@ class EVotingRequestHandler(SimpleHTTPRequestHandler):
         if route == "/api/admin/login":
             ok = ENGINE.authenticate_admin(data.get("username", ""), data.get("password", ""))
             if ok:
-                self._send_json({"status": "success", "message": "Admin authenticated successfully."})
+                self._send_json({"status": "success", "message": "Electoral Commission Admin Authority unlocked."})
             else:
                 self._send_json({"status": "error", "message": "Invalid Admin credentials (use admin / admin)."}, 401)
             return
@@ -120,6 +119,29 @@ class EVotingRequestHandler(SimpleHTTPRequestHandler):
             self._send_json({"result": res, "state": ENGINE.get_system_state()})
             return
 
+        if route == "/api/admin/delete-party":
+            res = ENGINE.delete_party(
+                party_id=int(data.get("party_id", 0)),
+                reason=data.get("reason", "EC Form-2B Official Mandate Revocation"),
+            )
+            code = 200 if res["status"] == "success" else 400
+            self._send_json({"result": res, "state": ENGINE.get_system_state()}, code)
+            return
+
+        if route == "/api/admin/delete-voter":
+            res = ENGINE.delete_voter(
+                username=data.get("username", ""),
+                reason=data.get("reason", "Form-7 Electoral Roll Delisting & Biometric Revocation"),
+            )
+            code = 200 if res["status"] == "success" else 400
+            self._send_json({"result": res, "state": ENGINE.get_system_state()}, code)
+            return
+
+        if route == "/api/admin/reset-demo":
+            res = ENGINE.reset_demo_state()
+            self._send_json(res)
+            return
+
         if route == "/api/voter/signup":
             res = ENGINE.register_voter(
                 username=data.get("username", ""),
@@ -127,7 +149,8 @@ class EVotingRequestHandler(SimpleHTTPRequestHandler):
                 contact=data.get("contact", ""),
                 email=data.get("email", ""),
                 address=data.get("address", ""),
-                profile_image=data.get("profile_image", "voter_webcam_capture.png"),
+                full_name=data.get("full_name", ""),
+                profile_image=data.get("profile_image", "https://randomuser.me/api/portraits/men/75.jpg"),
             )
             code = 200 if res["status"] == "success" else 400
             self._send_json({"result": res, "state": ENGINE.get_system_state()}, code)
@@ -176,9 +199,9 @@ def run_server(open_browser: bool = True) -> None:
     httpd = HTTPServer(server_address, EVotingRequestHandler)
     url = f"http://127.0.0.1:{PORT}/index.html"
     print("=" * 78)
-    print("  E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY // WAHLANOS LEDGER")
+    print("  CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023-2024)")
     print("  Architect: Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)")
-    print("  Portfolio: https://wahlanos.com | GitHub: https://github.com/ateeq-wahlan")
+    print("  Institution: LIET (Osmania University) | Portfolio: https://wahlanos.com")
     print(f"  Server listening at: {url}")
     print("=" * 78)
     if open_browser and os.environ.get("NO_BROWSER") != "1":

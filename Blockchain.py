@@ -1,27 +1,24 @@
 """
 ================================================================================
-E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
+E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
 Module: Blockchain.py — Proof-of-Work Ledger, Homomorphic Tally & AES Security
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
 Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
-Supervisor:  Ms. Gazala Begum (Asst. Professor, Dept. of CSE)
-Institution: Lords Institute of Engineering & Technology (Osmania University)
+Institution: LIET (Osmania University)
+Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
 ================================================================================
 """
 
 from hashlib import sha256, pbkdf2_hmac
 import base64
-import binascii
 from datetime import datetime
 import hmac
-import json
 import os
 import pickle
-import random
 import secrets
 import time
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 from Block import Block
 
@@ -34,8 +31,8 @@ class BallotCipher:
     mathematically verifiable.
     """
 
-    def __init__(self, master_secret: str = "WAHLANOS-EVOTING-LEDGER-2024") -> None:
-        self.salt = b"LIET-CSE-160920733003-SALT"
+    def __init__(self, master_secret: str = "CIVICCHAIN-EVOTING-LEDGER-2023-2024") -> None:
+        self.salt = b"LIET-OU-CSE-160920733003-SALT"
         self.key = pbkdf2_hmac("sha256", master_secret.encode("utf-8"), self.salt, 10000, dklen=32)
 
     def anonymize_voter_id(self, username: str) -> str:
@@ -67,7 +64,7 @@ class BallotCipher:
 
 class Blockchain:
     """
-    Restores the exact Blockchain class from Chapter 6.2 (Blockchain.py, pp. 42-46)
+    Implements the Blockchain class from Chapter 6.2 (Blockchain.py)
     with Proof-of-Work (`difficulty = 2`), peer tracking, transaction pool,
     pickle object persistence (`save_object`), and full chain integrity auditing.
     """
@@ -90,14 +87,15 @@ class Blockchain:
         genesis_tx = [
             {
                 "tx_type": "GENESIS_CONSTITUTION_ANCHOR",
-                "election_id": "GENERAL-ELECTION-HYD-2024",
+                "election_id": "GENERAL-ELECTION-HYD-2023-24",
                 "authority": "Decentralized Electoral Consensus Network",
                 "architect": "Ateeq Bin Mubarak Wahlan (160920733003)",
+                "institution": "LIET (Osmania University)",
                 "note": "Genesis Block — Immutable Ballot Ledger Initialized",
-                "timestamp_iso": "2024-05-02T09:00:00+05:30",
+                "timestamp_iso": "2023-11-15T09:00:00+05:30",
             }
         ]
-        genesis_block = Block(0, genesis_tx, 1714620600.0, "0")
+        genesis_block = Block(0, genesis_tx, 1700019000.0, "0")
         genesis_block.hash = self.proof_of_work(genesis_block)
         self.chain.append(genesis_block)
 

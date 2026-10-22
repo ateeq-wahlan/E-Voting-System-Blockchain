@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="civicBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D7C66"/>
+      <stop offset="100%" stop-color="#0B192C"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer Sovereign Hexagon / Shield Frame -->
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="url(#civicBg)" stroke="#34D399" stroke-width="2" stroke-opacity="0.45"/>
+  <!-- Blockchain Isometric Cube Base (Ballot Box) -->
+  <path d="M14 29L32 21L50 29V47L32 55L14 47V29Z" fill="#0B192C" fill-opacity="0.7" stroke="#34D399" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M14 29L32 37L50 29" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.7"/>
+  <path d="M32 37V55" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.7"/>
+  <!-- Ballot Slot on Top of Cube -->
+  <path d="M24 27.5L40 27.5" stroke="#A7F3D0" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Verified Ballot Card Inserting into Slot -->
+  <rect x="22" y="10" width="20" height="17" rx="3" fill="#FFFFFF" stroke="#10B981" stroke-width="1.8"/>
+  <!-- Checkmark on Ballot -->
+  <path d="M27.5 18.5L30.8 21.8L37 15.2" stroke="#0D7C66" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Cryptographic Node Dots -->
+  <circle cx="14" cy="29" r="2.5" fill="#34D399"/>
+  <circle cx="50" cy="29" r="2.5" fill="#34D399"/>
+  <circle cx="32" cy="55" r="2.5" fill="#34D399"/>
+</svg>
