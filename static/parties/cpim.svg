@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="56" fill="#DC2626" stroke="#7F1D1D" stroke-width="4"/>
+  <circle cx="60" cy="60" r="45" fill="#FEF2F2"/>
+  <!-- Star & Gear Civic Emblem -->
+  <polygon points="60,26 67,44 86,44 71,56 76,74 60,63 44,74 49,56 34,44 53,44" fill="#DC2626" stroke="#7F1D1D" stroke-width="2"/>
+  <circle cx="60" cy="53" r="7" fill="#FEF2F2"/>
+  <text x="60" y="99" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="800" text-anchor="middle" fill="#7F1D1D">CPI-M</text>
+</svg>

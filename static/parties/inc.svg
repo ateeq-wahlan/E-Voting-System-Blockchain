@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="incTri" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF9933"/>
+      <stop offset="33%" stop-color="#FF9933"/>
+      <stop offset="34%" stop-color="#FFFFFF"/>
+      <stop offset="66%" stop-color="#FFFFFF"/>
+      <stop offset="67%" stop-color="#138808"/>
+      <stop offset="100%" stop-color="#138808"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#incTri)" stroke="#0052FF" stroke-width="4"/>
+  <!-- Open Palm Emblem -->
+  <g fill="#FFFFFF" stroke="#15171B" stroke-width="2.2" stroke-linejoin="round">
+    <path d="M44 62 L44 38 C44 35 49 35 49 38 L49 55
+             L52 31 C52 28 57 28 57 31 L57 54
+             L60 28 C60 25 65 25 65 28 L65 54
+             L68 33 C68 30 73 30 73 33 L73 63
+             L78 50 C80 47 84 50 82 54 L74 75
+             C71 82 64 85 56 85 C48 85 44 78 44 68 Z"/>
+  </g>
+  <circle cx="59" cy="67" r="6" fill="none" stroke="#0052FF" stroke-width="1.8"/>
+  <text x="60" y="102" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="800" text-anchor="middle" fill="#FFFFFF">INC</text>
+</svg>

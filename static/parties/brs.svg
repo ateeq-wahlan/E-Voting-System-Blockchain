@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="56" fill="#EC4899" stroke="#9D174D" stroke-width="4"/>
+  <circle cx="60" cy="60" r="45" fill="#FFF5F9"/>
+  <!-- Ambassador Car Emblem -->
+  <path d="M30 66 L36 48 C38 44 43 42 48 42 L72 42 C77 42 82 44 84 48 L90 66 Z" fill="#EC4899" stroke="#15171B" stroke-width="2"/>
+  <rect x="24" y="62" width="72" height="16" rx="6" fill="#DB2777" stroke="#15171B" stroke-width="2"/>
+  <path d="M41 47 L57 47 L57 59 L36 59 Z" fill="#FFFFFF" stroke="#15171B" stroke-width="1.5"/>
+  <path d="M62 47 L78 47 L83 59 L62 59 Z" fill="#FFFFFF" stroke="#15171B" stroke-width="1.5"/>
+  <circle cx="38" cy="78" r="8" fill="#15171B"/>
+  <circle cx="38" cy="78" r="3.5" fill="#FFFFFF"/>
+  <circle cx="82" cy="78" r="8" fill="#15171B"/>
+  <circle cx="82" cy="78" r="3.5" fill="#FFFFFF"/>
+  <text x="60" y="99" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" text-anchor="middle" fill="#9D174D">BRS</text>
+</svg>

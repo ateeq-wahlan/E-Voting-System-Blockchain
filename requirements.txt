@@ -1,0 +1,4 @@
+# E-Voting System Using Blockchain Technology (Ateeq Bin Mubarak Wahlan - 160920733003)
+# Uses Python 3 Standard Library (hashlib, hmac, sqlite3, pickle, json, http.server)
+# Optional MySQL connector if connecting to an external MySQL server:
+# mysql-connector-python>=8.0.0

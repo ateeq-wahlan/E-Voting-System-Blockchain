@@ -1,0 +1,13 @@
+{
+  "name": "E-Voting System Using Blockchain Technology (Ateeq Wahlan - 160920733003)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "forwardPorts": [5070],
+  "portsAttributes": {
+    "5070": {
+      "label": "E-Voting Blockchain Web App (WahlanOS)",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "python3 manage.py migrate && python3 test_evoting.py",
+  "postAttachCommand": "NO_BROWSER=1 python3 app.py"
+}
