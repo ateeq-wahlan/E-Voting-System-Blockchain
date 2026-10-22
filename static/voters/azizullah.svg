@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 265" width="360" height="265">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#13253D"/>
+      <stop offset="100%" stop-color="#0A1424"/>
+    </linearGradient>
+    <linearGradient id="skin2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DCA882"/>
+      <stop offset="100%" stop-color="#BF8860"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="265" fill="url(#bg2)"/>
+  <g stroke="#1E3A5F" stroke-width="0.6" opacity="0.45">
+    <line x1="0" y1="53" x2="360" y2="53"/><line x1="0" y1="106" x2="360" y2="106"/>
+    <line x1="0" y1="159" x2="360" y2="159"/><line x1="0" y1="212" x2="360" y2="212"/>
+    <line x1="72" y1="0" x2="72" y2="265"/><line x1="144" y1="0" x2="144" y2="265"/>
+    <line x1="216" y1="0" x2="216" y2="265"/><line x1="288" y1="0" x2="288" y2="265"/>
+  </g>
+  <!-- Formal Kurta / Nehru Jacket -->
+  <path d="M84 265 C90 206, 128 190, 180 190 C232 190, 270 206, 276 265 Z" fill="#1E3A5F"/>
+  <path d="M158 190 L180 232 L202 190 Z" fill="#E2E8F0"/>
+  <rect x="162" y="152" width="36" height="44" rx="14" fill="#B8825B"/>
+  <ellipse cx="132" cy="116" rx="8" ry="14" fill="#BF8860"/>
+  <ellipse cx="228" cy="116" rx="8" ry="14" fill="#BF8860"/>
+  <path d="M134 94 C134 58, 226 58, 226 94 C226 136, 210 166, 180 166 C150 166, 134 136, 134 94 Z" fill="url(#skin2)"/>
+  <!-- Hair -->
+  <path d="M132 95 C130 56, 154 45, 180 45 C206 45, 230 56, 228 95 C222 76, 206 67, 180 67 C154 67, 138 76, 132 95 Z" fill="#1F2937"/>
+  <!-- Glasses -->
+  <g stroke="#94A3B8" stroke-width="2" fill="rgba(56,189,248,0.08)">
+    <rect x="145" y="99" width="28" height="17" rx="4"/>
+    <rect x="187" y="99" width="28" height="17" rx="4"/>
+    <line x1="173" y1="106" x2="187" y2="106"/>
+  </g>
+  <!-- Eyes -->
+  <circle cx="159" cy="107" r="3.4" fill="#111827"/>
+  <circle cx="201" cy="107" r="3.4" fill="#111827"/>
+  <path d="M148 94 Q159 90 170 94" stroke="#1F2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M190 94 Q201 90 212 94" stroke="#1F2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M180 106 L178 127 Q180 130 184 127" stroke="#9A6844" stroke-width="2" fill="none"/>
+  <!-- Mustache & Goatee -->
+  <path d="M164 139 Q180 133 196 139" stroke="#1F2937" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M168 145 Q180 151 192 145" stroke="#6B21A8" stroke-width="2" fill="none"/>
+  <g stroke="#10B981" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M112 48 L112 34 L128 34"/><path d="M248 48 L248 34 L232 34"/>
+    <path d="M112 168 L112 182 L128 182"/><path d="M248 168 L248 182 L232 182"/>
+  </g>
+</svg>

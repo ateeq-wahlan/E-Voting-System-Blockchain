@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 265" width="360" height="265">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14263B"/>
+      <stop offset="100%" stop-color="#091320"/>
+    </linearGradient>
+    <linearGradient id="skin3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8BE9A"/>
+      <stop offset="100%" stop-color="#CF9C74"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="265" fill="url(#bg3)"/>
+  <g stroke="#1E3A5F" stroke-width="0.6" opacity="0.45">
+    <line x1="0" y1="53" x2="360" y2="53"/><line x1="0" y1="106" x2="360" y2="106"/>
+    <line x1="0" y1="159" x2="360" y2="159"/><line x1="0" y1="212" x2="360" y2="212"/>
+    <line x1="72" y1="0" x2="72" y2="265"/><line x1="144" y1="0" x2="144" y2="265"/>
+    <line x1="216" y1="0" x2="216" y2="265"/><line x1="288" y1="0" x2="288" y2="265"/>
+  </g>
+  <!-- Long Hair Behind Shoulders -->
+  <path d="M122 96 C116 145, 118 192, 128 220 L232 220 C242 192, 244 145, 238 96 Z" fill="#18181B"/>
+  <!-- Formal Teal Suit / Collar -->
+  <path d="M88 265 C94 208, 130 190, 180 190 C230 190, 266 208, 272 265 Z" fill="#0F766E"/>
+  <polygon points="154,190 180,236 206,190" fill="#FDFBF7"/>
+  <!-- Neck -->
+  <rect x="164" y="152" width="32" height="44" rx="14" fill="#C9956E"/>
+  <!-- Face -->
+  <path d="M137 95 C137 60, 223 60, 223 95 C223 135, 206 164, 180 164 C154 164, 137 135, 137 95 Z" fill="url(#skin3)"/>
+  <!-- Hair Crown -->
+  <path d="M132 102 C130 58, 152 44, 180 44 C208 44, 230 58, 228 102 C220 78, 200 68, 180 68 C160 68, 140 78, 132 102 Z" fill="#18181B"/>
+  <!-- Bindi -->
+  <circle cx="180" cy="91" r="2.2" fill="#DC2626"/>
+  <!-- Eyebrows & Eyes -->
+  <path d="M149 97 Q160 92 171 96" stroke="#18181B" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <path d="M189 96 Q200 92 211 97" stroke="#18181B" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="160" cy="107" rx="7.8" ry="4.4" fill="#FFFFFF"/>
+  <circle cx="160" cy="107" r="3.5" fill="#1C1917"/>
+  <ellipse cx="200" cy="107" rx="7.8" ry="4.4" fill="#FFFFFF"/>
+  <circle cx="200" cy="107" r="3.5" fill="#1C1917"/>
+  <path d="M180 106 L178 126 Q180 129 184 126" stroke="#A3704C" stroke-width="2" fill="none"/>
+  <!-- Smile -->
+  <path d="M167 141 Q180 149 193 141" stroke="#B91C1C" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <g stroke="#10B981" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M112 48 L112 34 L128 34"/><path d="M248 48 L248 34 L232 34"/>
+    <path d="M112 168 L112 182 L128 182"/><path d="M248 168 L248 182 L232 182"/>
+  </g>
+</svg>

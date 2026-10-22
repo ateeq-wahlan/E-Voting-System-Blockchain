@@ -1,12 +1,11 @@
 """
 ================================================================================
-E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
+E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
 Module: evoting_engine.py — Relational SQLite + Blockchain Ledger Orchestrator
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
 Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
-Institution: LIET (Osmania University)
-Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
+Institution: LIET (Osmania University ’23)
 ================================================================================
 """
 
@@ -15,7 +14,6 @@ from hashlib import sha256
 import json
 import os
 import sqlite3
-import time
 from typing import Any, Dict, List, Optional
 
 from Block import Block
@@ -100,7 +98,7 @@ DEFAULT_VOTERS: List[Dict[str, str]] = [
         "email": "ateeq@wahlanos.com",
         "address": "Himayath Sagar, Jubilee Hills, Hyderabad",
         "constituency": "Jubilee Hills",
-        "profile_image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "profile_image": "static/voters/ateeq.svg",
     },
     {
         "username": "azizullahkarimi",
@@ -111,7 +109,7 @@ DEFAULT_VOTERS: List[Dict[str, str]] = [
         "email": "karimi@gmail.com",
         "address": "Tolichowki Main Road, Hyderabad",
         "constituency": "Tolichowki",
-        "profile_image": "https://randomuser.me/api/portraits/men/45.jpg",
+        "profile_image": "static/voters/azizullah.svg",
     },
     {
         "username": "priyankareddy",
@@ -122,7 +120,7 @@ DEFAULT_VOTERS: List[Dict[str, str]] = [
         "email": "priyanka.r@gmail.com",
         "address": "Trimulgherry, Secunderabad, Hyderabad",
         "constituency": "Secunderabad",
-        "profile_image": "https://randomuser.me/api/portraits/women/44.jpg",
+        "profile_image": "static/voters/priyanka.svg",
     },
     {
         "username": "mohammedzubair",
@@ -133,7 +131,7 @@ DEFAULT_VOTERS: List[Dict[str, str]] = [
         "email": "zubair.charminar@gmail.com",
         "address": "Laad Bazaar, Charminar, Hyderabad",
         "constituency": "Charminar",
-        "profile_image": "https://randomuser.me/api/portraits/men/67.jpg",
+        "profile_image": "static/voters/zubair.svg",
     },
     {
         "username": "farhanahmed",
@@ -144,7 +142,7 @@ DEFAULT_VOTERS: List[Dict[str, str]] = [
         "email": "farhan.hyd@outlook.com",
         "address": "Santosh Nagar Colony, Hyderabad",
         "constituency": "Santosh Nagar",
-        "profile_image": "https://randomuser.me/api/portraits/men/22.jpg",
+        "profile_image": "static/voters/farhan.svg",
     },
 ]
 
@@ -169,10 +167,6 @@ class EVotingEngine:
         return conn
 
     def _compute_face_signature(self, username: str, image_data: str = "") -> str:
-        """
-        Computes a deterministic 256-bit biometric facial feature hash from
-        the voter's enrollment image or webcam frame.
-        """
         seed = f"BIOMETRIC_EMBEDDING::{username.strip().lower()}::{len(image_data)}"
         return sha256(seed.encode("utf-8")).hexdigest()
 
@@ -180,7 +174,6 @@ class EVotingEngine:
         conn = self._get_conn()
         cur = conn.cursor()
 
-        # 1. Original Report Tables (`register` & `addparty`)
         cur.execute(
             """
             CREATE TABLE IF NOT EXISTS register (
@@ -191,14 +184,13 @@ class EVotingEngine:
                 contact TEXT NOT NULL,
                 email TEXT NOT NULL,
                 address TEXT NOT NULL,
-                profile_image TEXT DEFAULT 'https://randomuser.me/api/portraits/men/32.jpg',
+                profile_image TEXT DEFAULT '',
                 face_signature TEXT,
                 registered_at TEXT
             )
             """
         )
 
-        # Ensure new columns exist if migrating an older evoting.db
         existing_cols = {row["name"] for row in cur.execute("PRAGMA table_info(register)").fetchall()}
         if "full_name" not in existing_cols:
             cur.execute("ALTER TABLE register ADD COLUMN full_name TEXT DEFAULT ''")
@@ -219,7 +211,6 @@ class EVotingEngine:
             """
         )
 
-        # 2. 3NF Normalized Tables (`Voter`, `Election`, `Ballot`, `Voting`)
         cur.execute(
             """
             CREATE TABLE IF NOT EXISTS Election (
@@ -242,17 +233,15 @@ class EVotingEngine:
             """
         )
 
-        # Seed default Election & Ballot if empty
         cur.execute("SELECT COUNT(*) AS cnt FROM Election")
         if cur.fetchone()["cnt"] == 0:
             cur.execute(
-                "INSERT INTO Election (Election_ID, Election_Name, Start_Date, End_Date) VALUES (1, 'Hyderabad Metropolitan General Election (2023–2024)', '2023-11-15', '2024-05-30')"
+                "INSERT INTO Election (Election_ID, Election_Name, Start_Date, End_Date) VALUES (1, 'Hyderabad Metropolitan General Election', '2023-11-15', '2024-05-30')"
             )
             cur.execute(
                 "INSERT INTO Ballot (Ballot_ID, Election_ID, Ballot_Title, Ballot_Question) VALUES (1, 1, 'Parliamentary & Assembly Constituency Ballot', 'Select your preferred candidate and party symbol for your constituency')"
             )
 
-        # Seed default National & Regional Parties if empty
         cur.execute("SELECT COUNT(*) AS cnt FROM addparty")
         if cur.fetchone()["cnt"] == 0:
             for party in DEFAULT_PARTIES:
@@ -271,11 +260,10 @@ class EVotingEngine:
                     ),
                 )
 
-        # Seed or enrich default Voters
         cur.execute("SELECT COUNT(*) AS cnt FROM register")
         if cur.fetchone()["cnt"] == 0:
             for voter in DEFAULT_VOTERS:
-                sig = self._compute_face_signature(voter["username"])
+                sig = self._compute_face_signature(voter["username"], voter["profile_image"])
                 cur.execute(
                     """
                     INSERT INTO register (username, full_name, epic_id, password, contact, email, address, profile_image, face_signature, registered_at)
@@ -295,14 +283,13 @@ class EVotingEngine:
                     ),
                 )
         else:
-            # Ensure default voters have full_name, epic_id, and human portrait URLs
             for voter in DEFAULT_VOTERS:
                 cur.execute(
                     """
                     UPDATE register
-                    SET full_name = CASE WHEN full_name IS NULL OR full_name = '' THEN ? ELSE full_name END,
-                        epic_id = CASE WHEN epic_id IS NULL OR epic_id = '' THEN ? ELSE epic_id END,
-                        profile_image = CASE WHEN profile_image LIKE 'voter_%.svg' THEN ? ELSE profile_image END
+                    SET full_name = ?,
+                        epic_id = ?,
+                        profile_image = ?
                     WHERE username = ?
                     """,
                     (voter["full_name"], voter["epic_id"], voter["profile_image"], voter["username"]),
@@ -317,7 +304,6 @@ class EVotingEngine:
             return loaded
 
         bc = Blockchain()
-        # Seed initial verified historical blocks so the ledger has realistic initial state
         seed_votes = [
             ("azizullahkarimi", "Dr. Ananya Reddy", "Indian National Congress (INC)", "INC", "Santosh Nagar", "2023-11-16 10:14:22"),
             ("priyankareddy", "Vikramaditya Sharma", "Aam Aadmi Party (AAP)", "AAP", "Secunderabad", "2023-11-16 11:05:49"),
@@ -329,7 +315,7 @@ class EVotingEngine:
             enc = bc.cipher.encrypt_ballot_choice(cand, party, nullifier)
             tx = {
                 "tx_type": "BALLOT_CAST",
-                "election_id": "GENERAL-ELECTION-HYD-2023-24",
+                "election_id": "GENERAL-ELECTION-HYD",
                 "voter_nullifier": nullifier,
                 "voter_handle_masked": uname[:3] + "***" + uname[-2:],
                 "candidate_name": cand,
@@ -347,10 +333,6 @@ class EVotingEngine:
 
         bc.save_object(bc, self.chain_path)
         return bc
-
-    # -------------------------------------------------------------------------
-    # Admin Operations (Authentication, Party Registration & Mandate Revocation)
-    # -------------------------------------------------------------------------
 
     def authenticate_admin(self, username: str, password: str) -> bool:
         return username.strip() == "admin" and password.strip() == "admin"
@@ -387,10 +369,6 @@ class EVotingEngine:
         party_id: int,
         reason: str = "EC Form-2B Candidacy Withdrawal / Symbol Deregistration",
     ) -> Dict[str, Any]:
-        """
-        Deregisters a political party / candidate from the active `addparty`
-        electoral ballot registry (Electoral Mandate Revocation).
-        """
         conn = self._get_conn()
         cur = conn.cursor()
         cur.execute("SELECT * FROM addparty WHERE id = ?", (party_id,))
@@ -421,16 +399,11 @@ class EVotingEngine:
         rows = [dict(r) for r in cur.fetchall()]
         conn.close()
 
-        # Compute live tally from the verified blockchain
         tallies = self.get_party_vote_counts()
         for row in rows:
             key = f"{row['candidatename']}||{row['partyname']}"
             row["votes"] = tallies.get(key, 0)
         return rows
-
-    # -------------------------------------------------------------------------
-    # Voter Operations (Signup, Roll Revocation, Biometric Scan, Vote Casting)
-    # -------------------------------------------------------------------------
 
     def register_voter(
         self,
@@ -440,7 +413,7 @@ class EVotingEngine:
         email: str,
         address: str,
         full_name: str = "",
-        profile_image: str = "https://randomuser.me/api/portraits/men/75.jpg",
+        profile_image: str = "",
     ) -> Dict[str, Any]:
         uname = username.strip().lower()
         if not uname or not password:
@@ -453,11 +426,11 @@ class EVotingEngine:
             conn.close()
             return {"status": "error", "message": f"Voter '{uname}' is already registered in the electoral roll."}
 
-        face_sig = self._compute_face_signature(uname, profile_image)
+        avatar = profile_image.strip() if profile_image else ""
+        face_sig = self._compute_face_signature(uname, avatar) if avatar else ""
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         display_name = full_name.strip() or uname.replace("_", " ").title()
         epic_code = f"TS/HYD/23/{abs(hash(uname)) % 900 + 100}"
-        avatar = profile_image if profile_image and (profile_image.startswith("http") or profile_image.startswith("data:")) else "https://randomuser.me/api/portraits/men/75.jpg"
 
         cur.execute(
             """
@@ -468,13 +441,49 @@ class EVotingEngine:
         )
         conn.commit()
         conn.close()
+        bio_note = (
+            f"256-Bit Biometric Hash: {face_sig[:16]}..."
+            if face_sig
+            else "Biometric photo pending — open the Biometric Popup in the Voting Booth to capture & register face."
+        )
         return {
             "status": "success",
-            "message": f"Electoral Roll Enrollment Completed for '{display_name}' ({uname}). 256-Bit Biometric Hash: {face_sig[:16]}...",
+            "message": f"Electoral Roll Enrollment Completed for '{display_name}' ({uname}). {bio_note}",
             "username": uname,
             "full_name": display_name,
             "epic_id": epic_code,
+            "profile_image": avatar,
             "face_signature": face_sig,
+        }
+
+    def register_biometric_image(self, username: str, image_data: str) -> Dict[str, Any]:
+        """
+        Captures and registers a biometric face snapshot to the specified Voter ID
+        when captured from the camera popup modal.
+        """
+        uname = username.strip().lower()
+        conn = self._get_conn()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM register WHERE LOWER(username) = ?", (uname,))
+        row = cur.fetchone()
+        if row is None:
+            conn.close()
+            return {"status": "error", "message": f"Voter '{uname}' not found in electoral roll."}
+
+        avatar = image_data.strip() if image_data and image_data.strip() else "static/voters/ateeq.svg"
+        face_sig = self._compute_face_signature(uname, avatar)
+        cur.execute(
+            "UPDATE register SET profile_image = ?, face_signature = ? WHERE LOWER(username) = ?",
+            (avatar, face_sig, uname),
+        )
+        conn.commit()
+        conn.close()
+        return {
+            "status": "success",
+            "username": uname,
+            "profile_image": avatar,
+            "face_signature": face_sig,
+            "message": f"Biometric face image registered to Voter ID '{uname}'. Voter details have been filled — please proceed for voting.",
         }
 
     def delete_voter(
@@ -482,11 +491,6 @@ class EVotingEngine:
         username: str,
         reason: str = "Form-7 Electoral Roll Delisting & Biometric Credential Revocation",
     ) -> Dict[str, Any]:
-        """
-        Delists a voter from the off-chain `register` electoral roll and revokes
-        their biometric login credential. Preserves on-chain immutability if an
-        anonymous ballot was already mined under their Zero-Knowledge Nullifier.
-        """
         uname = username.strip().lower()
         conn = self._get_conn()
         cur = conn.cursor()
@@ -531,7 +535,6 @@ class EVotingEngine:
         return {"status": "success", "voter": voter_dict}
 
     def get_voter_vote_receipt(self, username: str) -> Optional[Dict[str, Any]]:
-        """Returns the mined block & transaction details if this voter has already cast a ballot."""
         nullifier = self.blockchain.cipher.anonymize_voter_id(username)
         for block in self.blockchain.chain[1:]:
             for tx in block.transactions:
@@ -550,20 +553,36 @@ class EVotingEngine:
         return None
 
     def validate_biometric_snapshot(self, username: str, snapshot_data: str = "") -> Dict[str, Any]:
-        """
-        Simulates the OpenCV / CNN webcam facial verification step (`User Validated as <username>`).
-        """
         uname = username.strip().lower()
         conn = self._get_conn()
         cur = conn.cursor()
         cur.execute("SELECT * FROM register WHERE LOWER(username) = ?", (uname,))
         row = cur.fetchone()
-        conn.close()
-
         if row is None:
+            conn.close()
             return {"status": "error", "message": f"Voter '{uname}' not found in biometric registry."}
 
-        expected_sig = row["face_signature"] or self._compute_face_signature(uname)
+        profile_img = row["profile_image"]
+        expected_sig = row["face_signature"]
+        if snapshot_data and snapshot_data.startswith("data:image/"):
+            profile_img = snapshot_data
+            expected_sig = self._compute_face_signature(uname, snapshot_data)
+            cur.execute(
+                "UPDATE register SET profile_image = ?, face_signature = ? WHERE LOWER(username) = ?",
+                (profile_img, expected_sig, uname),
+            )
+            conn.commit()
+        elif not expected_sig:
+            expected_sig = self._compute_face_signature(uname, profile_img or "CAPTURED")
+            if not profile_img:
+                profile_img = "static/voters/ateeq.svg"
+            cur.execute(
+                "UPDATE register SET profile_image = ?, face_signature = ? WHERE LOWER(username) = ?",
+                (profile_img, expected_sig, uname),
+            )
+            conn.commit()
+
+        conn.close()
         already_voted = self.has_voter_cast_ballot(uname)
         receipt = self.get_voter_vote_receipt(uname)
         return {
@@ -573,7 +592,7 @@ class EVotingEngine:
             "epic_id": row["epic_id"] or "TS/HYD/23/001",
             "address": row["address"],
             "email": row["email"],
-            "profile_image": row["profile_image"],
+            "profile_image": profile_img,
             "biometric_hash": expected_sig,
             "confidence": 99.68,
             "has_voted": already_voted,
@@ -590,11 +609,6 @@ class EVotingEngine:
         return False
 
     def cast_vote(self, username: str, candidatename: str, partyname: str, areaname: str = "", party_code: str = "") -> Dict[str, Any]:
-        """
-        Verifies voter eligibility, prevents double-voting via Zero-Knowledge
-        nullifier check, encrypts the ballot with Homomorphic commitment, mines
-        a new Proof-of-Work block, and returns the exact Block receipt.
-        """
         uname = username.strip().lower()
         if self.has_voter_cast_ballot(uname):
             return {
@@ -608,7 +622,7 @@ class EVotingEngine:
 
         tx = {
             "tx_type": "BALLOT_CAST",
-            "election_id": "GENERAL-ELECTION-HYD-2023-24",
+            "election_id": "GENERAL-ELECTION-HYD",
             "voter_nullifier": nullifier,
             "voter_handle_masked": uname[:3] + "***" + uname[-2:] if len(uname) >= 5 else uname + "***",
             "candidate_name": candidatename,
@@ -664,7 +678,6 @@ class EVotingEngine:
         return voters
 
     def reset_demo_state(self) -> Dict[str, Any]:
-        """Resets SQLite tables and Proof-of-Work ledger back to initial 8-party, 5-voter, 5-block seed."""
         if os.path.exists(self.db_path):
             os.remove(self.db_path)
         if os.path.exists(self.chain_path):
@@ -678,26 +691,17 @@ class EVotingEngine:
         }
 
     def simulate_tamper_attack(self, target_block_index: int = 1, forged_party: str = "Forged Party Override") -> Dict[str, Any]:
-        """
-        Demonstrates Chapter 8 Result Analysis: mutates a transaction inside
-        an existing block without re-mining the entire chain, then runs
-        `verify_chain_integrity()` to prove immediate cryptographic tamper detection
-        followed by automatic self-healing restoration from consensus backup.
-        """
         if target_block_index <= 0 or target_block_index >= len(self.blockchain.chain):
             target_block_index = len(self.blockchain.chain) - 1
 
         target_block = self.blockchain.chain[target_block_index]
         original_tx = json.loads(json.dumps(target_block.transactions))
 
-        # Mutate payload in memory
         if target_block.transactions:
             target_block.transactions[0]["party_name"] = forged_party
             target_block.transactions[0]["candidate_name"] = "TAMPERED_BALLOT_INJECTION"
 
         tampered_audit = self.blockchain.verify_chain_integrity()
-
-        # Restore consensus state immediately after capturing proof
         target_block.transactions = original_tx
         restored_audit = self.blockchain.verify_chain_integrity()
 
@@ -714,20 +718,22 @@ class EVotingEngine:
         audit = self.blockchain.verify_chain_integrity()
         total_votes = sum(p["votes"] for p in parties)
         return {
-            "election": {
-                "election_id": "GENERAL-ELECTION-HYD-2023-24",
-                "title": "Hyderabad Metropolitan General Election — Blockchain Ballot Ledger (2023–2024)",
-                "project_year": "2023–2024",
-                "architect": "Ateeq Bin Mubarak Wahlan (160920733003)",
+            "project": {
+                "title": "E-Voting System Using Blockchain Technology",
+                "author": "Ateeq Bin Mubarak Wahlan",
+                "roll_no": "160920733003",
+                "institution": "LIET (Osmania University ’23)",
                 "portfolio": "https://wahlanos.com",
                 "github": "https://github.com/ateeq-wahlan",
-                "institution": "LIET (Osmania University)",
+            },
+            "election": {
+                "name": "Hyderabad Metropolitan General Election",
                 "total_blocks": len(self.blockchain.chain),
                 "total_votes_cast": total_votes,
                 "registered_voters": len(voters),
                 "registered_parties": len(parties),
-                "difficulty": self.blockchain.difficulty,
-                "ledger_valid": audit["is_valid"],
+                "difficulty": Blockchain.difficulty,
+                "consensus": "SHA-256 Proof-of-Work (Leading '00') + Homomorphic Commitment",
             },
             "parties": parties,
             "voters": voters,

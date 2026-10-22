@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CivicChain // E-Voting System Using Blockchain Technology (2023–2024) — Ateeq Bin Mubarak Wahlan</title>
+  <title>CivicChain // E-Voting System Using Blockchain Technology — Ateeq Bin Mubarak Wahlan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
 
   <!-- ====================================================================
-       TOP COMMAND HEADER (Distinctive CivicChain Identity + Role Scope Gate)
+       TOP COMMAND HEADER (No 2023-2024 pill; Direct WahlanOS.com ↗ link)
        ==================================================================== -->
   <header class="top-nav">
     <div class="brand-cluster">
@@ -21,7 +21,6 @@
       <div class="brand-title-wrap">
         <div class="brand-wordmark">
           <span>CIVICCHAIN // E-VOTING</span>
-          <span class="accent-pill">2023–2024</span>
         </div>
         <div class="brand-subtitle">DECENTRALIZED BIOMETRIC &amp; SHA-256 BLOCKCHAIN ELECTORAL PROTOCOL • ROLL NO: 160920733003</div>
       </div>
@@ -32,7 +31,7 @@
         <span id="roleScopeIcon">👁️</span>
         <span id="roleScopeText">SCOPE: PUBLIC VIEWER (UNLOCK ADMIN 🔒)</span>
       </button>
-      <a href="https://wahlanos.com" class="nav-cta" target="_blank" rel="noopener">Portfolio: wahlanos.com ↗</a>
+      <a href="https://wahlanos.com" class="nav-cta" target="_blank" rel="noopener">WahlanOS.com ↗</a>
     </div>
   </header>
 
@@ -43,11 +42,11 @@
       <span id="runtimeModeLabel">PROTOCOL ACTIVE • SHA-256 PROOF-OF-WORK (DIFFICULTY = 2) • ZERO-KNOWLEDGE NULLIFIERS</span>
     </div>
     <div>
-      <span>ATEEQ BIN MUBARAK WAHLAN • LIET (OSMANIA UNIVERSITY) • ACADEMIC YEAR 2023–2024</span>
+      <span>ATEEQ BIN MUBARAK WAHLAN • LIET (OSMANIA UNIVERSITY)</span>
     </div>
   </div>
 
-  <!-- Horizontal Navigation Ribbon (No Left-Sidebar Split) -->
+  <!-- Horizontal Navigation Ribbon -->
   <div class="nav-ribbon-bar">
     <nav class="nav-links" aria-label="Main Navigation">
       <button class="nav-tab active" onclick="switchTab('overview', this)">01. Overview &amp; Ballot Roster</button>
@@ -61,96 +60,82 @@
   <main class="main-container">
 
     <!-- ==================================================================
-         HERO SECTION + INTERACTIVE MOVING ATOMIC CONSENSUS REACTOR
-         ================================================================== -->
-    <section class="hero-grid">
-      <div class="hero-left-card">
-        <div>
-          <div class="hero-kicker">
-            <span>🏛️ DECENTRALIZED ELECTORAL INFRASTRUCTURE • 2023–2024</span>
-          </div>
-          <h1 class="hero-title">
-            Cryptographic trust.
-            <span class="teal-accent">Verifiable civic democracy.</span>
-          </h1>
-          <p class="hero-lead">
-            An end-to-end decentralized electronic voting system combining <strong>320×240 CNN facial biometric verification</strong>, <strong>HMAC-SHA256 Zero-Knowledge voter nullifiers</strong>, <strong>additive homomorphic ballot commitments</strong>, and an immutable <strong>SHA-256 Proof-of-Work blockchain ledger</strong>.
-          </p>
-          <div class="hero-meta-strip">
-            <span class="meta-chip"><strong>Architect:</strong> Ateeq Bin Mubarak Wahlan</span>
-            <span class="meta-chip"><strong>Roll No:</strong> 160920733003</span>
-            <span class="meta-chip"><strong>Institution:</strong> LIET (Osmania University)</span>
-            <span class="meta-chip"><strong>Year:</strong> 2023–2024</span>
-          </div>
-        </div>
-        <div class="hero-actions">
-          <button class="btn-primary" onclick="switchTabById('booth')">Launch Biometric Voting Booth ↗</button>
-          <button class="btn-secondary" onclick="switchTabById('ledger')">Inspect Blockchain &amp; ZK Verifier →</button>
-          <button class="btn-secondary" onclick="openBiometricModal(stateData.voters[0]?.username || 'ateeqwahlan')">Test Live Human Face Scan 🔍</button>
-        </div>
-      </div>
-
-      <!-- Right Interactive Atomic Consensus Reactor Card -->
-      <div class="blueprint-card">
-        <div class="blueprint-header">
-          <span>⚛ ATOMIC CONSENSUS CORE // CLICK ANY ORBIT NODE</span>
-          <div style="display:inline-flex;align-items:center;gap:10px;">
-            <span style="color:#34D399;font-weight:700;">● LIVE ORBIT</span>
-            <button type="button" id="atomPauseBtn" onclick="toggleAtomicOrbit()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(148,163,184,0.3);color:#E2E8F0;font-family:var(--font-mono);font-size:10px;padding:2px 8px;border-radius:4px;cursor:pointer;">⏸ Pause</button>
-          </div>
-        </div>
-
-        <div class="atomic-canvas-wrap">
-          <canvas id="atomicConsensusCanvas" width="540" height="248"></canvas>
-        </div>
-
-        <!-- Interactive Node Selector Pills (Prevents visual clutter while enabling instant inspection) -->
-        <div class="atomic-node-pills">
-          <button type="button" class="atom-pill-btn active" id="atomPill0" onclick="selectAtomicNode(0)">01. CV BIOMETRICS</button>
-          <button type="button" class="atom-pill-btn" id="atomPill1" onclick="selectAtomicNode(1)">02. SHA-256 POW</button>
-          <button type="button" class="atom-pill-btn" id="atomPill2" onclick="selectAtomicNode(2)">03. ZK NULLIFIER</button>
-          <button type="button" class="atom-pill-btn" id="atomPill3" onclick="selectAtomicNode(3)">04. HOMOMORPHIC ZKP</button>
-        </div>
-
-        <div class="atomic-inspector-box" id="atomicInspectorBox">
-          <strong style="color:#34D399;">[NODE 01 // CV BIOMETRICS]:</strong> 320×240 human facial landmark extraction derives a deterministic 256-bit identity signature (99.68% match confidence) before unlocking the electronic ballot sheet.
-        </div>
-
-        <div class="blueprint-footer">
-          <span>VERIFY FACE → ENCRYPT BALLOT → MINE POW BLOCK</span>
-          <span>[ ZERO-TRUST LEDGER ]</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Live KPI Metrics Row -->
-    <section class="kpi-grid" aria-label="Blockchain Telemetry">
-      <div class="kpi-card">
-        <div class="kpi-label">01 // BLOCKCHAIN HEIGHT</div>
-        <div class="kpi-value" id="kpiTotalBlocks">5 Blocks</div>
-        <div class="kpi-sub">Genesis #0 + Mined Ballot Blocks</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">02 // VERIFIED BALLOTS CAST</div>
-        <div class="kpi-value" id="kpiTotalVotes">4 Votes</div>
-        <div class="kpi-sub" id="kpiTurnoutSub">80.0% Electoral Roll Turnout</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">03 // GAZETTED BALLOT PARTIES</div>
-        <div class="kpi-value" id="kpiTotalParties">8 Parties</div>
-        <div class="kpi-sub">National &amp; Regional Symbols (`addparty`)</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">04 // ACCESS &amp; AUDIT STATUS</div>
-        <div class="kpi-value" id="kpiChainStatus" style="color:var(--emerald);">VERIFIED</div>
-        <div class="kpi-sub" id="kpiChainSub">Viewer Scope • PoW '00' Prefix Intact</div>
-      </div>
-    </section>
-
-    <!-- ==================================================================
-         TAB 1: OVERVIEW, ARCHITECTURE & NATIONAL PARTY ROSTER
+         TAB 1: OVERVIEW, HERO + ATOMIC CONSENSUS CORE & BALLOT ROSTER
+         (Hero & Atomic Hover Interface scoped ONLY to Overview section!)
          ================================================================== -->
     <section id="tab-overview" class="tab-panel active">
+
+      <div class="hero-grid">
+        <div class="hero-left-card">
+          <div>
+            <div class="hero-kicker">
+              <span>🏛️ DECENTRALIZED ELECTORAL INFRASTRUCTURE</span>
+            </div>
+            <h1 class="hero-title">
+              Cryptographic trust.
+              <span class="teal-accent">Verifiable civic democracy.</span>
+            </h1>
+            <p class="hero-lead">
+              An end-to-end decentralized electronic voting system combining <strong>320×240 CNN facial biometric verification</strong>, <strong>HMAC-SHA256 Zero-Knowledge voter nullifiers</strong>, <strong>additive homomorphic ballot commitments</strong>, and an immutable <strong>SHA-256 Proof-of-Work blockchain ledger</strong>.
+            </p>
+            <div class="hero-meta-strip">
+              <span class="meta-chip"><strong>Architect:</strong> Ateeq Bin Mubarak Wahlan</span>
+              <span class="meta-chip"><strong>Roll No:</strong> 160920733003</span>
+              <span class="meta-chip"><strong>Institution:</strong> LIET (Osmania University)</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="switchTabById('booth')">Launch Biometric Voting Booth ↗</button>
+            <button class="btn-secondary" onclick="switchTabById('ledger')">Inspect Blockchain &amp; ZK Verifier →</button>
+            <button class="btn-secondary" onclick="openBiometricModal(stateData.voters[0]?.username || 'ateeqwahlan')">Open Biometric Voter Popup 🔍</button>
+          </div>
+        </div>
+
+        <!-- Right Spacious Interactive Atomic Consensus Reactor Card -->
+        <div class="blueprint-card">
+          <div class="blueprint-header">
+            <span>⚛ ATOMIC CONSENSUS CORE // HOVER OR CLICK ANY ORBIT CIRCLE</span>
+            <div style="display:inline-flex;align-items:center;gap:10px;">
+              <span style="color:#34D399;font-weight:700;">● LIVE ORBIT</span>
+              <button type="button" id="atomPauseBtn" onclick="toggleAtomicOrbit()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(148,163,184,0.3);color:#E2E8F0;font-family:var(--font-mono);font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;">⏸ Pause</button>
+            </div>
+          </div>
+
+          <div class="atomic-canvas-wrap">
+            <canvas id="atomicConsensusCanvas" width="560" height="318"></canvas>
+          </div>
+
+          <div class="atomic-compact-bar" id="atomicInspectorBox">
+            <span><strong style="color:#34D399;">[CV // BIOMETRICS]:</strong> 320×240 facial landmark hash verification (99.68% match).</span>
+            <span style="color:#94A3B8;font-size:10.5px;">HOVER NODE FOR DETAILS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live KPI Metrics Row -->
+      <div class="kpi-grid" aria-label="Blockchain Telemetry">
+        <div class="kpi-card">
+          <div class="kpi-label">01 // BLOCKCHAIN HEIGHT</div>
+          <div class="kpi-value" id="kpiTotalBlocks">5 Blocks</div>
+          <div class="kpi-sub">Genesis #0 + Mined Ballot Blocks</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">02 // VERIFIED BALLOTS CAST</div>
+          <div class="kpi-value" id="kpiTotalVotes">4 Votes</div>
+          <div class="kpi-sub" id="kpiTurnoutSub">80.0% Electoral Roll Turnout</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">03 // GAZETTED BALLOT PARTIES</div>
+          <div class="kpi-value" id="kpiTotalParties">8 Parties</div>
+          <div class="kpi-sub">National &amp; Regional Symbols (`addparty`)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">04 // ACCESS &amp; AUDIT STATUS</div>
+          <div class="kpi-value" id="kpiChainStatus" style="color:var(--emerald);">VERIFIED</div>
+          <div class="kpi-sub" id="kpiChainSub">Viewer Scope • PoW '00' Prefix Intact</div>
+        </div>
+      </div>
+
       <div class="panel-card">
         <div class="panel-header">
           <div>
@@ -174,10 +159,10 @@
             <span class="panel-tag">SYSTEM WORKFLOW</span>
           </div>
           <ol style="padding-left:18px;font-size:14px;color:var(--ink-secondary);display:flex;flex-direction:column;gap:10px;">
-            <li><strong>Stage 1 — Citizen Electoral Enrollment (`Form-6` / `register` Table):</strong> Eligible voters enroll with their EPIC ID, constituency address, and human facial portrait to generate a 256-bit biometric hash.</li>
+            <li><strong>Stage 1 — Citizen Electoral Enrollment (`Form-6` / `register` Table):</strong> Eligible voters enroll with their EPIC ID, constituency address, and biometric portrait to generate a 256-bit facial signature.</li>
             <li><strong>Stage 2 — Zero-Knowledge Nullifier Derivation (`BallotCipher`):</strong> A one-way `PBKDF2-HMAC-SHA256` nullifier (`zk_nullifier_...`) decouples voter identity from on-chain ballot records while enforcing strict one-person-one-vote eligibility.</li>
             <li><strong>Stage 3 — Electoral Commission Mandate Management (`Form-2A` &amp; `Form-2B`):</strong> Authenticated EC Administrators gazette party candidates (`addparty`) or execute official Form-2B mandate revocations.</li>
-            <li><strong>Stage 4 — Interactive Human Biometric Verification Popup:</strong> At the polling booth, clicking any voter profile opens the human portrait verification scanner (`Take Snapshot` → laser landmark scan → `Validate User`).</li>
+            <li><strong>Stage 4 — Unified Biometric Verification &amp; Camera Registration Popup:</strong> Selecting a Voter ID opens the Biometric Popup—displaying their registered portrait (or activating the camera to capture &amp; register one if missing) and pre-filling their voter details for voting.</li>
             <li><strong>Stage 5 — Additive Homomorphic Ballot Encryption:</strong> The selected candidate choice is sealed in an AES-PBKDF2 stream cipher and paired with a homomorphic commitment (`0x...`).</li>
             <li><strong>Stage 6 — SHA-256 Proof-of-Work Mining (`Blockchain.py`):</strong> The mining node increments `block.nonce` until `compute_hash()` produces a SHA-256 digest starting with `'00'` (`difficulty = 2`).</li>
             <li><strong>Stage 7 — Public Consensus Audit &amp; Form-7 Roll Governance:</strong> Observers verify every block hash and ZK receipt while off-chain Form-7 voter delisting revokes future booth credentials without mutating historical blocks.</li>
@@ -212,7 +197,7 @@ class Blockchain:
             computed_hash = block.compute_hash()
         return computed_hash</code></pre>
           <div style="margin-top:14px;padding:12px 14px;background:var(--bg-elevated);border:1px solid var(--border-hairline);border-radius:8px;font-size:13px;color:var(--ink-secondary);">
-            <strong>Project Attribution:</strong> Architected by <strong>Ateeq Bin Mubarak Wahlan</strong> (Roll No: <code>160920733003</code>) • Department of Computer Science &amp; Engineering • <strong>LIET (Osmania University)</strong> • Created in Academic Year <strong>2023–2024</strong>.
+            <strong>Project Attribution:</strong> Architected by <strong>Ateeq Bin Mubarak Wahlan</strong> (Roll No: <code>160920733003</code>) • Department of Computer Science &amp; Engineering • <strong>LIET (Osmania University ’23)</strong>.
           </div>
         </div>
       </div>
@@ -223,7 +208,6 @@ class Blockchain:
          ================================================================== -->
     <section id="tab-admin" class="tab-panel">
 
-      <!-- Role-Based Access Control Banner for Admin Console -->
       <div id="adminRbacBanner" class="rbac-lock-banner">
         <div>
           <div style="font-family:var(--font-mono);font-size:11px;color:#FBBF24;font-weight:700;letter-spacing:0.06em;">🔒 ELECTORAL COMMISSION AUTHORITY GATE (RBAC SCOPE)</div>
@@ -235,7 +219,6 @@ class Blockchain:
       </div>
 
       <div class="two-col-grid">
-        <!-- Form-2A: Gazette New Party Candidate -->
         <div class="panel-card">
           <div class="panel-header">
             <div>
@@ -281,7 +264,6 @@ class Blockchain:
           </form>
         </div>
 
-        <!-- Form-2B: Electoral Mandate Revocation & Party Deregistration Use Case -->
         <div class="panel-card">
           <div class="panel-header">
             <div>
@@ -315,7 +297,6 @@ class Blockchain:
         </div>
       </div>
 
-      <!-- View Party Registry Table with Inline Form-2B Revocation Action -->
       <div class="panel-card">
         <div class="panel-header">
           <div>
@@ -347,12 +328,11 @@ class Blockchain:
          ================================================================== -->
     <section id="tab-signup" class="tab-panel">
       <div class="two-col-grid">
-        <!-- Form-6: New Voter Enrollment -->
         <div class="panel-card">
           <div class="panel-header">
             <div>
               <h2 class="panel-title">Form-6 — Citizen Electoral Roll Enrollment (`/Signup`)</h2>
-              <p style="font-size:12.5px;color:var(--ink-secondary);">Enrolls an eligible citizen into the `register` table with a human biometric portrait and derives a Zero-Knowledge Nullifier.</p>
+              <p style="font-size:12.5px;color:var(--ink-secondary);">Enrolls an eligible citizen into the `register` table. You can either capture their face at the booth popup via camera or pre-assign an EPIC portrait.</p>
             </div>
             <span class="panel-tag">FORM-6 ENROLLMENT</span>
           </div>
@@ -389,20 +369,20 @@ class Blockchain:
               </div>
             </div>
             <div class="form-group">
-              <label class="form-label">Biometric Portrait Preset / Custom Photo Upload</label>
+              <label class="form-label">Biometric Face Registration Mode</label>
               <select id="regPortraitPreset" class="form-select">
-                <option value="https://randomuser.me/api/portraits/men/75.jpg">Human Portrait Preset #1 (Male — Hyderabad EPIC Roll)</option>
-                <option value="https://randomuser.me/api/portraits/women/68.jpg">Human Portrait Preset #2 (Female — Hyderabad EPIC Roll)</option>
-                <option value="https://randomuser.me/api/portraits/men/52.jpg">Human Portrait Preset #3 (Male — Secunderabad Roll)</option>
-                <option value="https://randomuser.me/api/portraits/women/33.jpg">Human Portrait Preset #4 (Female — Jubilee Hills Roll)</option>
+                <option value="">📷 Capture Live via Camera Popup at Voting Booth (Unregistered Photo)</option>
+                <option value="static/voters/ateeq.svg">Pre-Registered EPIC Portrait #1 (Hyderabad Roll)</option>
+                <option value="static/voters/azizullah.svg">Pre-Registered EPIC Portrait #2 (Tolichowki Roll)</option>
+                <option value="static/voters/priyanka.svg">Pre-Registered EPIC Portrait #3 (Secunderabad Roll)</option>
+                <option value="static/voters/zubair.svg">Pre-Registered EPIC Portrait #4 (Charminar Roll)</option>
               </select>
             </div>
-            <button type="submit" class="btn-primary">Enroll Citizen &amp; Generate 256-Bit Biometric Hash (Form-6) ↗</button>
+            <button type="submit" class="btn-primary">Enroll Citizen in Electoral Roll (Form-6) ↗</button>
             <div id="signupFeedback" style="margin-top:12px;font-size:13px;font-weight:600;"></div>
           </form>
         </div>
 
-        <!-- Form-7: Electoral Roll Delisting & Biometric Credential Revocation -->
         <div class="panel-card">
           <div class="panel-header">
             <div>
@@ -436,13 +416,12 @@ class Blockchain:
         </div>
       </div>
 
-      <!-- Registered Electoral Roll Table (Shows RBAC Masked vs Unmasked PII + Popup Scanner Trigger) -->
       <div class="panel-card">
         <div class="panel-header">
           <div>
-            <h2 class="panel-title">Registered Electoral Roll (`register` Table — Human Biometric Profiles)</h2>
+            <h2 class="panel-title">Registered Electoral Roll (`register` Table — Citizen Biometric Profiles)</h2>
             <p style="font-size:13px;color:var(--ink-secondary);">
-              Click <strong>🔍 Face Scan Popup</strong> on any voter (including voters who have already voted) to inspect their human photograph and run an interactive biometric scan.
+              Click <strong>🔍 Biometric Popup</strong> on any voter to view their registered portrait (or capture one via camera if unregistered) and pre-fill their voting session.
               <span id="piiScopeNote" style="color:var(--primary-dark);font-weight:600;">(PII Masked in Public Viewer Mode — Unlock Admin to view full Contact/Email).</span>
             </p>
           </div>
@@ -467,16 +446,15 @@ class Blockchain:
     </section>
 
     <!-- ==================================================================
-         TAB 4: BIOMETRIC VOTING BOOTH (`/CastVote.html` & `/ValidateUser`)
+         TAB 4: BIOMETRIC VOTING BOOTH (Unified Popup Scanner + Pre-Filled Voter Session)
          ================================================================== -->
     <section id="tab-booth" class="tab-panel">
-      <!-- Visual Human Profile Selector Cards (Works for both Eligible & Already-Voted Citizens) -->
       <div class="panel-card">
         <div class="panel-header">
           <div>
-            <h2 class="panel-title">Step 1 — Select Voter Profile &amp; Launch Human Biometric Scan Popup</h2>
+            <h2 class="panel-title">Step 1 — Select Voter ID &amp; Verify Biometrics via Popup</h2>
             <p style="font-size:13.5px;color:var(--ink-secondary);margin-top:2px;">
-              Click any registered citizen profile card below (including voters who have <strong>Already Voted</strong>) to open the <strong>Human Face Biometric Verification Popup</strong> with live <code>Take Snapshot</code> &amp; laser landmark scanning.
+              Select a registered citizen below to open the <strong>Biometric Verification Popup</strong>. If their biometric photo is already registered, it loads their portrait and pre-fills their voter details immediately; if unregistered, the popup opens the camera to capture and register their photo to the selected Voter ID.
             </p>
           </div>
           <span class="panel-tag" id="biometricStatusBadge">SELECT CITIZEN PROFILE</span>
@@ -485,68 +463,33 @@ class Blockchain:
         <!-- Interactive Grid of Human Voter Cards -->
         <div id="boothVoterCardsGrid" class="voter-booth-grid"></div>
 
-        <div class="two-col-grid" style="align-items:start;margin-bottom:0;">
-          <div>
-            <div class="form-group">
-              <label class="form-label">Active Polling Booth Citizen (`User Login Screen` — Fig. 27)</label>
+        <!-- Selected Voter Session & Pre-Filled Details Bar (No redundant duplicate camera boxes here!) -->
+        <div style="background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:var(--radius-md);padding:18px 20px;">
+          <div class="two-col-grid" style="margin-bottom:0;align-items:center;">
+            <div>
+              <label class="form-label">Active Polling Booth Citizen (`User Login Screen`)</label>
               <select id="boothVoterSelect" class="form-select" onchange="onBoothVoterChange()"></select>
-            </div>
-
-            <div style="display:flex;flex-wrap:wrap;gap:10px;margin:16px 0;">
-              <button type="button" class="btn-primary" onclick="openBiometricModal(document.getElementById('boothVoterSelect').value)">
-                🔍 Open Human Biometric Scan Popup (Recommended) ↗
-              </button>
-              <button type="button" class="btn-secondary" onclick="takeBiometricSnapshot()">
-                📸 Quick Booth Snapshot (320×240)
-              </button>
-              <button type="button" class="btn-primary" style="background:var(--emerald);border-color:var(--emerald);" onclick="validateBiometricUser()">
-                ✓ Validate User
-              </button>
-              <button type="button" class="btn-secondary btn-sm" onclick="startLiveWebcam()">
-                🎥 Enable Hardware Webcam (Optional)
-              </button>
-            </div>
-
-            <div id="biometricValidationBanner" style="padding:14px 16px;border-radius:8px;background:var(--bg-elevated);border:1px solid var(--border-strong);font-family:var(--font-mono);font-size:12.5px;">
-              Status: Ready. Click any <strong>Citizen Card above</strong> or click <strong>"Open Human Biometric Scan Popup"</strong> to inspect the voter's real photograph, capture a 320×240 snapshot, and run facial landmark validation.
-            </div>
-          </div>
-
-          <!-- Dual 320x240 Capture & Display Boxes (Now Rendering Real Human Portraits!) -->
-          <div class="webcam-grid">
-            <div>
-              <div style="font-family:var(--font-mono);font-size:11px;margin-bottom:6px;color:var(--ink-secondary);">OPTICAL SENSOR FEED (320×240 HUMAN PORTRAIT)</div>
-              <div class="camera-box">
-                <div id="boothLaserLine" class="laser-scan-line"></div>
-                <video id="webcamVideo" autoplay playsinline muted style="display:none;"></video>
-                <canvas id="simulatedCameraCanvas" width="320" height="240"></canvas>
-                <div class="reticle-overlay">
-                  <span>CNN_FACE_MESH: ACTIVE</span>
-                  <span>320×240 PX</span>
-                </div>
+              <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;">
+                <button type="button" class="btn-primary" onclick="openBiometricModal(document.getElementById('boothVoterSelect').value)">
+                  🔍 Verify / Capture Voter Biometrics in Popup ↗
+                </button>
               </div>
             </div>
-            <div>
-              <div style="font-family:var(--font-mono);font-size:11px;margin-bottom:6px;color:var(--ink-secondary);">CAPTURED BIOMETRIC SNAPSHOT BUFFER:</div>
-              <div class="camera-box">
-                <canvas id="snapshotCanvas" width="320" height="240"></canvas>
-                <div class="reticle-overlay">
-                  <span id="snapshotOverlayLabel">SNAPSHOT_BUFFER</span>
-                  <span>256-BIT HASH</span>
-                </div>
-              </div>
+
+            <div id="biometricValidationBanner" style="padding:15px 18px;border-radius:8px;background:#FFFFFF;border:1px solid var(--border-hairline);border-left:4px solid var(--primary);font-size:13px;line-height:1.6;">
+              <strong>Voter Session Status:</strong> Click any <strong>Citizen Card above</strong> or click <strong>"🔍 Verify / Capture Voter Biometrics in Popup"</strong> to verify the voter's registered portrait (or capture a new face via camera) and pre-fill their voter details for voting.
             </div>
           </div>
         </div>
       </div>
 
       <!-- Step 2: Candidate Ballot Selection Table -->
-      <div class="panel-card">
+      <div class="panel-card" id="electronicBallotCard">
         <div class="panel-header">
           <div>
             <h2 class="panel-title" id="ballotTableHeading">Step 2 — Official Electronic Ballot Sheet (`/ValidateUser`)</h2>
             <p style="font-size:13.5px;color:var(--ink-secondary);margin-top:2px;">
-              Once biometric validation succeeds for an eligible voter, click <strong>Cast Encrypted Ballot</strong> beside your chosen candidate to mine a new Proof-of-Work block.
+              Once voter details are verified and pre-filled from the Biometric Popup, click <strong>Cast Encrypted Ballot</strong> beside your chosen candidate to mine a new Proof-of-Work block.
             </p>
           </div>
           <span class="panel-tag">HOMOMORPHIC BALLOT COMMITMENT</span>
@@ -578,7 +521,6 @@ class Blockchain:
          ================================================================== -->
     <section id="tab-ledger" class="tab-panel">
       <div class="two-col-grid">
-        <!-- E-Voting Result Tally -->
         <div class="panel-card">
           <div class="panel-header">
             <div>
@@ -604,7 +546,6 @@ class Blockchain:
           </div>
         </div>
 
-        <!-- Right Column: Cryptographic Tamper Simulator + Zero-Knowledge Receipt Verifier -->
         <div>
           <div class="panel-card">
             <div class="panel-header">
@@ -640,7 +581,6 @@ class Blockchain:
         </div>
       </div>
 
-      <!-- Full Chain of Blocks -->
       <div class="panel-card">
         <div class="panel-header">
           <h2 class="panel-title">Immutable Proof-of-Work Blockchain Explorer (`Genesis #0` → Latest Block)</h2>
@@ -653,62 +593,66 @@ class Blockchain:
   </main>
 
   <!-- ====================================================================
-       POPUP MODAL 1: INTERACTIVE HUMAN FACE BIOMETRIC SCANNER & VALIDATOR
+       POPUP MODAL 1: UNIFIED BIOMETRIC SCANNER & CAMERA REGISTRATION POPUP
+       - If Voter ID already has a registered image: displays the portrait,
+         confirms voter details are filled, and lets them Proceed for Voting!
+       - If Voter ID has no registered image (or clicks Camera Capture):
+         accesses the camera to capture & register face to the selected ID!
        ==================================================================== -->
   <div id="biometricScanModal" class="modal-backdrop" onclick="if(event.target===this) closeBiometricModal()">
     <div class="modal-card">
       <div class="panel-header" style="margin-bottom:14px;">
         <div>
-          <h2 class="panel-title" id="bioModalTitle">Biometric Voter Verification &amp; Optical Landmark Scanner</h2>
+          <h2 class="panel-title" id="bioModalTitle">Biometric Voter Verification &amp; Registration</h2>
           <p style="font-size:12.5px;color:var(--ink-secondary);" id="bioModalSubtitle">
-            Inspect registered citizen portrait, capture a 320×240 optical frame, and execute 256-bit CNN facial hash verification.
+            Verifies registered citizen biometric portrait or captures &amp; registers a live camera snapshot to the selected Voter ID.
           </p>
         </div>
-        <button type="button" class="btn-secondary btn-sm" onclick="closeBiometricModal()">✕ Close Popup</button>
+        <button type="button" class="btn-secondary btn-sm" onclick="closeBiometricModal()">✕ Close</button>
       </div>
 
       <div class="two-col-grid" style="margin-bottom:16px;align-items:start;">
-        <!-- Left: Human Photograph + Animated Laser Scan Stage -->
+        <!-- Left: Portrait Image / Live Camera Stream Stage -->
         <div>
           <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-secondary);margin-bottom:6px;display:flex;justify-content:space-between;">
-            <span>OPTICAL BIOMETRIC CAMERA STAGE (320×240)</span>
-            <span id="bioModalScanStateLabel" style="color:var(--primary-dark);font-weight:700;">READY FOR SNAPSHOT</span>
+            <span>BIOMETRIC OPTICAL FRAME (320×240)</span>
+            <span id="bioModalScanStateLabel" style="color:var(--emerald);font-weight:700;">REGISTERED PORTRAIT VERIFIED</span>
           </div>
+
           <div class="modal-portrait-stage">
             <div id="modalLaserLine" class="laser-scan-line"></div>
-            <canvas id="modalBiometricCanvas" width="360" height="265"></canvas>
+            <!-- Registered Portrait Image (Always renders reliably offline & online!) -->
+            <img id="modalVoterPortraitImg" src="static/voters/ateeq.svg" alt="Registered Voter Biometric Portrait" />
+            <!-- Live Hardware Webcam Video (Shown when capturing new photo) -->
+            <video id="modalWebcamVideo" autoplay playsinline muted style="display:none;"></video>
+            <!-- Optical Camera Fallback / Capture Canvas -->
+            <canvas id="modalCaptureCanvas" width="360" height="270" style="display:none;"></canvas>
+
             <div class="reticle-overlay">
-              <span id="modalReticleLeft">LANDMARKS: 68 PTS</span>
-              <span id="modalReticleRight">CONFIDENCE: --</span>
+              <span id="modalReticleLeft">CNN_LANDMARKS: 68 PTS</span>
+              <span id="modalReticleRight">MATCH: 99.68%</span>
             </div>
           </div>
-          <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;">
-            <button type="button" class="btn-primary" style="flex:1;" onclick="triggerModalSnapshotAndScan()">
-              📸 1. Take Snapshot &amp; Run Biometric Scan
-            </button>
-            <button type="button" id="modalUnlockBallotBtn" class="btn-secondary" onclick="confirmModalValidationToBooth()">
-              ✓ Load in Polling Booth
-            </button>
-          </div>
+
+          <!-- Dynamic Camera / Verification Action Buttons -->
+          <div id="modalCameraActionRow" style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;"></div>
         </div>
 
-        <!-- Right: Citizen Electoral Roll Dossier & Live Scan Telemetry -->
+        <!-- Right: Pre-Filled Voter Details & Status Banner -->
         <div>
           <div style="background:var(--bg-elevated);border:1px solid var(--border-hairline);border-radius:8px;padding:14px 16px;margin-bottom:12px;">
             <div style="font-family:var(--font-mono);font-size:11px;color:var(--primary-dark);font-weight:700;margin-bottom:8px;">
-              CITIZEN ELECTORAL ROLL RECORD (`register` TABLE)
+              PRE-FILLED VOTER DETAILS (`register` TABLE)
             </div>
             <div id="bioModalCitizenDetails" style="font-size:13.5px;display:flex;flex-direction:column;gap:6px;"></div>
           </div>
 
-          <div id="bioModalScanResultBox" style="background:#0B1528;color:#E2E8F0;border:1px solid #1E293B;border-left:4px solid #10B981;border-radius:8px;padding:13px 15px;font-family:var(--font-mono);font-size:11.5px;line-height:1.6;">
-            Click <strong>"📸 1. Take Snapshot &amp; Run Biometric Scan"</strong> to capture the voter's facial frame, project the 68-point biometric mesh, and verify their 256-bit SHA-256 identity signature.
-          </div>
+          <div id="bioModalScanResultBox" style="background:#0B1528;color:#E2E8F0;border:1px solid #1E293B;border-left:4px solid #10B981;border-radius:8px;padding:13px 15px;font-family:var(--font-mono);font-size:11.5px;line-height:1.6;"></div>
         </div>
       </div>
 
-      <!-- Bottom: If voter has ALREADY VOTED, show their Mined Blockchain Receipt; if ELIGIBLE, show Ballot Unlock CTA -->
-      <div id="bioModalReceiptSection" style="display:none;"></div>
+      <!-- Bottom Call-to-Action: "Voter details have been filled — please proceed for voting" OR Blockchain Receipt -->
+      <div id="bioModalReceiptSection"></div>
     </div>
   </div>
 
@@ -747,18 +691,19 @@ class Blockchain:
 
   <!-- ====================================================================
        ENHANCED SYMMETRIC / CENTERED ARCHITECTURAL FOOTER
+       (Mentions Osmania University ’23 & WahlanOS.com)
        ==================================================================== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand-row">
         <img src="static/evoting_logo.svg" alt="CivicChain Emblem" style="width:28px;height:28px;border-radius:6px;" />
         <strong style="font-family:var(--font-display);font-size:15.5px;color:#FFFFFF;letter-spacing:-0.01em;">
-          CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
+          CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
         </strong>
       </div>
 
       <div style="max-width:740px;font-size:14px;color:#CBD5E1;line-height:1.6;">
-        Architected &amp; Engineered by <strong style="color:#FFFFFF;">Ateeq Bin Mubarak Wahlan</strong> (University Roll No: <code style="color:#34D399;">160920733003</code>) • Bachelor of Engineering in Computer Science &amp; Engineering • <strong style="color:#FFFFFF;">LIET (Osmania University)</strong>, Hyderabad.
+        Architected &amp; Engineered by <strong style="color:#FFFFFF;">Ateeq Bin Mubarak Wahlan</strong> (Roll No: <code style="color:#34D399;">160920733003</code>) • B.E. Computer Science &amp; Engineering • <strong style="color:#FFFFFF;">LIET (Osmania University ’23)</strong>.
       </div>
 
       <div class="footer-meta-grid">
@@ -767,13 +712,11 @@ class Blockchain:
         <span>PRIVACY: HMAC-SHA256 ZK-NULLIFIERS</span>
         <span>•</span>
         <span>BIOMETRICS: 320×240 OPTICAL FACE VERIFICATION</span>
-        <span>•</span>
-        <span>ACADEMIC YEAR: 2023–2024</span>
       </div>
 
       <div class="footer-links-row">
-        <a href="https://wahlanos.com" class="footer-link-pill" target="_blank" rel="noopener">Portfolio: wahlanos.com ↗</a>
-        <a href="https://github.com/ateeq-wahlan" class="footer-link-pill" target="_blank" rel="noopener">GitHub: github.com/ateeq-wahlan ↗</a>
+        <a href="https://wahlanos.com" class="footer-link-pill" target="_blank" rel="noopener">WahlanOS.com ↗</a>
+        <a href="https://github.com/ateeq-wahlan" class="footer-link-pill" target="_blank" rel="noopener">github.com/ateeq-wahlan ↗</a>
         <a href="https://github.com/ateeq-wahlan/E-Voting-System-Blockchain" class="footer-link-pill" target="_blank" rel="noopener">Source Repository ↗</a>
       </div>
     </div>
@@ -781,10 +724,9 @@ class Blockchain:
 
   <!-- ====================================================================
        HYBRID ENGINE: Seamless Local Python API + Standalone Browser Engine
-       Works both via `python3 app.py` AND zero-clone on GitHub Pages!
        ==================================================================== -->
   <script>
-    // 1. Default Seed Data for Standalone / GitHub Pages Mode (Matches evoting_engine.py)
+    // 1. Default Seed Data with Local Offline-Safe SVG Human Portraits
     const INITIAL_PARTIES = [
       { id: 1, candidatename: "Rajeshwar Rao Deshmukh", partyname: "Bharatiya Janata Party (BJP)", areaname: "Jubilee Hills", image: "static/parties/bjp.svg", party_code: "BJP", manifesto: "Digital Infrastructure, Urban Mobility & Industrial Growth Corridors", votes: 0 },
       { id: 2, candidatename: "Dr. Ananya Reddy", partyname: "Indian National Congress (INC)", areaname: "Santosh Nagar", image: "static/parties/inc.svg", party_code: "INC", manifesto: "Universal Healthcare Access, Youth Employment & Civic Welfare", votes: 1 },
@@ -804,7 +746,7 @@ class Blockchain:
         contact: "9849016003",
         email: "ateeq@wahlanos.com",
         address: "Himayath Sagar, Jubilee Hills, Hyderabad",
-        profile_image: "https://randomuser.me/api/portraits/men/32.jpg",
+        profile_image: "static/voters/ateeq.svg",
         face_signature: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
         has_voted: false,
         nullifier: "zk_nullifier_8f41c92a7b10e3d944a1208b"
@@ -816,7 +758,7 @@ class Blockchain:
         contact: "9652881908",
         email: "karimi@gmail.com",
         address: "Tolichowki Main Road, Hyderabad",
-        profile_image: "https://randomuser.me/api/portraits/men/45.jpg",
+        profile_image: "static/voters/azizullah.svg",
         face_signature: "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
         has_voted: true,
         nullifier: "zk_nullifier_3e92a17b85c04f1298d1a4c2"
@@ -828,7 +770,7 @@ class Blockchain:
         contact: "9988776655",
         email: "priyanka.r@gmail.com",
         address: "Trimulgherry, Secunderabad, Hyderabad",
-        profile_image: "https://randomuser.me/api/portraits/women/44.jpg",
+        profile_image: "static/voters/priyanka.svg",
         face_signature: "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
         has_voted: true,
         nullifier: "zk_nullifier_7a19d44e20b81c6533f09e11"
@@ -840,7 +782,7 @@ class Blockchain:
         contact: "9123456780",
         email: "zubair.charminar@gmail.com",
         address: "Laad Bazaar, Charminar, Hyderabad",
-        profile_image: "https://randomuser.me/api/portraits/men/67.jpg",
+        profile_image: "static/voters/zubair.svg",
         face_signature: "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683",
         has_voted: true,
         nullifier: "zk_nullifier_5c82f01944d2a8b711e309f4"
@@ -852,7 +794,7 @@ class Blockchain:
         contact: "9701234509",
         email: "farhan.hyd@outlook.com",
         address: "Santosh Nagar Colony, Hyderabad",
-        profile_image: "https://randomuser.me/api/portraits/men/22.jpg",
+        profile_image: "static/voters/farhan.svg",
         face_signature: "7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451",
         has_voted: true,
         nullifier: "zk_nullifier_9d04e61288a3c7f520b18c66"
@@ -868,7 +810,7 @@ class Blockchain:
         stored_hash: "008c49e21f7b8a9043c11d5e82a07b6193f4c82019d8e34a712b60c918e3f4a1",
         valid_pow: true,
         valid_link: true,
-        transactions: [{ tx_type: "GENESIS_INIT", election_title: "Hyderabad Metropolitan General Election (2023–2024)", authority: "LIET (Osmania University) — CSE Major Project", architect: "Ateeq Bin Mubarak Wahlan (160920733003)" }]
+        transactions: [{ tx_type: "GENESIS_INIT", election_title: "Hyderabad Metropolitan General Election", authority: "LIET (Osmania University ’23) — CSE Major Project", architect: "Ateeq Bin Mubarak Wahlan (160920733003)" }]
       },
       {
         index: 1,
@@ -922,61 +864,61 @@ class Blockchain:
     let backendConnected = false;
     let isAdminUnlocked = false;
     let currentValidatedVoter = null;
-    let snapshotTakenForCurrentVoter = false;
-    let liveWebcamStream = null;
     let activeModalVoterUsername = null;
-    const loadedPortraitImages = {};
+    let modalCameraStream = null;
+    let modalCameraActive = false;
 
     // ====================================================================
-    // 2. INTERACTIVE MOVING ATOMIC CONSENSUS REACTOR (60FPS CANVAS)
+    // 2. SPACIOUS ATOMIC CONSENSUS REACTOR WITH CIRCULAR ACRONYM NODES
+    //    & ISOMETRIC 3D BALLOT VAULT NUCLEUS (Hover shows floating tooltip!)
     // ====================================================================
     const ATOMIC_NODES = [
       {
         id: 0,
-        shortLabel: "CV BIOMETRICS",
-        tag: "NODE 01 // CV BIOMETRICS (320×240 CNN MESH)",
-        detail: "320×240 human facial landmark extraction derives a deterministic 256-bit identity signature (99.68% match confidence) before unlocking the electronic ballot sheet.",
-        rx: 195,
-        ry: 68,
-        tiltDeg: -16,
-        angle: 0.3,
-        speed: 0.011,
+        acronym: "CV",
+        title: "CV // BIOMETRICS",
+        shortDesc: "320×240 facial landmark hash verification (99.68% match).",
+        rx: 205,
+        ry: 82,
+        tiltDeg: -18,
+        angle: 0.4,
+        speed: 0.010,
         color: "#10B981"
       },
       {
         id: 1,
-        shortLabel: "SHA-256 POW",
-        tag: "NODE 02 // SHA-256 PROOF-OF-WORK (DIFFICULTY = 2)",
-        detail: "Every cast vote increments block.nonce until SHA-256(block_json) starts with '00', cryptographically chaining previous_hash -> current_hash.",
-        rx: 195,
-        ry: 68,
-        tiltDeg: 20,
-        angle: 2.1,
-        speed: 0.0095,
+        acronym: "PoW",
+        title: "PoW // MINING",
+        shortDesc: "Difficulty-2 SHA-256 nonce search requiring leading '00' digest.",
+        rx: 205,
+        ry: 82,
+        tiltDeg: 22,
+        angle: 2.2,
+        speed: 0.009,
         color: "#38BDF8"
       },
       {
         id: 2,
-        shortLabel: "ZK NULLIFIER",
-        tag: "NODE 03 // ZERO-KNOWLEDGE VOTER NULLIFIER",
-        detail: "PBKDF2-HMAC-SHA256 converts voter credentials into an anonymous one-way nullifier (zk_nullifier_...), preventing double-voting while preserving ballot secrecy.",
-        rx: 145,
-        ry: 86,
-        tiltDeg: 58,
-        angle: 3.9,
-        speed: 0.0125,
+        acronym: "ZKP",
+        title: "ZKP // NULLIFIER",
+        shortDesc: "One-way HMAC-SHA256 voter nullifier prevents double voting.",
+        rx: 150,
+        ry: 102,
+        tiltDeg: 62,
+        angle: 3.8,
+        speed: 0.0115,
         color: "#F59E0B"
       },
       {
         id: 3,
-        shortLabel: "HOMOMORPHIC ZKP",
-        tag: "NODE 04 // ADDITIVE HOMOMORPHIC COMMITMENT",
-        detail: "Ballot choices are sealed inside an additive homomorphic commitment (0x...), enabling public tally verification without decrypting individual voter choices.",
-        rx: 195,
-        ry: 68,
-        tiltDeg: -16,
-        angle: 3.45,
-        speed: 0.011,
+        acronym: "SHA",
+        title: "SHA // COMMIT",
+        shortDesc: "Additive homomorphic commitment seals encrypted ballot choice.",
+        rx: 205,
+        ry: 82,
+        tiltDeg: -18,
+        angle: 3.55,
+        speed: 0.010,
         color: "#A78BFA"
       }
     ];
@@ -985,16 +927,14 @@ class Blockchain:
     let atomicOrbitRunning = true;
     let hoveredAtomicIndex = -1;
 
-    function selectAtomicNode(idx) {
-      selectedAtomicIndex = idx;
-      for (let i = 0; i < 4; i++) {
-        const btn = document.getElementById(`atomPill${i}`);
-        if (btn) btn.classList.toggle("active", i === idx);
-      }
+    function updateAtomicReadoutBar(idx) {
       const node = ATOMIC_NODES[idx];
       const box = document.getElementById("atomicInspectorBox");
       if (box && node) {
-        box.innerHTML = `<strong style="color:${node.color};">[${node.tag}]:</strong> ${node.detail}`;
+        box.innerHTML = `
+          <span><strong style="color:${node.color};">[${node.title}]:</strong> ${node.shortDesc}</span>
+          <span style="color:#94A3B8;font-size:10.5px;">NODE 0${idx + 1}/04</span>
+        `;
       }
     }
 
@@ -1002,6 +942,92 @@ class Blockchain:
       atomicOrbitRunning = !atomicOrbitRunning;
       const btn = document.getElementById("atomPauseBtn");
       if (btn) btn.textContent = atomicOrbitRunning ? "⏸ Pause" : "▶ Orbit";
+    }
+
+    function drawIsometricBallotVaultNucleus(ctx, cx, cy, pulse) {
+      // Outer radial aura
+      const grad = ctx.createRadialGradient(cx, cy, 8, cx, cy, 56 * pulse);
+      grad.addColorStop(0, "rgba(16, 185, 129, 0.40)");
+      grad.addColorStop(0.6, "rgba(13, 148, 136, 0.14)");
+      grad.addColorStop(1, "rgba(16, 185, 129, 0)");
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, 56 * pulse, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Rotating dashed quantum core ring
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(Date.now() * 0.0008);
+      ctx.beginPath();
+      ctx.arc(0, 0, 34, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(110, 231, 183, 0.45)";
+      ctx.lineWidth = 1.4;
+      ctx.setLineDash([4, 4]);
+      ctx.stroke();
+      ctx.restore();
+
+      // Isometric 3D Hexagonal Ballot Cube + Checkmark Crest in the Center
+      const R = 24;
+      ctx.save();
+      ctx.translate(cx, cy);
+
+      // Top diamond face
+      ctx.beginPath();
+      ctx.moveTo(0, -R);
+      ctx.lineTo(R * 0.88, -R * 0.48);
+      ctx.lineTo(0, 0);
+      ctx.lineTo(-R * 0.88, -R * 0.48);
+      ctx.closePath();
+      ctx.fillStyle = "#14B8A6";
+      ctx.fill();
+      ctx.strokeStyle = "#A7F3D0";
+      ctx.lineWidth = 1.4;
+      ctx.stroke();
+
+      // Left face
+      ctx.beginPath();
+      ctx.moveTo(-R * 0.88, -R * 0.48);
+      ctx.lineTo(0, 0);
+      ctx.lineTo(0, R);
+      ctx.lineTo(-R * 0.88, R * 0.50);
+      ctx.closePath();
+      ctx.fillStyle = "#0F766E";
+      ctx.fill();
+      ctx.stroke();
+
+      // Right face
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(R * 0.88, -R * 0.48);
+      ctx.lineTo(R * 0.88, R * 0.50);
+      ctx.lineTo(0, R);
+      ctx.closePath();
+      ctx.fillStyle = "#0B1528";
+      ctx.fill();
+      ctx.stroke();
+
+      // Glowing ballot slot on top diamond
+      ctx.beginPath();
+      ctx.moveTo(-6, -R * 0.52);
+      ctx.lineTo(6, -R * 0.52);
+      ctx.strokeStyle = "#FFFFFF";
+      ctx.lineWidth = 2.4;
+      ctx.lineCap = "round";
+      ctx.stroke();
+
+      // Crisp Verified Checkmark on front crest
+      ctx.beginPath();
+      ctx.moveTo(-6, 5);
+      ctx.lineTo(-1.5, 10);
+      ctx.lineTo(7, 0);
+      ctx.strokeStyle = "#6EE7B7";
+      ctx.lineWidth = 2.4;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.stroke();
+
+      ctx.restore();
     }
 
     function initAtomicConsensusCanvas() {
@@ -1015,18 +1041,28 @@ class Blockchain:
         const scaleY = canvas.height / rect.height;
         const mx = (e.clientX - rect.left) * scaleX;
         const my = (e.clientY - rect.top) * scaleY;
-        hoveredAtomicIndex = -1;
+        let found = -1;
         ATOMIC_NODES.forEach((n, idx) => {
           if (n._screenX !== undefined && n._screenY !== undefined) {
             const dist = Math.hypot(mx - n._screenX, my - n._screenY);
-            if (dist < 42) hoveredAtomicIndex = idx;
+            if (dist <= 26) found = idx;
           }
         });
+        hoveredAtomicIndex = found;
+        if (found !== -1) {
+          selectedAtomicIndex = found;
+          updateAtomicReadoutBar(found);
+        }
+      });
+
+      canvas.addEventListener("mouseleave", () => {
+        hoveredAtomicIndex = -1;
       });
 
       canvas.addEventListener("click", () => {
         if (hoveredAtomicIndex !== -1) {
-          selectAtomicNode(hoveredAtomicIndex);
+          selectedAtomicIndex = hoveredAtomicIndex;
+          updateAtomicReadoutBar(selectedAtomicIndex);
         }
       });
 
@@ -1038,11 +1074,11 @@ class Blockchain:
 
         ctx.clearRect(0, 0, W, H);
 
-        // 1. Draw 3 Atomic Orbital Rings
+        // 1. Draw 3 Elliptical Atomic Orbital Paths with generous top/bottom margin
         const rings = [
-          { rx: 195, ry: 68, tilt: (-16 * Math.PI) / 180, stroke: "rgba(16, 185, 129, 0.28)" },
-          { rx: 195, ry: 68, tilt: (20 * Math.PI) / 180, stroke: "rgba(56, 189, 248, 0.26)" },
-          { rx: 145, ry: 86, tilt: (58 * Math.PI) / 180, stroke: "rgba(167, 139, 250, 0.22)" }
+          { rx: 205, ry: 82, tilt: (-18 * Math.PI) / 180, stroke: "rgba(16, 185, 129, 0.28)" },
+          { rx: 205, ry: 82, tilt: (22 * Math.PI) / 180, stroke: "rgba(56, 189, 248, 0.26)" },
+          { rx: 150, ry: 102, tilt: (62 * Math.PI) / 180, stroke: "rgba(167, 139, 250, 0.24)" }
         ];
 
         rings.forEach((r) => {
@@ -1058,34 +1094,11 @@ class Blockchain:
           ctx.restore();
         });
 
-        // 2. Draw Central Nucleus (Cryptographic Ballot Cube + Arrow/Check Core)
+        // 2. Draw Central Isometric Ballot Vault Nucleus
         const pulse = 1 + 0.06 * Math.sin(Date.now() * 0.004);
-        const grad = ctx.createRadialGradient(cx, cy, 6, cx, cy, 44 * pulse);
-        grad.addColorStop(0, "rgba(16, 185, 129, 0.42)");
-        grad.addColorStop(1, "rgba(16, 185, 129, 0)");
-        ctx.fillStyle = grad;
-        ctx.beginPath();
-        ctx.arc(cx, cy, 44 * pulse, 0, Math.PI * 2);
-        ctx.fill();
+        drawIsometricBallotVaultNucleus(ctx, cx, cy, pulse);
 
-        // Nucleus Rounded Box
-        ctx.save();
-        ctx.fillStyle = "#0D9488";
-        ctx.strokeStyle = "#6EE7B7";
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.roundRect(cx - 24, cy - 24, 48, 48, 8);
-        ctx.fill();
-        ctx.stroke();
-
-        ctx.fillStyle = "#FFFFFF";
-        ctx.font = "700 20px 'Space Grotesk', sans-serif";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText("↗", cx, cy - 1);
-        ctx.restore();
-
-        // 3. Update & Draw Orbiting Atomic Nodes + Readable Callout Badges
+        // 3. Draw Circular Acronym Nodes Along the Orbits (No awkward sliding boxes!)
         ATOMIC_NODES.forEach((node, idx) => {
           if (atomicOrbitRunning && hoveredAtomicIndex !== idx) {
             node.angle = (node.angle + node.speed) % (Math.PI * 2);
@@ -1100,53 +1113,80 @@ class Blockchain:
           node._screenX = x;
           node._screenY = y;
 
-          const isSelected = idx === selectedAtomicIndex || idx === hoveredAtomicIndex;
+          const isHovered = idx === hoveredAtomicIndex;
+          const isSelected = idx === selectedAtomicIndex || isHovered;
+          const radius = isHovered ? 22 : 19;
 
-          // Subtle tether line to nucleus when selected
+          // Subtle energy tether when hovered/selected
           if (isSelected) {
             ctx.save();
             ctx.beginPath();
             ctx.moveTo(cx, cy);
             ctx.lineTo(x, y);
             ctx.strokeStyle = node.color;
-            ctx.globalAlpha = 0.45;
-            ctx.lineWidth = 1.2;
+            ctx.globalAlpha = 0.42;
+            ctx.lineWidth = 1.3;
             ctx.stroke();
             ctx.restore();
           }
 
-          // Electron sphere
+          // Outer glow ring on the circular atom
+          ctx.save();
           ctx.beginPath();
-          ctx.arc(x, y, isSelected ? 7.5 : 5.5, 0, Math.PI * 2);
-          ctx.fillStyle = "#081020";
+          ctx.arc(x, y, radius + 4, 0, Math.PI * 2);
+          ctx.fillStyle = node.color;
+          ctx.globalAlpha = isSelected ? 0.24 : 0.10;
           ctx.fill();
-          ctx.lineWidth = 2.5;
+          ctx.restore();
+
+          // Circular Atom Body with Acronym Inside
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fillStyle = isSelected ? "#0F172A" : "#081020";
+          ctx.fill();
+          ctx.lineWidth = isSelected ? 2.6 : 1.8;
           ctx.strokeStyle = node.color;
           ctx.stroke();
 
-          // Label pill positioned cleanly outward from center to avoid clustering
-          const offsetX = x >= cx ? 12 : -12;
-          const badgeW = 114;
-          const badgeH = 22;
-          const bx = x >= cx ? Math.min(W - badgeW - 6, x + offsetX) : Math.max(6, x + offsetX - badgeW);
-          const by = Math.max(6, Math.min(H - badgeH - 6, y - badgeH / 2));
+          ctx.fillStyle = "#FFFFFF";
+          ctx.font = "700 10.5px 'IBM Plex Mono', monospace";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText(node.acronym, x, y + 0.5);
+          ctx.restore();
+        });
+
+        // 4. If user is hovering over a circular node, draw a sleek floating tooltip
+        if (hoveredAtomicIndex !== -1) {
+          const hn = ATOMIC_NODES[hoveredAtomicIndex];
+          const tipW = 246;
+          const tipH = 46;
+          let tx = hn._screenX - tipW / 2;
+          let ty = hn._screenY - 58;
+          if (tx < 10) tx = 10;
+          if (tx + tipW > W - 10) tx = W - tipW - 10;
+          if (ty < 10) ty = hn._screenY + 28;
 
           ctx.save();
-          ctx.fillStyle = isSelected ? "rgba(15, 23, 42, 0.96)" : "rgba(15, 23, 42, 0.84)";
-          ctx.strokeStyle = isSelected ? node.color : "rgba(148, 163, 184, 0.45)";
-          ctx.lineWidth = isSelected ? 1.6 : 1;
+          ctx.fillStyle = "rgba(11, 21, 40, 0.96)";
+          ctx.strokeStyle = hn.color;
+          ctx.lineWidth = 1.5;
           ctx.beginPath();
-          ctx.roundRect(bx, by, badgeW, badgeH, 4);
+          ctx.roundRect(tx, ty, tipW, tipH, 6);
           ctx.fill();
           ctx.stroke();
 
-          ctx.fillStyle = isSelected ? "#FFFFFF" : "#E2E8F0";
-          ctx.font = "600 9.5px 'IBM Plex Mono', monospace";
-          ctx.textAlign = "center";
-          ctx.textBaseline = "middle";
-          ctx.fillText(node.shortLabel, bx + badgeW / 2, by + badgeH / 2 + 0.5);
+          ctx.fillStyle = hn.color;
+          ctx.font = "700 10.5px 'IBM Plex Mono', monospace";
+          ctx.textAlign = "left";
+          ctx.fillText(hn.title, tx + 10, ty + 16);
+
+          ctx.fillStyle = "#E2E8F0";
+          ctx.font = "400 10px 'DM Sans', sans-serif";
+          ctx.fillText(hn.shortDesc.slice(0, 44) + (hn.shortDesc.length > 44 ? "..." : ""), tx + 10, ty + 33);
           ctx.restore();
-        });
+        }
 
         requestAnimationFrame(renderAtomicFrame);
       }
@@ -1180,7 +1220,6 @@ class Blockchain:
 
     function toggleAdminAuthModal() {
       if (isAdminUnlocked) {
-        // Lock session back to Public Viewer Mode
         isAdminUnlocked = false;
         syncRbacUiState();
         renderAllViews();
@@ -1319,23 +1358,7 @@ class Blockchain:
         document.getElementById("runtimeModeLabel").textContent =
           "STANDALONE BROWSER ENGINE (GITHUB PAGES) • SHA-256 POW DIFFICULTY = 2";
       }
-      preloadVoterPortraits();
       renderAllViews();
-      drawSimulatedBiometricFeed();
-    }
-
-    function preloadVoterPortraits() {
-      stateData.voters.forEach((v) => {
-        if (v.profile_image && !loadedPortraitImages[v.username]) {
-          const img = new Image();
-          img.crossOrigin = "anonymous";
-          img.onload = () => {
-            loadedPortraitImages[v.username] = img;
-            drawSimulatedBiometricFeed();
-          };
-          img.src = v.profile_image;
-        }
-      });
     }
 
     function getVoterVoteReceiptClient(voter) {
@@ -1362,7 +1385,7 @@ class Blockchain:
     }
 
     // ====================================================================
-    // 5. RENDER ALL VIEWS (PARTIES, ADMIN, VOTER ROLL, BOOTH, BLOCKCHAIN)
+    // 5. RENDER ALL VIEWS
     // ====================================================================
     function renderAllViews() {
       const totalBlocks = stateData.blocks.length;
@@ -1438,15 +1461,17 @@ class Blockchain:
       // 3. Registered Voters Roll Table + Form-7 Select Dropdown
       const votersBody = document.getElementById("registeredVotersTableBody");
       votersBody.innerHTML = stateData.voters
-        .map(
-          (v) => `
+        .map((v) => {
+          const hasImg = Boolean(v.profile_image && v.profile_image.trim() !== "");
+          const thumbSrc = hasImg ? v.profile_image : "static/evoting_logo.svg";
+          return `
         <tr>
           <td>
             <div style="display:flex;align-items:center;gap:10px;">
-              <img src="${v.profile_image || 'https://randomuser.me/api/portraits/men/32.jpg'}" alt="${v.username}" class="voter-avatar-thumb" />
+              <img src="${thumbSrc}" alt="${v.username}" class="voter-avatar-thumb" />
               <div>
                 <div style="font-weight:700;">${v.full_name || v.username}</div>
-                <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-muted);">@${v.username}</div>
+                <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-muted);">@${v.username} ${hasImg ? "" : "• <span style='color:var(--amber);'>[Photo Unregistered]</span>"}</div>
               </div>
             </div>
           </td>
@@ -1468,15 +1493,17 @@ class Blockchain:
           </td>
           <td>
             <div style="display:flex;gap:6px;flex-wrap:wrap;">
-              <button class="btn-primary btn-sm" onclick="openBiometricModal('${v.username}')">🔍 Face Scan Popup</button>
+              <button class="btn-primary btn-sm" onclick="openBiometricModal('${v.username}')">
+                ${hasImg ? "🔍 Biometric Popup" : "📷 Capture Face Popup"}
+              </button>
               <button class="btn-danger btn-sm" onclick="handleDelistVoterByUsername('${v.username}')">
                 ${isAdminUnlocked ? "✕ Form-7 Delist" : "🔒 Form-7"}
               </button>
             </div>
           </td>
         </tr>
-      `
-        )
+      `;
+        })
         .join("");
 
       const delistVoterSelect = document.getElementById("delistVoterSelect");
@@ -1490,12 +1517,15 @@ class Blockchain:
       const boothSelect = document.getElementById("boothVoterSelect");
       const prevSelected = boothSelect.value;
       boothSelect.innerHTML = stateData.voters
-        .map(
-          (v) =>
-            `<option value="${v.username}">${v.full_name || v.username} (@${v.username} • ${v.address}) — ${
-              v.has_voted ? "[ALREADY VOTED - INSPECT SCAN/RECEIPT]" : "[ELIGIBLE TO VOTE]"
-            }</option>`
-        )
+        .map((v) => {
+          const hasImg = Boolean(v.profile_image && v.profile_image.trim() !== "");
+          const stateTag = v.has_voted
+            ? "[ALREADY VOTED - VIEW RECEIPT]"
+            : hasImg
+            ? "[IMAGE REGISTERED - READY TO VOTE]"
+            : "[NO IMAGE YET - CAPTURE IN POPUP]";
+          return `<option value="${v.username}">${v.full_name || v.username} (@${v.username} • ${v.address}) — ${stateTag}</option>`;
+        })
         .join("");
       if (prevSelected && stateData.voters.some((v) => v.username === prevSelected)) {
         boothSelect.value = prevSelected;
@@ -1507,10 +1537,12 @@ class Blockchain:
         boothCardsGrid.innerHTML = stateData.voters
           .map((v) => {
             const isSel = v.username === activeBoothUser;
+            const hasImg = Boolean(v.profile_image && v.profile_image.trim() !== "");
+            const thumbSrc = hasImg ? v.profile_image : "static/evoting_logo.svg";
             return `
             <div class="voter-profile-card ${isSel ? "selected" : ""}" onclick="openBiometricModal('${v.username}')">
               <div style="display:flex;align-items:center;gap:11px;">
-                <img src="${v.profile_image || 'https://randomuser.me/api/portraits/men/32.jpg'}" alt="${v.username}" class="voter-avatar-thumb" style="width:50px;height:50px;" />
+                <img src="${thumbSrc}" alt="${v.username}" class="voter-avatar-thumb" style="width:50px;height:50px;" />
                 <div>
                   <div style="font-weight:700;font-size:14px;line-height:1.25;">${v.full_name || v.username}</div>
                   <div style="font-family:var(--font-mono);font-size:11px;color:var(--primary-dark);margin-top:2px;">${v.epic_id || "TS/HYD/160920/003"}</div>
@@ -1518,10 +1550,10 @@ class Blockchain:
                 </div>
               </div>
               <div style="display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px solid var(--border-hairline);font-family:var(--font-mono);font-size:11px;">
-                <span style="color:${v.has_voted ? "var(--amber)" : "var(--emerald)"};font-weight:700;">
-                  ${v.has_voted ? "● VOTED (SCAN / RECEIPT)" : "○ ELIGIBLE"}
+                <span style="color:${v.has_voted ? "var(--amber)" : hasImg ? "var(--emerald)" : "var(--indigo)"};font-weight:700;">
+                  ${v.has_voted ? "● VOTED (RECEIPT)" : hasImg ? "✓ IMAGE REGISTERED" : "📷 CAPTURE FACE"}
                 </span>
-                <span style="color:var(--primary-dark);font-weight:700;">🔍 Scan Face →</span>
+                <span style="color:var(--primary-dark);font-weight:700;">Open Popup →</span>
               </div>
             </div>
           `;
@@ -1640,7 +1672,7 @@ class Blockchain:
             <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-secondary);background:var(--bg-elevated);padding:10px 12px;border-radius:6px;border:1px solid var(--border-hairline);">
               ${
                 isGenesis
-                  ? `<strong>Payload:</strong> Genesis Block Initialized — ${tx.election_title || "Hyderabad Metropolitan General Election (2023–2024)"} • Architect: ${tx.architect || "Ateeq Bin Mubarak Wahlan (160920733003)"}`
+                  ? `<strong>Payload:</strong> Genesis Block Initialized — ${tx.election_title || "Hyderabad Metropolitan General Election"} • Architect: ${tx.architect || "Ateeq Bin Mubarak Wahlan (160920733003)"}`
                   : `<strong>Ballot Transaction:</strong> Candidate: <strong>${tx.candidate_name}</strong> (${tx.party_name} — ${tx.area_name}) | Voter ZK-Nullifier: <code>${tx.voter_nullifier}</code> | Homomorphic Commitment: <code>${tx.homomorphic_commitment}</code>`
               }
             </div>
@@ -1651,224 +1683,272 @@ class Blockchain:
     }
 
     // ====================================================================
-    // 6. INTERACTIVE HUMAN FACE BIOMETRIC SCAN POPUP MODAL
+    // 6. UNIFIED BIOMETRIC POPUP WORKFLOW
+    //    - If Voter ID already has a registered image: displays the image
+    //      immediately, pre-fills voter details, and says:
+    //      "Voter details have been filled — please proceed for voting."
+    //    - If Voter ID has no registered image yet (or clicks Camera Capture):
+    //      accesses the camera to capture & register it to the selected ID!
     // ====================================================================
-    function drawHumanFaceWithBiometricHUD(canvas, voter, isCaptured, showScanMesh) {
-      if (!canvas || !voter) return;
-      const ctx = canvas.getContext("2d");
-      const W = canvas.width;
-      const H = canvas.height;
-
-      ctx.fillStyle = "#081020";
-      ctx.fillRect(0, 0, W, H);
-
-      const img = loadedPortraitImages[voter.username];
-      if (img && img.complete && img.naturalWidth > 0) {
-        // Draw real human portrait centered & cover-fitted
-        const scale = Math.max(W / img.naturalWidth, H / img.naturalHeight);
-        const nw = img.naturalWidth * scale;
-        const nh = img.naturalHeight * scale;
-        const nx = (W - nw) / 2;
-        const ny = (H - nh) / 2;
-        ctx.drawImage(img, nx, ny, nw, nh);
-
-        // Subtle dark vignette for HUD legibility
-        const grad = ctx.createLinearGradient(0, 0, 0, H);
-        grad.addColorStop(0, "rgba(8, 16, 32, 0.45)");
-        grad.addColorStop(0.5, "rgba(8, 16, 32, 0.05)");
-        grad.addColorStop(1, "rgba(8, 16, 32, 0.72)");
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, W, H);
-      } else {
-        // Trigger image load if not yet cached
-        const newImg = new Image();
-        newImg.crossOrigin = "anonymous";
-        newImg.onload = () => {
-          loadedPortraitImages[voter.username] = newImg;
-          drawHumanFaceWithBiometricHUD(canvas, voter, isCaptured, showScanMesh);
-        };
-        newImg.src = voter.profile_image || "https://randomuser.me/api/portraits/men/32.jpg";
+    function stopModalCameraStream() {
+      if (modalCameraStream) {
+        modalCameraStream.getTracks().forEach((t) => t.stop());
+        modalCameraStream = null;
       }
-
-      // Draw Biometric Detection Bounding Box & 68-Point Landmark Reticle
-      const bx = W * 0.25;
-      const by = H * 0.14;
-      const bw = W * 0.50;
-      const bh = H * 0.66;
-
-      ctx.strokeStyle = isCaptured ? "#10B981" : "#38BDF8";
-      ctx.lineWidth = 2;
-      ctx.strokeRect(bx, by, bw, bh);
-
-      if (showScanMesh) {
-        ctx.fillStyle = "#34D399";
-        const landmarks = [
-          [0.42, 0.36], [0.58, 0.36], [0.50, 0.46],
-          [0.44, 0.56], [0.50, 0.58], [0.56, 0.56],
-          [0.37, 0.32], [0.63, 0.32], [0.50, 0.27],
-          [0.40, 0.64], [0.50, 0.68], [0.60, 0.64]
-        ];
-        landmarks.forEach(([lx, ly]) => {
-          ctx.beginPath();
-          ctx.arc(W * lx, H * ly, 2.5, 0, Math.PI * 2);
-          ctx.fill();
-        });
+      modalCameraActive = false;
+      const videoEl = document.getElementById("modalWebcamVideo");
+      if (videoEl) {
+        videoEl.style.display = "none";
+        videoEl.srcObject = null;
       }
+    }
 
-      ctx.fillStyle = "#6EE7B7";
-      ctx.font = "600 10.5px 'IBM Plex Mono', monospace";
-      ctx.fillText(
-        isCaptured ? `✓ BIOMETRIC MATCH: ${(voter.full_name || voter.username).toUpperCase()}` : `CITIZEN: ${(voter.full_name || voter.username).toUpperCase()}`,
-        12,
-        20
-      );
+    function applyPreFilledVoterSessionToBooth(voter) {
+      currentValidatedVoter = voter.username;
+      const boothSel = document.getElementById("boothVoterSelect");
+      if (boothSel) boothSel.value = voter.username;
+
+      document.getElementById("biometricStatusBadge").textContent = "VOTER DETAILS FILLED: " + voter.username.toUpperCase();
+      document.getElementById("ballotTableHeading").textContent =
+        `Step 2 — Electronic Ballot Sheet (Voter Details Filled for ${voter.full_name || voter.username})`;
+
+      document.getElementById("biometricValidationBanner").innerHTML = `
+        <div style="display:flex;align-items:center;gap:14px;">
+          <img src="${voter.profile_image || 'static/voters/ateeq.svg'}" alt="${voter.username}" class="voter-avatar-thumb" style="width:54px;height:54px;" />
+          <div>
+            <div style="color:var(--emerald);font-weight:700;font-size:14px;">
+              ✓ Registered Biometric Image Verified &amp; Voter Details Filled — Please proceed for voting below
+            </div>
+            <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-secondary);margin-top:2px;">
+              <strong>Voter:</strong> ${voter.full_name || voter.username} (<code>@${voter.username}</code>) • <strong>EPIC:</strong> ${voter.epic_id || "TS/HYD/160920/003"} • <strong>Constituency:</strong> ${voter.address}
+            </div>
+          </div>
+        </div>
+      `;
     }
 
     function openBiometricModal(username) {
+      stopModalCameraStream();
       const voter = stateData.voters.find((v) => v.username === username) || stateData.voters[0];
       if (!voter) return;
       activeModalVoterUsername = voter.username;
 
-      // Also sync the booth dropdown to this voter
       const boothSel = document.getElementById("boothVoterSelect");
       if (boothSel) boothSel.value = voter.username;
-      drawSimulatedBiometricFeed();
 
-      document.getElementById("bioModalTitle").textContent = `Biometric Identity Verification — ${voter.full_name || voter.username}`;
-      document.getElementById("bioModalScanStateLabel").textContent = "AWAITING SNAPSHOT SCAN";
-      document.getElementById("bioModalScanStateLabel").style.color = "var(--amber)";
-      document.getElementById("modalReticleRight").textContent = "CONFIDENCE: --";
-      document.getElementById("modalLaserLine").classList.remove("scanning");
+      const hasRegisteredImage = Boolean(voter.profile_image && voter.profile_image.trim() !== "");
+
+      document.getElementById("bioModalTitle").textContent =
+        `Biometric Voter Verification — ${voter.full_name || voter.username}`;
 
       const detailsEl = document.getElementById("bioModalCitizenDetails");
       detailsEl.innerHTML = `
-        <div><strong>Full Citizen Name:</strong> ${voter.full_name || voter.username} (<code>@${voter.username}</code>)</div>
-        <div><strong>EPIC Voter ID:</strong> <code style="color:var(--primary-dark);font-weight:700;">${voter.epic_id || "TS/HYD/160920/003"}</code></div>
+        <div><strong>Voter ID (` + "`username`" + `):</strong> <code>@${voter.username}</code></div>
+        <div><strong>Full Citizen Name:</strong> ${voter.full_name || voter.username}</div>
+        <div><strong>EPIC Voter Roll No:</strong> <code style="color:var(--primary-dark);font-weight:700;">${voter.epic_id || "TS/HYD/160920/003"}</code></div>
         <div><strong>Constituency Address:</strong> ${voter.address}</div>
         <div><strong>Contact &amp; Email:</strong> ${maskPhone(voter.contact)} • ${maskEmail(voter.email)}</div>
         <div><strong>ZK Nullifier:</strong> <code style="font-size:11px;">${voter.nullifier}</code></div>
-        <div><strong>Current Ballot Status:</strong> ${
-          voter.has_voted
-            ? '<span style="color:var(--amber);font-weight:700;">● BALLOT ALREADY CAST &amp; MINED ON BLOCKCHAIN</span>'
-            : '<span style="color:var(--emerald);font-weight:700;">○ ELIGIBLE TO CAST ENCRYPTED BALLOT</span>'
-        }</div>
       `;
 
-      document.getElementById("bioModalScanResultBox").innerHTML =
-        `Click <strong>"📸 1. Take Snapshot &amp; Run Biometric Scan"</strong> on the left to capture a 320×240 frame of <strong>${voter.full_name || voter.username}</strong> and run the 68-point facial landmark hash comparison.`;
-
+      const imgEl = document.getElementById("modalVoterPortraitImg");
+      const videoEl = document.getElementById("modalWebcamVideo");
+      const canvasEl = document.getElementById("modalCaptureCanvas");
+      const laserEl = document.getElementById("modalLaserLine");
+      const stateLabel = document.getElementById("bioModalScanStateLabel");
+      const actionRow = document.getElementById("modalCameraActionRow");
+      const scanBox = document.getElementById("bioModalScanResultBox");
       const receiptSec = document.getElementById("bioModalReceiptSection");
-      receiptSec.style.display = "none";
-      receiptSec.innerHTML = "";
-
-      const canvas = document.getElementById("modalBiometricCanvas");
-      drawHumanFaceWithBiometricHUD(canvas, voter, false, false);
 
       document.getElementById("biometricScanModal").classList.add("open");
+
+      if (hasRegisteredImage) {
+        // CASE A: Voter ALREADY has a registered biometric portrait image!
+        imgEl.style.display = "block";
+        imgEl.src = voter.profile_image;
+        videoEl.style.display = "none";
+        canvasEl.style.display = "none";
+
+        laserEl.classList.add("scanning");
+        setTimeout(() => laserEl.classList.remove("scanning"), 1200);
+
+        stateLabel.textContent = "✓ REGISTERED PORTRAIT LOADED";
+        stateLabel.style.color = "var(--emerald)";
+        document.getElementById("modalReticleRight").textContent = "MATCH: 99.68%";
+
+        // Automatically mark voter details as filled for the voting booth
+        applyPreFilledVoterSessionToBooth(voter);
+
+        scanBox.innerHTML = `
+          <div style="color:#34D399;font-weight:700;">✓ REGISTERED BIOMETRIC IMAGE FOUND FOR @${voter.username.toUpperCase()}</div>
+          <div><strong>256-Bit Facial Hash:</strong> <code>${(voter.face_signature || "9f86d081884c7d659a2feaa0c55ad015").slice(0, 32)}...</code></div>
+          <div><strong>Verification Status:</strong> Voter details have been filled — please proceed for voting.</div>
+        `;
+
+        actionRow.innerHTML = `
+          <button type="button" class="btn-primary" style="flex:1;" onclick="proceedFromPopupToVoting()">
+            ✓ Voter Details Filled — Proceed for Voting →
+          </button>
+          <button type="button" class="btn-secondary btn-sm" onclick="startModalCameraCaptureMode()">
+            📷 Update / Capture via Camera
+          </button>
+        `;
+
+        const receipt = getVoterVoteReceiptClient(voter);
+        if (voter.has_voted && receipt) {
+          receiptSec.innerHTML = `
+            <div class="receipt-banner" style="margin-top:8px;">
+              <div style="color:#FBBF24;font-weight:700;font-size:13.5px;margin-bottom:4px;">
+                🔒 BALLOT ALREADY CAST &amp; MINED ON BLOCKCHAIN (BLOCK #${receipt.block_index})
+              </div>
+              <div>Registered biometric portrait verified for <strong>${voter.full_name || voter.username}</strong>. Their immutable blockchain vote receipt is shown below:</div>
+              <div style="margin-top:6px;">
+                <strong>Block No:</strong> #${receipt.block_index} (PoW Nonce: ${receipt.nonce}) • <strong>SHA-256 Hash:</strong> ${receipt.block_hash}<br/>
+                <strong>Voter ZK Nullifier:</strong> ${receipt.voter_nullifier} • <strong>Homomorphic Commitment:</strong> ${receipt.homomorphic_commitment}
+              </div>
+            </div>
+          `;
+        } else {
+          receiptSec.innerHTML = `
+            <div style="background:var(--emerald-soft);border:1px solid var(--emerald);color:var(--ink-primary);padding:13px 16px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+              <div>
+                <strong style="color:var(--emerald);">✓ Registered Biometric Image Verified &amp; Voter Details Have Been Filled!</strong>
+                <div style="font-size:12.5px;color:var(--ink-secondary);">Please proceed for voting on the Electronic Ballot Sheet for <strong>${voter.full_name || voter.username}</strong>.</div>
+              </div>
+              <button type="button" class="btn-primary btn-sm" onclick="proceedFromPopupToVoting()">Proceed for Voting →</button>
+            </div>
+          `;
+        }
+      } else {
+        // CASE B: Voter does NOT have a registered image yet -> Open Camera to Capture & Register to Selected ID!
+        startModalCameraCaptureMode();
+      }
     }
 
-    function closeBiometricModal() {
-      document.getElementById("biometricScanModal").classList.remove("open");
-      document.getElementById("modalLaserLine").classList.remove("scanning");
-    }
-
-    async function triggerModalSnapshotAndScan() {
+    async function startModalCameraCaptureMode() {
       const voter = stateData.voters.find((v) => v.username === activeModalVoterUsername);
       if (!voter) return;
 
-      const laser = document.getElementById("modalLaserLine");
+      const imgEl = document.getElementById("modalVoterPortraitImg");
+      const videoEl = document.getElementById("modalWebcamVideo");
+      const canvasEl = document.getElementById("modalCaptureCanvas");
+      const laserEl = document.getElementById("modalLaserLine");
       const stateLabel = document.getElementById("bioModalScanStateLabel");
+      const actionRow = document.getElementById("modalCameraActionRow");
       const scanBox = document.getElementById("bioModalScanResultBox");
-      const canvas = document.getElementById("modalBiometricCanvas");
-
-      laser.classList.add("scanning");
-      stateLabel.textContent = "SCANNING 68 FACIAL LANDMARKS...";
-      stateLabel.style.color = "var(--primary)";
-      drawHumanFaceWithBiometricHUD(canvas, voter, false, true);
-
-      scanBox.innerHTML = `
-        <div style="color:#38BDF8;">[STEP 1/3] Capturing 320×240 optical frame for <strong>${voter.full_name || voter.username}</strong>...</div>
-        <div style="color:#FBBF24;">[STEP 2/3] Extracting 68-point CNN facial geometry &amp; computing 256-bit SHA-256 embedding...</div>
-      `;
-
-      await new Promise((r) => setTimeout(r, 950));
-
-      let bioHash = voter.face_signature || (await sha256Hex("BIOMETRIC_EMBEDDING::" + voter.username));
-      let receipt = getVoterVoteReceiptClient(voter);
-
-      if (backendConnected) {
-        try {
-          const res = await fetch("/api/voter/validate-biometric", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username: voter.username, snapshot_data: "MODAL_320X240_SCAN" })
-          });
-          if (res.ok) {
-            const data = await res.json();
-            bioHash = data.biometric_hash || bioHash;
-            receipt = data.vote_receipt || receipt;
-          }
-        } catch (e) {}
-      }
-
-      laser.classList.remove("scanning");
-      stateLabel.textContent = "✓ BIOMETRIC IDENTITY VERIFIED (99.68%)";
-      stateLabel.style.color = "var(--emerald)";
-      document.getElementById("modalReticleRight").textContent = "MATCH: 99.68%";
-      drawHumanFaceWithBiometricHUD(canvas, voter, true, true);
-
-      // Also update the main booth canvases & state so the voter is immediately validated!
-      snapshotTakenForCurrentVoter = true;
-      currentValidatedVoter = voter.username;
-      drawHumanFaceWithBiometricHUD(document.getElementById("simulatedCameraCanvas"), voter, false, true);
-      drawHumanFaceWithBiometricHUD(document.getElementById("snapshotCanvas"), voter, true, true);
-      document.getElementById("biometricStatusBadge").textContent = "USER VALIDATED: " + voter.username.toUpperCase();
-      document.getElementById("ballotTableHeading").textContent = `Step 2 — Electronic Ballot Sheet (User Validated as ${voter.username})`;
-      document.getElementById("biometricValidationBanner").innerHTML = `
-        <span style="color:var(--emerald);font-weight:700;">✓ User Validated as ${voter.username} (${voter.full_name || voter.username})</span><br/>
-        256-Bit Facial Descriptor Hash: <code>${bioHash.slice(0, 36)}...</code> | Biometric Match Confidence: <strong>99.68%</strong>
-      `;
-
-      scanBox.innerHTML = `
-        <div style="color:#34D399;font-weight:700;">✓ BIOMETRIC MATCH CONFIRMED: User Validated as ${voter.username}</div>
-        <div><strong>256-Bit Facial Hash:</strong> <code>${bioHash.slice(0, 32)}...</code></div>
-        <div><strong>Cosine Similarity Score:</strong> <code>0.9968 (Threshold ≥ 0.8500)</code></div>
-        <div><strong>ZK Nullifier Check:</strong> <code>${voter.nullifier}</code></div>
-      `;
-
       const receiptSec = document.getElementById("bioModalReceiptSection");
-      receiptSec.style.display = "block";
-      if (voter.has_voted && receipt) {
-        receiptSec.innerHTML = `
-          <div class="receipt-banner" style="margin-top:8px;">
-            <div style="color:#FBBF24;font-weight:700;font-size:13.5px;margin-bottom:4px;">
-              🔒 ZERO-KNOWLEDGE DOUBLE-VOTE LOCK: CITIZEN HAS ALREADY VOTED
-            </div>
-            <div>Biometric identity confirmed for <strong>${voter.full_name || voter.username}</strong>, and their anonymous ballot is already permanently sealed in <strong>Block #${receipt.block_index}</strong>:</div>
-            <div style="margin-top:6px;">
-              <strong>Mined Block No:</strong> #${receipt.block_index} (PoW Nonce: ${receipt.nonce})<br/>
-              <strong>Block SHA-256 Hash:</strong> ${receipt.block_hash}<br/>
-              <strong>Voter ZK Nullifier:</strong> ${receipt.voter_nullifier}<br/>
-              <strong>Homomorphic Commitment:</strong> ${receipt.homomorphic_commitment}
-            </div>
-          </div>
-        `;
-      } else {
-        receiptSec.innerHTML = `
-          <div style="background:var(--emerald-soft);border:1px solid var(--emerald);color:var(--ink-primary);padding:12px 16px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-            <div>
-              <strong style="color:var(--emerald);">✓ Biometric Verification Complete &amp; Ballot Sheet Unlocked!</strong>
-              <div style="font-size:12.5px;color:var(--ink-secondary);">Citizen <strong>${voter.full_name || voter.username}</strong> has not voted yet and is now authorized to cast an encrypted ballot.</div>
-            </div>
-            <button type="button" class="btn-primary btn-sm" onclick="confirmModalValidationToBooth()">Proceed to Ballot Sheet →</button>
-          </div>
-        `;
+
+      imgEl.style.display = "none";
+      laserEl.classList.add("scanning");
+      stateLabel.textContent = "📷 CAMERA ACTIVE — READY TO CAPTURE";
+      stateLabel.style.color = "var(--amber)";
+      document.getElementById("modalReticleRight").textContent = "AWAITING CAPTURE";
+
+      scanBox.innerHTML = `
+        <div style="color:#FBBF24;font-weight:700;">📷 CAMERA REGISTRATION MODE FOR VOTER ID: @${voter.username.toUpperCase()}</div>
+        <div>Position face inside the biometric reticle and click <strong>"📸 Capture &amp; Register to Voter ID"</strong> to register the image and pre-fill voter details.</div>
+      `;
+
+      receiptSec.innerHTML = "";
+
+      actionRow.innerHTML = `
+        <button type="button" class="btn-primary" style="flex:1;" onclick="captureAndRegisterModalPhoto()">
+          📸 Capture &amp; Register Image to Voter ID (@${voter.username})
+        </button>
+      `;
+
+      try {
+        modalCameraStream = await navigator.mediaDevices.getUserMedia({ video: { width: 360, height: 270 } });
+        videoEl.srcObject = modalCameraStream;
+        videoEl.style.display = "block";
+        canvasEl.style.display = "none";
+        modalCameraActive = true;
+      } catch (err) {
+        // If hardware webcam is unavailable/denied, render an interactive optical camera preview on canvasEl
+        videoEl.style.display = "none";
+        canvasEl.style.display = "block";
+        modalCameraActive = false;
+        drawSimulatedOpticalCameraPreview(canvasEl, voter);
       }
     }
 
-    function confirmModalValidationToBooth() {
+    function drawSimulatedOpticalCameraPreview(canvas, voter) {
+      const ctx = canvas.getContext("2d");
+      const W = canvas.width;
+      const H = canvas.height;
+      const fallbackImg = new Image();
+      fallbackImg.onload = () => {
+        ctx.clearRect(0, 0, W, H);
+        ctx.drawImage(fallbackImg, 0, 0, W, H);
+        ctx.fillStyle = "rgba(16, 185, 129, 0.9)";
+        ctx.font = "600 11px 'IBM Plex Mono', monospace";
+        ctx.fillText(`OPTICAL CAMERA STREAM // ID: @${voter.username}`, 14, 24);
+      };
+      fallbackImg.src = "static/voters/ateeq.svg";
+    }
+
+    async function captureAndRegisterModalPhoto() {
+      const voter = stateData.voters.find((v) => v.username === activeModalVoterUsername);
+      if (!voter) return;
+
+      const videoEl = document.getElementById("modalWebcamVideo");
+      const canvasEl = document.getElementById("modalCaptureCanvas");
+      const ctx = canvasEl.getContext("2d");
+
+      let capturedDataUrl = "static/voters/ateeq.svg";
+      if (modalCameraActive && videoEl.style.display !== "none") {
+        ctx.drawImage(videoEl, 0, 0, canvasEl.width, canvasEl.height);
+        capturedDataUrl = canvasEl.toDataURL("image/png");
+      } else {
+        try {
+          capturedDataUrl = canvasEl.toDataURL("image/png");
+        } catch (e) {
+          capturedDataUrl = "static/voters/ateeq.svg";
+        }
+      }
+
+      stopModalCameraStream();
+
+      const bioHash = await sha256Hex("BIOMETRIC_EMBEDDING::" + voter.username + "::" + capturedDataUrl.length);
+      voter.profile_image = capturedDataUrl;
+      voter.face_signature = bioHash;
+
+      if (backendConnected) {
+        try {
+          const res = await fetch("/api/voter/register-biometric", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: voter.username, image_data: capturedDataUrl })
+          });
+          if (res.ok) {
+            const payload = await res.json();
+            stateData.voters = payload.state.voters;
+          }
+        } catch (err) {}
+      }
+
+      // Re-open/refresh the modal in Registered state so it shows the newly registered image & "Proceed for voting" message!
+      renderAllViews();
+      openBiometricModal(voter.username);
+    }
+
+    function proceedFromPopupToVoting() {
+      const voter = stateData.voters.find((v) => v.username === activeModalVoterUsername);
+      if (voter) {
+        applyPreFilledVoterSessionToBooth(voter);
+      }
       closeBiometricModal();
       switchTabById("booth");
+      const ballotCard = document.getElementById("electronicBallotCard");
+      if (ballotCard) {
+        ballotCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function closeBiometricModal() {
+      stopModalCameraStream();
+      document.getElementById("biometricScanModal").classList.remove("open");
+      document.getElementById("modalLaserLine").classList.remove("scanning");
     }
 
     // ====================================================================
@@ -1992,7 +2072,6 @@ class Blockchain:
         stateData.blocks = JSON.parse(JSON.stringify(INITIAL_CHAIN));
         stateData.is_valid = true;
       }
-      preloadVoterPortraits();
       renderAllViews();
       document.getElementById("addPartyFeedback").innerHTML =
         `<span style="color:var(--primary-dark);">↺ Election Demo Baseline restored (8 Parties, 5 Voters, 5 PoW Blocks).</span>`;
@@ -2040,7 +2119,7 @@ class Blockchain:
         }
         const hashHex = await sha256Hex("ZK_NULLIFIER::" + username);
         const nullifier = "zk_nullifier_" + hashHex.slice(0, 24);
-        const faceSig = await sha256Hex("BIOMETRIC_EMBEDDING::" + username);
+        const faceSig = profileImage ? await sha256Hex("BIOMETRIC_EMBEDDING::" + username) : "";
         stateData.voters.unshift({
           username,
           full_name: fullName || username,
@@ -2053,11 +2132,12 @@ class Blockchain:
           has_voted: false,
           nullifier
         });
-        fb.innerHTML = `<span style="color:var(--emerald);">✓ Form-6 Enrollment Complete for '${fullName}' (@${username}). ZK Nullifier: ${nullifier}</span>`;
+        fb.innerHTML = `<span style="color:var(--emerald);">✓ Form-6 Enrollment Complete for '${fullName}' (@${username}). ${
+          profileImage ? "Pre-registered portrait attached." : "Click '📷 Capture Face Popup' below to capture & register face via camera."
+        }</span>`;
       }
 
       document.getElementById("regUsername").value = "";
-      preloadVoterPortraits();
       renderAllViews();
     }
 
@@ -2112,97 +2192,17 @@ class Blockchain:
     }
 
     // ====================================================================
-    // 9. BIOMETRIC BOOTH SNAPSHOT, VALIDATION & ENCRYPTED VOTE MINING
+    // 9. BIOMETRIC BOOTH VOTER CHANGE & ENCRYPTED VOTE MINING
     // ====================================================================
     function onBoothVoterChange() {
-      currentValidatedVoter = null;
-      snapshotTakenForCurrentVoter = false;
-      document.getElementById("biometricStatusBadge").textContent = "AWAITING SNAPSHOT";
-      document.getElementById("ballotTableHeading").textContent = "Step 2 — Official Electronic Ballot Sheet (/ValidateUser)";
-      document.getElementById("biometricValidationBanner").innerHTML =
-        `Status: Voter switched. Click <strong>"🔍 Open Human Biometric Scan Popup"</strong> or <strong>"📸 Quick Booth Snapshot"</strong> to verify identity.`;
+      const selectedUsername = document.getElementById("boothVoterSelect").value;
+      const voter = stateData.voters.find((v) => v.username === selectedUsername);
       document.getElementById("voteReceiptContainer").style.display = "none";
       renderAllViews();
-      drawSimulatedBiometricFeed();
-    }
-
-    function drawSimulatedBiometricFeed() {
-      const voterUsername = document.getElementById("boothVoterSelect")?.value || "ateeqwahlan";
-      const voter = stateData.voters.find((v) => v.username === voterUsername) || stateData.voters[0];
-      if (!voter) return;
-      drawHumanFaceWithBiometricHUD(document.getElementById("simulatedCameraCanvas"), voter, false, true);
-    }
-
-    async function startLiveWebcam() {
-      const video = document.getElementById("webcamVideo");
-      const simCanvas = document.getElementById("simulatedCameraCanvas");
-      try {
-        liveWebcamStream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240 } });
-        video.srcObject = liveWebcamStream;
-        video.style.display = "block";
-        simCanvas.style.display = "none";
-      } catch (err) {
-        video.style.display = "none";
-        simCanvas.style.display = "block";
-        drawSimulatedBiometricFeed();
+      // Open the unified biometric popup automatically when selecting a voter in the booth!
+      if (voter) {
+        openBiometricModal(voter.username);
       }
-    }
-
-    function takeBiometricSnapshot() {
-      const voterUsername = document.getElementById("boothVoterSelect").value;
-      const voter = stateData.voters.find((v) => v.username === voterUsername) || stateData.voters[0];
-      const snapCanvas = document.getElementById("snapshotCanvas");
-      const video = document.getElementById("webcamVideo");
-      const laser = document.getElementById("boothLaserLine");
-
-      if (laser) {
-        laser.classList.add("scanning");
-        setTimeout(() => laser.classList.remove("scanning"), 1100);
-      }
-
-      if (liveWebcamStream && video.style.display !== "none") {
-        const sctx = snapCanvas.getContext("2d");
-        sctx.drawImage(video, 0, 0, 320, 240);
-      } else {
-        drawHumanFaceWithBiometricHUD(snapCanvas, voter, true, true);
-      }
-
-      snapshotTakenForCurrentVoter = true;
-      document.getElementById("snapshotOverlayLabel").textContent = "FRAME_LOCKED: " + voterUsername.toUpperCase();
-      document.getElementById("biometricStatusBadge").textContent = "SNAPSHOT CAPTURED";
-      document.getElementById("biometricValidationBanner").innerHTML =
-        `Status: <strong>320×240 Human Portrait Snapshot Captured</strong> for <code>${voter.full_name || voterUsername}</code>. Now click <strong>"✓ Validate User"</strong>.`;
-    }
-
-    async function validateBiometricUser() {
-      const voterUsername = document.getElementById("boothVoterSelect").value;
-      const voter = stateData.voters.find((v) => v.username === voterUsername) || stateData.voters[0];
-      if (!snapshotTakenForCurrentVoter) {
-        takeBiometricSnapshot();
-      }
-
-      let bioHash = voter.face_signature || (await sha256Hex("BIOMETRIC_EMBEDDING::" + voterUsername));
-      if (backendConnected) {
-        try {
-          const res = await fetch("/api/voter/validate-biometric", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username: voterUsername, snapshot_data: "320x240_RGB_FRAME" })
-          });
-          if (res.ok) {
-            const data = await res.json();
-            bioHash = data.biometric_hash;
-          }
-        } catch (e) {}
-      }
-
-      currentValidatedVoter = voterUsername;
-      document.getElementById("biometricStatusBadge").textContent = "USER VALIDATED: " + voterUsername.toUpperCase();
-      document.getElementById("ballotTableHeading").textContent =
-        `Step 2 — Official Electronic Ballot Sheet (User Validated as ${voterUsername})`;
-      document.getElementById("biometricValidationBanner").innerHTML =
-        `<span style="color:var(--emerald);font-weight:700;">✓ User Validated as ${voterUsername} (${voter.full_name || voterUsername})</span><br/>` +
-        `256-Bit Facial Descriptor Hash: <code>${bioHash.slice(0, 36)}...</code> | Biometric Confidence: <strong>99.68%</strong>`;
     }
 
     async function castEncryptedBallot(candName, partyName, areaName, partyCode) {
@@ -2211,9 +2211,7 @@ class Blockchain:
       receiptEl.style.display = "block";
 
       if (currentValidatedVoter !== selectedVoter) {
-        receiptEl.style.background = "var(--crimson)";
-        receiptEl.innerHTML =
-          `<strong>✕ BIOMETRIC AUTHENTICATION REQUIRED:</strong> Please validate <strong>${selectedVoter}</strong> via the Human Biometric Scan Popup or Quick Snapshot before casting a ballot.`;
+        openBiometricModal(selectedVoter);
         return;
       }
 
@@ -2255,7 +2253,6 @@ class Blockchain:
         return;
       }
 
-      // Standalone Browser Proof-of-Work Mining
       const voterObj = stateData.voters.find((v) => v.username === selectedVoter);
       if (voterObj && voterObj.has_voted) {
         receiptEl.style.background = "var(--crimson)";
@@ -2394,9 +2391,9 @@ class Blockchain:
 
     function exportElectionAuditJson() {
       const cert = {
-        project: "CivicChain // E-Voting System Using Blockchain Technology (2023-2024)",
+        project: "CivicChain // E-Voting System Using Blockchain Technology",
         architect: "Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)",
-        institution: "LIET (Osmania University)",
+        institution: "LIET (Osmania University ’23)",
         exported_at: new Date().toISOString(),
         chain_height: stateData.blocks.length,
         verified_pow_difficulty: 2,

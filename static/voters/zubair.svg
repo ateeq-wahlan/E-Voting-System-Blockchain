@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 265" width="360" height="265">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#112238"/>
+      <stop offset="100%" stop-color="#08111E"/>
+    </linearGradient>
+    <linearGradient id="skin4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D6A17A"/>
+      <stop offset="100%" stop-color="#B88058"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="265" fill="url(#bg4)"/>
+  <g stroke="#1E3A5F" stroke-width="0.6" opacity="0.45">
+    <line x1="0" y1="53" x2="360" y2="53"/><line x1="0" y1="106" x2="360" y2="106"/>
+    <line x1="0" y1="159" x2="360" y2="159"/><line x1="0" y1="212" x2="360" y2="212"/>
+    <line x1="72" y1="0" x2="72" y2="265"/><line x1="144" y1="0" x2="144" y2="265"/>
+    <line x1="216" y1="0" x2="216" y2="265"/><line x1="288" y1="0" x2="288" y2="265"/>
+  </g>
+  <path d="M84 265 C90 206, 128 190, 180 190 C232 190, 270 206, 276 265 Z" fill="#0F172A"/>
+  <polygon points="158,190 180,236 202,190" fill="#F1F5F9"/>
+  <rect x="161" y="152" width="38" height="44" rx="14" fill="#AF7850"/>
+  <ellipse cx="132" cy="116" rx="8" ry="14" fill="#B88058"/>
+  <ellipse cx="228" cy="116" rx="8" ry="14" fill="#B88058"/>
+  <path d="M134 94 C134 58, 226 58, 226 94 C226 136, 210 166, 180 166 C150 166, 134 136, 134 94 Z" fill="url(#skin4)"/>
+  <path d="M131 94 C130 56, 152 44, 180 44 C208 44, 230 56, 229 94 C222 75, 206 66, 180 66 C154 66, 138 75, 131 94 Z" fill="#090D16"/>
+  <!-- Full Groomed Beard -->
+  <path d="M135 120 C137 152, 155 168, 180 168 C205 168, 223 152, 225 120 C220 140, 204 154, 180 154 C156 154, 140 140, 135 120 Z" fill="#111827" opacity="0.88"/>
+  <path d="M148 96 Q160 91 171 95" stroke="#090D16" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path d="M189 95 Q200 91 212 96" stroke="#090D16" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="160" cy="107" rx="8" ry="4.4" fill="#FFFFFF"/>
+  <circle cx="160" cy="107" r="3.6" fill="#1C1917"/>
+  <ellipse cx="200" cy="107" rx="8" ry="4.4" fill="#FFFFFF"/>
+  <circle cx="200" cy="107" r="3.6" fill="#1C1917"/>
+  <path d="M180 105 L177 127 Q180 130 185 127" stroke="#8C5A38" stroke-width="2.2" fill="none"/>
+  <path d="M167 143 Q180 149 193 143" stroke="#F8FAFC" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g stroke="#10B981" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M112 48 L112 34 L128 34"/><path d="M248 48 L248 34 L232 34"/>
+    <path d="M112 168 L112 182 L128 182"/><path d="M248 168 L248 182 L232 182"/>
+  </g>
+</svg>

@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
+E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
 Module: app.py — Zero-Dependency HTTP/JSON & Static Web Application Server
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
 Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
-Institution: LIET (Osmania University)
-Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
+Institution: LIET (Osmania University ’23)
 ================================================================================
 """
 
@@ -26,13 +25,6 @@ ENGINE = EVotingEngine(BASE_DIR)
 
 
 class EVotingRequestHandler(SimpleHTTPRequestHandler):
-    """
-    Serves the CivicChain E-Voting Blockchain Platform (`index.html`),
-    compatibility endpoints (`/Admin.html`, `/AddParty.html`, `/ViewParty`,
-    `/Signup`, `/Login.html`, `/CastVote.html`, `/ValidateUser`, `/ViewVotes`),
-    and REST JSON API endpoints (`/api/*`).
-    """
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=BASE_DIR, **kwargs)
 
@@ -71,7 +63,6 @@ class EVotingRequestHandler(SimpleHTTPRequestHandler):
             self._send_json(ENGINE.blockchain.verify_chain_integrity())
             return
 
-        # Map original report routes to the unified application interface
         legacy_routes = {
             "/": "/index.html",
             "/index.html": "/index.html",
@@ -150,7 +141,16 @@ class EVotingRequestHandler(SimpleHTTPRequestHandler):
                 email=data.get("email", ""),
                 address=data.get("address", ""),
                 full_name=data.get("full_name", ""),
-                profile_image=data.get("profile_image", "https://randomuser.me/api/portraits/men/75.jpg"),
+                profile_image=data.get("profile_image", ""),
+            )
+            code = 200 if res["status"] == "success" else 400
+            self._send_json({"result": res, "state": ENGINE.get_system_state()}, code)
+            return
+
+        if route == "/api/voter/register-biometric":
+            res = ENGINE.register_biometric_image(
+                username=data.get("username", ""),
+                image_data=data.get("image_data", ""),
             )
             code = 200 if res["status"] == "success" else 400
             self._send_json({"result": res, "state": ENGINE.get_system_state()}, code)
@@ -199,9 +199,9 @@ def run_server(open_browser: bool = True) -> None:
     httpd = HTTPServer(server_address, EVotingRequestHandler)
     url = f"http://127.0.0.1:{PORT}/index.html"
     print("=" * 78)
-    print("  CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023-2024)")
+    print("  CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY")
     print("  Architect: Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)")
-    print("  Institution: LIET (Osmania University) | Portfolio: https://wahlanos.com")
+    print("  Institution: LIET (Osmania University ’23) | WahlanOS.com")
     print(f"  Server listening at: {url}")
     print("=" * 78)
     if open_browser and os.environ.get("NO_BROWSER") != "1":

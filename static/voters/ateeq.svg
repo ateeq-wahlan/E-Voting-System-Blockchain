@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 265" width="360" height="265">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#112239"/>
+      <stop offset="100%" stop-color="#091322"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="42%" r="52%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#091322" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2B48D"/>
+      <stop offset="100%" stop-color="#C89369"/>
+    </linearGradient>
+    <linearGradient id="suit1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="265" fill="url(#bg1)"/>
+  <rect width="360" height="265" fill="url(#glow1)"/>
+  <!-- Subtle Biometric Grid -->
+  <g stroke="#1E3A5F" stroke-width="0.6" opacity="0.45">
+    <line x1="0" y1="53" x2="360" y2="53"/><line x1="0" y1="106" x2="360" y2="106"/>
+    <line x1="0" y1="159" x2="360" y2="159"/><line x1="0" y1="212" x2="360" y2="212"/>
+    <line x1="72" y1="0" x2="72" y2="265"/><line x1="144" y1="0" x2="144" y2="265"/>
+    <line x1="216" y1="0" x2="216" y2="265"/><line x1="288" y1="0" x2="288" y2="265"/>
+  </g>
+  <!-- Shoulders / Blazer & Crisp Shirt -->
+  <path d="M82 265 C86 205, 126 188, 180 188 C234 188, 274 205, 278 265 Z" fill="url(#suit1)"/>
+  <polygon points="156,188 180,244 204,188" fill="#F8FAFC"/>
+  <polygon points="175,202 185,202 187,255 173,255" fill="#0D9488"/>
+  <!-- Neck -->
+  <rect x="161" y="152" width="38" height="44" rx="14" fill="#C48E64"/>
+  <!-- Ears -->
+  <ellipse cx="131" cy="116" rx="8" ry="15" fill="#C89369"/>
+  <ellipse cx="229" cy="116" rx="8" ry="15" fill="#C89369"/>
+  <!-- Head / Face Contour -->
+  <path d="M133 94 C133 58, 227 58, 227 94 C227 136, 212 167, 180 167 C148 167, 133 136, 133 94 Z" fill="url(#skin1)"/>
+  <!-- Hair (Styled Dark Waves) -->
+  <path d="M130 98 C128 60, 152 44, 182 44 C214 44, 232 62, 230 98 C225 78, 212 68, 180 68 C150 68, 136 78, 130 98 Z" fill="#18181B"/>
+  <!-- Well-Groomed Light Beard / Jaw Shadow -->
+  <path d="M135 124 C138 152, 156 167, 180 167 C204 167, 222 152, 225 124 C221 142, 206 156, 180 156 C154 156, 139 142, 135 124 Z" fill="#27272A" opacity="0.72"/>
+  <path d="M162 142 Q180 136 198 142 Q180 140 162 142 Z" fill="#27272A" opacity="0.8"/>
+  <!-- Eyebrows -->
+  <path d="M148 97 Q160 92 171 96" stroke="#18181B" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <path d="M189 96 Q200 92 212 97" stroke="#18181B" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <!-- Eyes -->
+  <ellipse cx="160" cy="107" rx="8" ry="4.5" fill="#FFFFFF"/>
+  <circle cx="160" cy="107" r="3.6" fill="#1E1B18"/>
+  <circle cx="158.8" cy="105.8" r="1.1" fill="#FFFFFF"/>
+  <ellipse cx="200" cy="107" rx="8" ry="4.5" fill="#FFFFFF"/>
+  <circle cx="200" cy="107" r="3.6" fill="#1E1B18"/>
+  <circle cx="198.8" cy="105.8" r="1.1" fill="#FFFFFF"/>
+  <!-- Nose -->
+  <path d="M180 105 L177 127 Q180 130 185 127" stroke="#9C6B46" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Smile / Mouth -->
+  <path d="M167 144 Q180 151 193 144" stroke="#7C2D12" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Subtle Biometric Reticle Corners -->
+  <g stroke="#10B981" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M112 48 L112 34 L128 34"/>
+    <path d="M248 48 L248 34 L232 34"/>
+    <path d="M112 168 L112 182 L128 182"/>
+    <path d="M248 168 L248 182 L232 182"/>
+  </g>
+</svg>

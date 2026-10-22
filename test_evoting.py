@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
+E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
 Module: test_evoting.py — End-to-End Cryptographic & Functional Test Suite
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
 Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
-Institution: LIET (Osmania University)
-Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
+Institution: LIET (Osmania University ’23)
 ================================================================================
 """
 
@@ -33,9 +32,8 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertTrue(state["audit"]["is_valid"])
         for blk in state["audit"]["blocks"]:
             self.assertTrue(blk["stored_hash"].startswith("00"))
-        # Verify all seeded voters have human portrait URLs and EPIC IDs
         for voter in state["voters"]:
-            self.assertTrue(voter["profile_image"].startswith("http"))
+            self.assertTrue(voter["profile_image"].startswith("static/voters/"))
             self.assertTrue(voter["epic_id"].startswith("TS/HYD/"))
 
     def test_02_admin_auth_and_add_delete_party_form2b(self) -> None:
@@ -51,7 +49,6 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertEqual(res["status"], "success")
         self.assertEqual(len(self.engine.list_parties()), 9)
 
-        # Form-2B Party Mandate Revocation (Deletion)
         del_res = self.engine.delete_party(
             party_id=res["party_id"],
             reason="EC Form-2B Candidacy Withdrawal",
@@ -59,7 +56,7 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertEqual(del_res["status"], "success")
         self.assertEqual(len(self.engine.list_parties()), 8)
 
-    def test_03_voter_signup_biometric_and_single_vote_enforcement(self) -> None:
+    def test_03_voter_signup_camera_registration_and_single_vote(self) -> None:
         reg = self.engine.register_voter(
             username="newvoter_hyd",
             full_name="Syed Rayyan Ali",
@@ -67,15 +64,21 @@ class TestEVotingBlockchain(unittest.TestCase):
             contact="9000011111",
             email="newvoter@wahlanos.com",
             address="Jubilee Hills, Hyderabad",
+            profile_image="",
         )
         self.assertEqual(reg["status"], "success")
+        self.assertEqual(reg["profile_image"], "")
+
+        # Register face via popup camera capture
+        cam_reg = self.engine.register_biometric_image("newvoter_hyd", "static/voters/ateeq.svg")
+        self.assertEqual(cam_reg["status"], "success")
+        self.assertEqual(cam_reg["profile_image"], "static/voters/ateeq.svg")
 
         bio = self.engine.validate_biometric_snapshot("newvoter_hyd")
         self.assertEqual(bio["status"], "success")
         self.assertEqual(bio["message"], "User Validated as newvoter_hyd")
         self.assertEqual(bio["full_name"], "Syed Rayyan Ali")
 
-        # Cast first vote -> should succeed and mine Block #5
         vote1 = self.engine.cast_vote(
             username="newvoter_hyd",
             candidatename="Rajeshwar Rao Deshmukh",
@@ -87,7 +90,6 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertEqual(vote1["block_index"], 5)
         self.assertTrue(vote1["current_hash"].startswith("00"))
 
-        # Attempt second vote -> must be rejected by Zero-Knowledge Nullifier check
         vote2 = self.engine.cast_vote(
             username="newvoter_hyd",
             candidatename="Dr. Ananya Reddy",
@@ -98,7 +100,6 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertEqual(vote2["status"], "error")
         self.assertEqual(vote2["code"], "DOUBLE_VOTE_REJECTED")
 
-        # Form-7 Voter Delisting -> revokes off-chain roll entry while keeping Block #5 immutable
         del_voter = self.engine.delete_voter("newvoter_hyd", "EC Form-7 Constituency Migration")
         self.assertEqual(del_voter["status"], "success")
         self.assertTrue(del_voter["had_voted"])
