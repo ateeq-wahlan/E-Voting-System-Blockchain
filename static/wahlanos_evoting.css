@@ -259,7 +259,7 @@ a:hover {
 }
 
 /* ============================================================================
-   MAIN CONTAINER & OVERVIEW HERO WITH SPACIOUS ATOMIC CONSENSUS REACTOR
+   MAIN CONTAINER & OVERVIEW HERO WITH BALANCED LEFT & RIGHT CARDS
    ============================================================================ */
 .main-container {
   max-width: 1320px;
@@ -269,8 +269,8 @@ a:hover {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.12fr 1.08fr;
-  gap: 32px;
+  grid-template-columns: 1.08fr 1.12fr;
+  gap: 28px;
   align-items: stretch;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--border-hairline);
@@ -282,11 +282,12 @@ a:hover {
   border: 1px solid var(--border-hairline);
   border-top: 4px solid var(--primary);
   border-radius: var(--radius-lg);
-  padding: 32px 34px;
+  padding: 28px 30px;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 18px;
 }
 
 .hero-kicker {
@@ -294,23 +295,23 @@ a:hover {
   align-items: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--primary-dark);
   background: var(--primary-soft);
   border: 1px solid var(--primary-border);
   padding: 5px 12px;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-weight: 600;
   width: fit-content;
 }
 
 .hero-title {
-  font-size: 46px;
+  font-size: 40px;
   line-height: 1.08;
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--ink-primary);
 }
 
@@ -320,33 +321,65 @@ a:hover {
 }
 
 .hero-lead {
-  font-size: 15.5px;
+  font-size: 14.8px;
   color: var(--ink-secondary);
-  margin-bottom: 22px;
-  line-height: 1.65;
+  margin-bottom: 16px;
+  line-height: 1.62;
+}
+
+.hero-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.hero-spec-item {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-left: 3px solid var(--primary);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.hero-spec-item .spec-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-spec-item .spec-val {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-primary);
 }
 
 .hero-meta-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 11px;
 }
 
 .meta-chip {
   background: var(--bg-elevated);
   border: 1px solid var(--border-hairline);
-  padding: 5px 11px;
+  padding: 7px 10px;
   border-radius: 6px;
   color: var(--ink-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-wrap: nowrap;
+  gap: 8px;
   align-items: center;
 }
 
@@ -355,14 +388,16 @@ a:hover {
   background: var(--primary-dark);
   color: #FFFFFF;
   border: 1px solid var(--primary-dark);
-  padding: 11px 20px;
-  font-size: 13.5px;
+  padding: 10px 16px;
+  font-size: 13px;
   font-weight: 600;
   border-radius: var(--radius-sm);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
   transition: all 0.16s ease;
 }
 
@@ -376,14 +411,16 @@ a:hover {
   background: var(--bg-surface);
   color: var(--ink-primary);
   border: 1px solid var(--border-strong);
-  padding: 11px 18px;
-  font-size: 13.5px;
+  padding: 10px 14px;
+  font-size: 13px;
   font-weight: 600;
   border-radius: var(--radius-sm);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
   transition: all 0.16s ease;
 }
 
@@ -419,7 +456,7 @@ a:hover {
 }
 
 /* ============================================================================
-   SPACIOUS INTERACTIVE ATOMIC CONSENSUS REACTOR CARD
+   FULL-BLEED INTERACTIVE ATOMIC CONSENSUS REACTOR CARD (Zero Dead Space)
    ============================================================================ */
 .blueprint-card {
   background: var(--bg-navy);
@@ -427,30 +464,103 @@ a:hover {
   border: 1px solid #1E293B;
   border-top: 4px solid #10B981;
   border-radius: var(--radius-lg);
-  padding: 24px 26px;
+  padding: 18px 20px;
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 14px;
+  gap: 10px;
 }
 
-.blueprint-header, .blueprint-footer {
+.blueprint-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #94A3B8;
+  white-space: nowrap;
+  gap: 12px;
+}
+
+.orbit-status-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.orbit-state-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.orbit-state-badge.live {
+  color: #34D399;
+}
+
+.orbit-state-badge.paused {
+  color: #F87171;
+}
+
+.orbit-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.orbit-dot.live {
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: blinkLiveOrbit 1.15s ease-in-out infinite;
+}
+
+.orbit-dot.paused {
+  background: #EF4444;
+  box-shadow: 0 0 8px #EF4444;
+}
+
+@keyframes blinkLiveOrbit {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(0.85); }
+}
+
+.orbit-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  color: #E2E8F0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.orbit-toggle-btn:hover {
+  border-color: #34D399;
+  color: #FFFFFF;
 }
 
 .atomic-canvas-wrap {
-  height: 318px;
+  flex: 1;
+  min-height: 356px;
   background-color: #070F1E;
   background-image:
-    radial-gradient(circle at center, rgba(16, 185, 129, 0.16) 0%, transparent 64%),
+    radial-gradient(circle at center, rgba(16, 185, 129, 0.18) 0%, transparent 68%),
     linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
   background-size: 100% 100%, 26px 26px, 26px 26px;
@@ -458,7 +568,9 @@ a:hover {
   border-radius: var(--radius-md);
   position: relative;
   overflow: hidden;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #atomicConsensusCanvas {
@@ -469,10 +581,10 @@ a:hover {
 }
 
 .atomic-compact-bar {
-  background: rgba(15, 23, 42, 0.90);
+  background: rgba(15, 23, 42, 0.92);
   border: 1px solid rgba(52, 211, 153, 0.30);
   border-radius: 6px;
-  padding: 8px 14px;
+  padding: 8px 13px;
   font-family: var(--font-mono);
   font-size: 11.5px;
   color: #E2E8F0;
@@ -605,7 +717,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* Forms & Custom Styled Dropdown Select (Fixes Point #4 Dropdown Arrow & Spacing) */
+/* Forms & Custom Styled Dropdown Select */
 .form-group {
   margin-bottom: 14px;
 }
@@ -862,7 +974,7 @@ a:hover {
 }
 
 /* ============================================================================
-   POPUP MODALS (Biometric Human Face Scan & Camera Registration Modal)
+   POPUP MODALS (Biometric Scanner, 5-Sec Vote Confirmation Popup, Admin Login)
    ============================================================================ */
 .modal-backdrop {
   position: fixed;
@@ -915,19 +1027,62 @@ a:hover {
   display: block;
 }
 
+/* Vote Cast Confirmation Modal Styles (5-Second Auto-Closing Timer) */
+.vote-confirm-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.vote-confirm-party-emblem {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #FFFFFF;
+  border: 3px solid var(--primary);
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.22);
+  flex-shrink: 0;
+}
+
+.vote-timer-track {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.vote-timer-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary), #10B981);
+  border-radius: 999px;
+  transition: width 1s linear;
+}
+
 /* ============================================================================
-   ENHANCED SYMMETRIC / CENTERED ARCHITECTURAL FOOTER
+   STRUCTURED ARCHITECTURAL FOOTER (No Source Repo Button, Clean Hierarchy)
    ============================================================================ */
 .site-footer {
   border-top: 2px solid var(--border-hairline);
-  padding: 44px 32px 36px;
+  padding: 40px 32px 34px;
   margin-top: 64px;
   background: var(--bg-navy);
   color: #E2E8F0;
 }
 
 .footer-inner {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -941,18 +1096,55 @@ a:hover {
   align-items: center;
   gap: 12px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  padding: 8px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 8px 20px;
   border-radius: 999px;
+}
+
+.footer-attribution-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: var(--radius-md);
+}
+
+.footer-architect-line {
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.footer-credentials-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #CBD5E1;
+}
+
+.footer-cred-pill {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 4px 11px;
+  border-radius: 6px;
 }
 
 .footer-meta-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px 24px;
+  gap: 10px 20px;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11.5px;
   color: #94A3B8;
 }
 
@@ -960,15 +1152,15 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-  margin-top: 4px;
+  gap: 12px;
+  margin-top: 2px;
 }
 
 .footer-link-pill {
-  padding: 7px 16px;
+  padding: 7px 18px;
   border-radius: 999px;
-  background: rgba(13, 148, 136, 0.16);
-  border: 1px solid rgba(52, 211, 153, 0.35);
+  background: rgba(13, 148, 136, 0.18);
+  border: 1px solid rgba(52, 211, 153, 0.38);
   color: #6EE7B7;
   font-family: var(--font-mono);
   font-size: 12px;
@@ -981,8 +1173,11 @@ a:hover {
 }
 
 @media (max-width: 980px) {
-  .hero-grid, .two-col-grid, .three-col-grid, .kpi-grid {
+  .hero-grid, .two-col-grid, .three-col-grid, .kpi-grid, .hero-meta-strip {
     grid-template-columns: 1fr;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
   }
   .hero-title {
     font-size: 34px;

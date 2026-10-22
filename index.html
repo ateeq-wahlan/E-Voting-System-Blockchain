@@ -13,7 +13,7 @@
 <body>
 
   <!-- ====================================================================
-       TOP COMMAND HEADER (No 2023-2024 pill; Direct WahlanOS.com ↗ link)
+       TOP COMMAND HEADER
        ==================================================================== -->
   <header class="top-nav">
     <div class="brand-cluster">
@@ -61,11 +61,11 @@
 
     <!-- ==================================================================
          TAB 1: OVERVIEW, HERO + ATOMIC CONSENSUS CORE & BALLOT ROSTER
-         (Hero & Atomic Hover Interface scoped ONLY to Overview section!)
          ================================================================== -->
     <section id="tab-overview" class="tab-panel active">
 
       <div class="hero-grid">
+        <!-- Left Card: Balanced Layout Using Space Cleanly Without Clustering -->
         <div class="hero-left-card">
           <div>
             <div class="hero-kicker">
@@ -78,36 +78,61 @@
             <p class="hero-lead">
               An end-to-end decentralized electronic voting system combining <strong>320×240 CNN facial biometric verification</strong>, <strong>HMAC-SHA256 Zero-Knowledge voter nullifiers</strong>, <strong>additive homomorphic ballot commitments</strong>, and an immutable <strong>SHA-256 Proof-of-Work blockchain ledger</strong>.
             </p>
+
+            <!-- Structured 2x2 Cryptographic Specification Strip (Fills Left Space Cleanly) -->
+            <div class="hero-spec-grid">
+              <div class="hero-spec-item">
+                <div class="spec-kicker">01 // BIOMETRIC GATE</div>
+                <div class="spec-val">320×240 CNN Face Mesh</div>
+              </div>
+              <div class="hero-spec-item">
+                <div class="spec-kicker">02 // CONSENSUS ENGINE</div>
+                <div class="spec-val">SHA-256 PoW (Difficulty 2)</div>
+              </div>
+              <div class="hero-spec-item">
+                <div class="spec-kicker">03 // BALLOT PRIVACY</div>
+                <div class="spec-val">HMAC-SHA256 ZK-Nullifier</div>
+              </div>
+              <div class="hero-spec-item">
+                <div class="spec-kicker">04 // TALLY INTEGRITY</div>
+                <div class="spec-val">Homomorphic Commitment</div>
+              </div>
+            </div>
+
             <div class="hero-meta-strip">
-              <span class="meta-chip"><strong>Architect:</strong> Ateeq Bin Mubarak Wahlan</span>
+              <span class="meta-chip"><strong>Architect:</strong> Ateeq Wahlan</span>
               <span class="meta-chip"><strong>Roll No:</strong> 160920733003</span>
-              <span class="meta-chip"><strong>Institution:</strong> LIET (Osmania University)</span>
+              <span class="meta-chip"><strong>College:</strong> LIET (OU ’23)</span>
             </div>
           </div>
+
           <div class="hero-actions">
-            <button class="btn-primary" onclick="switchTabById('booth')">Launch Biometric Voting Booth ↗</button>
-            <button class="btn-secondary" onclick="switchTabById('ledger')">Inspect Blockchain &amp; ZK Verifier →</button>
-            <button class="btn-secondary" onclick="openBiometricModal(stateData.voters[0]?.username || 'ateeqwahlan')">Open Biometric Voter Popup 🔍</button>
+            <button class="btn-primary" onclick="switchTabById('booth')">Biometric Voting Booth ↗</button>
+            <button class="btn-secondary" onclick="switchTabById('ledger')">Inspect Ledger →</button>
+            <button class="btn-secondary" onclick="openBiometricModal(stateData.voters[0]?.username || 'ateeqwahlan')">Biometric Popup 🔍</button>
           </div>
         </div>
 
-        <!-- Right Spacious Interactive Atomic Consensus Reactor Card -->
+        <!-- Right Card: Full-Height Atomic Consensus Reactor (Zero Top/Bottom Dead Space, Single-Line Blinking Header) -->
         <div class="blueprint-card">
           <div class="blueprint-header">
-            <span>⚛ ATOMIC CONSENSUS CORE // HOVER OR CLICK ANY ORBIT CIRCLE</span>
-            <div style="display:inline-flex;align-items:center;gap:10px;">
-              <span style="color:#34D399;font-weight:700;">● LIVE ORBIT</span>
-              <button type="button" id="atomPauseBtn" onclick="toggleAtomicOrbit()" style="background:rgba(255,255,255,0.08);border:1px solid rgba(148,163,184,0.3);color:#E2E8F0;font-family:var(--font-mono);font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;">⏸ Pause</button>
+            <span>⚛ ATOMIC CONSENSUS CORE // HOVER ORBIT NODES</span>
+            <div class="orbit-status-cluster">
+              <span id="orbitStateBadge" class="orbit-state-badge live">
+                <span id="orbitStateDot" class="orbit-dot live"></span>
+                <span id="orbitStateText">LIVE ORBIT</span>
+              </span>
+              <button type="button" id="atomPauseBtn" class="orbit-toggle-btn" onclick="toggleAtomicOrbit()">⏸ Pause</button>
             </div>
           </div>
 
           <div class="atomic-canvas-wrap">
-            <canvas id="atomicConsensusCanvas" width="560" height="318"></canvas>
+            <canvas id="atomicConsensusCanvas" width="580" height="365"></canvas>
           </div>
 
           <div class="atomic-compact-bar" id="atomicInspectorBox">
             <span><strong style="color:#34D399;">[CV // BIOMETRICS]:</strong> 320×240 facial landmark hash verification (99.68% match).</span>
-            <span style="color:#94A3B8;font-size:10.5px;">HOVER NODE FOR DETAILS</span>
+            <span style="color:#94A3B8;font-size:10.5px;white-space:nowrap;">NODE 01/04</span>
           </div>
         </div>
       </div>
@@ -165,7 +190,7 @@
             <li><strong>Stage 4 — Unified Biometric Verification &amp; Camera Registration Popup:</strong> Selecting a Voter ID opens the Biometric Popup—displaying their registered portrait (or activating the camera to capture &amp; register one if missing) and pre-filling their voter details for voting.</li>
             <li><strong>Stage 5 — Additive Homomorphic Ballot Encryption:</strong> The selected candidate choice is sealed in an AES-PBKDF2 stream cipher and paired with a homomorphic commitment (`0x...`).</li>
             <li><strong>Stage 6 — SHA-256 Proof-of-Work Mining (`Blockchain.py`):</strong> The mining node increments `block.nonce` until `compute_hash()` produces a SHA-256 digest starting with `'00'` (`difficulty = 2`).</li>
-            <li><strong>Stage 7 — Public Consensus Audit &amp; Form-7 Roll Governance:</strong> Observers verify every block hash and ZK receipt while off-chain Form-7 voter delisting revokes future booth credentials without mutating historical blocks.</li>
+            <li><strong>Stage 7 — 5-Second Ballot Confirmation Popup &amp; Public Consensus Audit:</strong> Casting a vote triggers an instant 5-second auto-closing confirmation popup showing the voter's details, party symbol, and mined block hash.</li>
           </ol>
         </div>
 
@@ -197,7 +222,7 @@ class Blockchain:
             computed_hash = block.compute_hash()
         return computed_hash</code></pre>
           <div style="margin-top:14px;padding:12px 14px;background:var(--bg-elevated);border:1px solid var(--border-hairline);border-radius:8px;font-size:13px;color:var(--ink-secondary);">
-            <strong>Project Attribution:</strong> Architected by <strong>Ateeq Bin Mubarak Wahlan</strong> (Roll No: <code>160920733003</code>) • Department of Computer Science &amp; Engineering • <strong>LIET (Osmania University ’23)</strong>.
+            <strong>Project Attribution:</strong> Architected by <strong>Ateeq Bin Mubarak Wahlan</strong> (Roll No: <code>160920733003</code>) • B.E. Computer Science &amp; Engineering • <strong>LIET (Osmania University ’23)</strong>.
           </div>
         </div>
       </div>
@@ -446,7 +471,7 @@ class Blockchain:
     </section>
 
     <!-- ==================================================================
-         TAB 4: BIOMETRIC VOTING BOOTH (Unified Popup Scanner + Pre-Filled Voter Session)
+         TAB 4: BIOMETRIC VOTING BOOTH (Unified Popup Scanner + 5-Sec Vote Cast Modal)
          ================================================================== -->
     <section id="tab-booth" class="tab-panel">
       <div class="panel-card">
@@ -463,7 +488,7 @@ class Blockchain:
         <!-- Interactive Grid of Human Voter Cards -->
         <div id="boothVoterCardsGrid" class="voter-booth-grid"></div>
 
-        <!-- Selected Voter Session & Pre-Filled Details Bar (No redundant duplicate camera boxes here!) -->
+        <!-- Selected Voter Session & Pre-Filled Details Bar -->
         <div style="background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:var(--radius-md);padding:18px 20px;">
           <div class="two-col-grid" style="margin-bottom:0;align-items:center;">
             <div>
@@ -489,7 +514,7 @@ class Blockchain:
           <div>
             <h2 class="panel-title" id="ballotTableHeading">Step 2 — Official Electronic Ballot Sheet (`/ValidateUser`)</h2>
             <p style="font-size:13.5px;color:var(--ink-secondary);margin-top:2px;">
-              Once voter details are verified and pre-filled from the Biometric Popup, click <strong>Cast Encrypted Ballot</strong> beside your chosen candidate to mine a new Proof-of-Work block.
+              Click <strong>Cast Encrypted Ballot ↗</strong> beside your chosen candidate to mine a Proof-of-Work block and open the <strong>5-Second Voter &amp; Party Confirmation Popup</strong>.
             </p>
           </div>
           <span class="panel-tag">HOMOMORPHIC BALLOT COMMITMENT</span>
@@ -510,9 +535,6 @@ class Blockchain:
             <tbody id="boothBallotTableBody"></tbody>
           </table>
         </div>
-
-        <!-- Blockchain Vote Receipt Banner -->
-        <div id="voteReceiptContainer" style="display:none;" class="receipt-banner"></div>
       </div>
     </section>
 
@@ -594,10 +616,6 @@ class Blockchain:
 
   <!-- ====================================================================
        POPUP MODAL 1: UNIFIED BIOMETRIC SCANNER & CAMERA REGISTRATION POPUP
-       - If Voter ID already has a registered image: displays the portrait,
-         confirms voter details are filled, and lets them Proceed for Voting!
-       - If Voter ID has no registered image (or clicks Camera Capture):
-         accesses the camera to capture & register face to the selected ID!
        ==================================================================== -->
   <div id="biometricScanModal" class="modal-backdrop" onclick="if(event.target===this) closeBiometricModal()">
     <div class="modal-card">
@@ -612,7 +630,6 @@ class Blockchain:
       </div>
 
       <div class="two-col-grid" style="margin-bottom:16px;align-items:start;">
-        <!-- Left: Portrait Image / Live Camera Stream Stage -->
         <div>
           <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-secondary);margin-bottom:6px;display:flex;justify-content:space-between;">
             <span>BIOMETRIC OPTICAL FRAME (320×240)</span>
@@ -621,11 +638,8 @@ class Blockchain:
 
           <div class="modal-portrait-stage">
             <div id="modalLaserLine" class="laser-scan-line"></div>
-            <!-- Registered Portrait Image (Always renders reliably offline & online!) -->
             <img id="modalVoterPortraitImg" src="static/voters/ateeq.svg" alt="Registered Voter Biometric Portrait" />
-            <!-- Live Hardware Webcam Video (Shown when capturing new photo) -->
             <video id="modalWebcamVideo" autoplay playsinline muted style="display:none;"></video>
-            <!-- Optical Camera Fallback / Capture Canvas -->
             <canvas id="modalCaptureCanvas" width="360" height="270" style="display:none;"></canvas>
 
             <div class="reticle-overlay">
@@ -634,11 +648,9 @@ class Blockchain:
             </div>
           </div>
 
-          <!-- Dynamic Camera / Verification Action Buttons -->
           <div id="modalCameraActionRow" style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;"></div>
         </div>
 
-        <!-- Right: Pre-Filled Voter Details & Status Banner -->
         <div>
           <div style="background:var(--bg-elevated);border:1px solid var(--border-hairline);border-radius:8px;padding:14px 16px;margin-bottom:12px;">
             <div style="font-family:var(--font-mono);font-size:11px;color:var(--primary-dark);font-weight:700;margin-bottom:8px;">
@@ -651,13 +663,44 @@ class Blockchain:
         </div>
       </div>
 
-      <!-- Bottom Call-to-Action: "Voter details have been filled — please proceed for voting" OR Blockchain Receipt -->
       <div id="bioModalReceiptSection"></div>
     </div>
   </div>
 
   <!-- ====================================================================
-       POPUP MODAL 2: ELECTORAL COMMISSION ADMIN AUTHORITY LOGIN (RBAC)
+       POPUP MODAL 2: 5-SECOND AUTO-CLOSING VOTE CONFIRMATION POPUP
+       (Displays Voter Details + Large Voted Party Symbol + Mined Block Hash)
+       ==================================================================== -->
+  <div id="voteConfirmationModal" class="modal-backdrop" onclick="if(event.target===this) closeVoteConfirmationModal()">
+    <div class="modal-card" id="voteConfirmationCard" style="max-width:660px;">
+      <div class="panel-header" style="margin-bottom:14px;">
+        <div>
+          <span class="panel-tag" id="voteModalBadge" style="background:var(--emerald-soft);color:var(--emerald);border-color:var(--emerald);">
+            ✓ BLOCKCHAIN BALLOT SEALED
+          </span>
+          <h2 class="panel-title" id="voteModalHeading" style="margin-top:6px;">
+            Encrypted Ballot Confirmed &amp; Mined on Blockchain
+          </h2>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span id="voteModalCountdownText" style="font-family:var(--font-mono);font-size:11.5px;font-weight:700;color:var(--primary-dark);">
+            Auto-closing in 5s
+          </span>
+          <button type="button" class="btn-secondary btn-sm" onclick="closeVoteConfirmationModal()">✕ Close</button>
+        </div>
+      </div>
+
+      <div id="voteModalBodyContent"></div>
+
+      <!-- 5-Second Animated Progress Bar -->
+      <div class="vote-timer-track">
+        <div id="voteModalTimerBar" class="vote-timer-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       POPUP MODAL 3: ELECTORAL COMMISSION ADMIN AUTHORITY LOGIN (RBAC)
        ==================================================================== -->
   <div id="adminLoginModal" class="modal-backdrop" onclick="if(event.target===this) closeAdminAuthModal()">
     <div class="modal-card" style="max-width:480px;">
@@ -690,20 +733,28 @@ class Blockchain:
   </div>
 
   <!-- ====================================================================
-       ENHANCED SYMMETRIC / CENTERED ARCHITECTURAL FOOTER
-       (Mentions Osmania University ’23 & WahlanOS.com)
+       STRUCTURED ARCHITECTURAL FOOTER (No Source Repo Button, Clean Lines)
        ==================================================================== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand-row">
-        <img src="static/evoting_logo.svg" alt="CivicChain Emblem" style="width:28px;height:28px;border-radius:6px;" />
-        <strong style="font-family:var(--font-display);font-size:15.5px;color:#FFFFFF;letter-spacing:-0.01em;">
+        <img src="static/evoting_logo.svg" alt="CivicChain Emblem" style="width:26px;height:26px;border-radius:6px;" />
+        <strong style="font-family:var(--font-display);font-size:15px;color:#FFFFFF;letter-spacing:-0.01em;">
           CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
         </strong>
       </div>
 
-      <div style="max-width:740px;font-size:14px;color:#CBD5E1;line-height:1.6;">
-        Architected &amp; Engineered by <strong style="color:#FFFFFF;">Ateeq Bin Mubarak Wahlan</strong> (Roll No: <code style="color:#34D399;">160920733003</code>) • B.E. Computer Science &amp; Engineering • <strong style="color:#FFFFFF;">LIET (Osmania University ’23)</strong>.
+      <div class="footer-attribution-card">
+        <div class="footer-architect-line">
+          Architected &amp; Engineered by <span style="color:#34D399;">Ateeq Bin Mubarak Wahlan</span>
+        </div>
+        <div class="footer-credentials-row">
+          <span class="footer-cred-pill">Roll No: <strong style="color:#FFFFFF;">160920733003</strong></span>
+          <span>•</span>
+          <span class="footer-cred-pill">B.E. Computer Science &amp; Engineering</span>
+          <span>•</span>
+          <span class="footer-cred-pill"><strong style="color:#FFFFFF;">LIET (Osmania University ’23)</strong></span>
+        </div>
       </div>
 
       <div class="footer-meta-grid">
@@ -717,7 +768,6 @@ class Blockchain:
       <div class="footer-links-row">
         <a href="https://wahlanos.com" class="footer-link-pill" target="_blank" rel="noopener">WahlanOS.com ↗</a>
         <a href="https://github.com/ateeq-wahlan" class="footer-link-pill" target="_blank" rel="noopener">github.com/ateeq-wahlan ↗</a>
-        <a href="https://github.com/ateeq-wahlan/E-Voting-System-Blockchain" class="footer-link-pill" target="_blank" rel="noopener">Source Repository ↗</a>
       </div>
     </div>
   </footer>
@@ -726,7 +776,6 @@ class Blockchain:
        HYBRID ENGINE: Seamless Local Python API + Standalone Browser Engine
        ==================================================================== -->
   <script>
-    // 1. Default Seed Data with Local Offline-Safe SVG Human Portraits
     const INITIAL_PARTIES = [
       { id: 1, candidatename: "Rajeshwar Rao Deshmukh", partyname: "Bharatiya Janata Party (BJP)", areaname: "Jubilee Hills", image: "static/parties/bjp.svg", party_code: "BJP", manifesto: "Digital Infrastructure, Urban Mobility & Industrial Growth Corridors", votes: 0 },
       { id: 2, candidatename: "Dr. Ananya Reddy", partyname: "Indian National Congress (INC)", areaname: "Santosh Nagar", image: "static/parties/inc.svg", party_code: "INC", manifesto: "Universal Healthcare Access, Youth Employment & Civic Welfare", votes: 1 },
@@ -867,10 +916,12 @@ class Blockchain:
     let activeModalVoterUsername = null;
     let modalCameraStream = null;
     let modalCameraActive = false;
+    let voteConfirmCountdownInterval = null;
+    let voteConfirmAutoCloseTimeout = null;
 
     // ====================================================================
-    // 2. SPACIOUS ATOMIC CONSENSUS REACTOR WITH CIRCULAR ACRONYM NODES
-    //    & ISOMETRIC 3D BALLOT VAULT NUCLEUS (Hover shows floating tooltip!)
+    // 2. FULL-BLEED ATOMIC CONSENSUS REACTOR (No Tether Lines, Expanded Orbits,
+    //    Single-Line Blinking Green / Stopped Red Status Indicator)
     // ====================================================================
     const ATOMIC_NODES = [
       {
@@ -878,9 +929,9 @@ class Blockchain:
         acronym: "CV",
         title: "CV // BIOMETRICS",
         shortDesc: "320×240 facial landmark hash verification (99.68% match).",
-        rx: 205,
-        ry: 82,
-        tiltDeg: -18,
+        rx: 232,
+        ry: 104,
+        tiltDeg: -19,
         angle: 0.4,
         speed: 0.010,
         color: "#10B981"
@@ -890,9 +941,9 @@ class Blockchain:
         acronym: "PoW",
         title: "PoW // MINING",
         shortDesc: "Difficulty-2 SHA-256 nonce search requiring leading '00' digest.",
-        rx: 205,
-        ry: 82,
-        tiltDeg: 22,
+        rx: 232,
+        ry: 104,
+        tiltDeg: 21,
         angle: 2.2,
         speed: 0.009,
         color: "#38BDF8"
@@ -902,8 +953,8 @@ class Blockchain:
         acronym: "ZKP",
         title: "ZKP // NULLIFIER",
         shortDesc: "One-way HMAC-SHA256 voter nullifier prevents double voting.",
-        rx: 150,
-        ry: 102,
+        rx: 172,
+        ry: 126,
         tiltDeg: 62,
         angle: 3.8,
         speed: 0.0115,
@@ -914,9 +965,9 @@ class Blockchain:
         acronym: "SHA",
         title: "SHA // COMMIT",
         shortDesc: "Additive homomorphic commitment seals encrypted ballot choice.",
-        rx: 205,
-        ry: 82,
-        tiltDeg: -18,
+        rx: 232,
+        ry: 104,
+        tiltDeg: -19,
         angle: 3.55,
         speed: 0.010,
         color: "#A78BFA"
@@ -933,7 +984,7 @@ class Blockchain:
       if (box && node) {
         box.innerHTML = `
           <span><strong style="color:${node.color};">[${node.title}]:</strong> ${node.shortDesc}</span>
-          <span style="color:#94A3B8;font-size:10.5px;">NODE 0${idx + 1}/04</span>
+          <span style="color:#94A3B8;font-size:10.5px;white-space:nowrap;">NODE 0${idx + 1}/04</span>
         `;
       }
     }
@@ -941,34 +992,57 @@ class Blockchain:
     function toggleAtomicOrbit() {
       atomicOrbitRunning = !atomicOrbitRunning;
       const btn = document.getElementById("atomPauseBtn");
-      if (btn) btn.textContent = atomicOrbitRunning ? "⏸ Pause" : "▶ Orbit";
+      const badge = document.getElementById("orbitStateBadge");
+      const dot = document.getElementById("orbitStateDot");
+      const text = document.getElementById("orbitStateText");
+
+      if (atomicOrbitRunning) {
+        if (btn) btn.textContent = "⏸ Pause";
+        if (badge) {
+          badge.classList.remove("paused");
+          badge.classList.add("live");
+        }
+        if (dot) {
+          dot.classList.remove("paused");
+          dot.classList.add("live");
+        }
+        if (text) text.textContent = "LIVE ORBIT";
+      } else {
+        if (btn) btn.textContent = "▶ Resume";
+        if (badge) {
+          badge.classList.remove("live");
+          badge.classList.add("paused");
+        }
+        if (dot) {
+          dot.classList.remove("live");
+          dot.classList.add("paused");
+        }
+        if (text) text.textContent = "ORBIT STOPPED";
+      }
     }
 
     function drawIsometricBallotVaultNucleus(ctx, cx, cy, pulse) {
-      // Outer radial aura
-      const grad = ctx.createRadialGradient(cx, cy, 8, cx, cy, 56 * pulse);
-      grad.addColorStop(0, "rgba(16, 185, 129, 0.40)");
-      grad.addColorStop(0.6, "rgba(13, 148, 136, 0.14)");
+      const grad = ctx.createRadialGradient(cx, cy, 8, cx, cy, 62 * pulse);
+      grad.addColorStop(0, "rgba(16, 185, 129, 0.42)");
+      grad.addColorStop(0.6, "rgba(13, 148, 136, 0.15)");
       grad.addColorStop(1, "rgba(16, 185, 129, 0)");
       ctx.fillStyle = grad;
       ctx.beginPath();
-      ctx.arc(cx, cy, 56 * pulse, 0, Math.PI * 2);
+      ctx.arc(cx, cy, 62 * pulse, 0, Math.PI * 2);
       ctx.fill();
 
-      // Rotating dashed quantum core ring
       ctx.save();
       ctx.translate(cx, cy);
       ctx.rotate(Date.now() * 0.0008);
       ctx.beginPath();
-      ctx.arc(0, 0, 34, 0, Math.PI * 2);
+      ctx.arc(0, 0, 38, 0, Math.PI * 2);
       ctx.strokeStyle = "rgba(110, 231, 183, 0.45)";
-      ctx.lineWidth = 1.4;
+      ctx.lineWidth = 1.5;
       ctx.setLineDash([4, 4]);
       ctx.stroke();
       ctx.restore();
 
-      // Isometric 3D Hexagonal Ballot Cube + Checkmark Crest in the Center
-      const R = 24;
+      const R = 26;
       ctx.save();
       ctx.translate(cx, cy);
 
@@ -982,7 +1056,7 @@ class Blockchain:
       ctx.fillStyle = "#14B8A6";
       ctx.fill();
       ctx.strokeStyle = "#A7F3D0";
-      ctx.lineWidth = 1.4;
+      ctx.lineWidth = 1.5;
       ctx.stroke();
 
       // Left face
@@ -1007,22 +1081,22 @@ class Blockchain:
       ctx.fill();
       ctx.stroke();
 
-      // Glowing ballot slot on top diamond
+      // Ballot slot on top diamond
       ctx.beginPath();
-      ctx.moveTo(-6, -R * 0.52);
-      ctx.lineTo(6, -R * 0.52);
+      ctx.moveTo(-7, -R * 0.52);
+      ctx.lineTo(7, -R * 0.52);
       ctx.strokeStyle = "#FFFFFF";
-      ctx.lineWidth = 2.4;
+      ctx.lineWidth = 2.5;
       ctx.lineCap = "round";
       ctx.stroke();
 
-      // Crisp Verified Checkmark on front crest
+      // Verified Checkmark on front crest
       ctx.beginPath();
       ctx.moveTo(-6, 5);
-      ctx.lineTo(-1.5, 10);
-      ctx.lineTo(7, 0);
+      ctx.lineTo(-1.5, 10.5);
+      ctx.lineTo(7.5, 0);
       ctx.strokeStyle = "#6EE7B7";
-      ctx.lineWidth = 2.4;
+      ctx.lineWidth = 2.5;
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
       ctx.stroke();
@@ -1045,7 +1119,7 @@ class Blockchain:
         ATOMIC_NODES.forEach((n, idx) => {
           if (n._screenX !== undefined && n._screenY !== undefined) {
             const dist = Math.hypot(mx - n._screenX, my - n._screenY);
-            if (dist <= 26) found = idx;
+            if (dist <= 28) found = idx;
           }
         });
         hoveredAtomicIndex = found;
@@ -1074,11 +1148,11 @@ class Blockchain:
 
         ctx.clearRect(0, 0, W, H);
 
-        // 1. Draw 3 Elliptical Atomic Orbital Paths with generous top/bottom margin
+        // 1. Draw 3 Full-Canvas Elliptical Orbital Rings
         const rings = [
-          { rx: 205, ry: 82, tilt: (-18 * Math.PI) / 180, stroke: "rgba(16, 185, 129, 0.28)" },
-          { rx: 205, ry: 82, tilt: (22 * Math.PI) / 180, stroke: "rgba(56, 189, 248, 0.26)" },
-          { rx: 150, ry: 102, tilt: (62 * Math.PI) / 180, stroke: "rgba(167, 139, 250, 0.24)" }
+          { rx: 232, ry: 104, tilt: (-19 * Math.PI) / 180, stroke: "rgba(16, 185, 129, 0.30)" },
+          { rx: 232, ry: 104, tilt: (21 * Math.PI) / 180, stroke: "rgba(56, 189, 248, 0.28)" },
+          { rx: 172, ry: 126, tilt: (62 * Math.PI) / 180, stroke: "rgba(167, 139, 250, 0.26)" }
         ];
 
         rings.forEach((r) => {
@@ -1088,8 +1162,8 @@ class Blockchain:
           ctx.beginPath();
           ctx.ellipse(0, 0, r.rx, r.ry, 0, 0, Math.PI * 2);
           ctx.strokeStyle = r.stroke;
-          ctx.lineWidth = 1.5;
-          ctx.setLineDash([5, 5]);
+          ctx.lineWidth = 1.6;
+          ctx.setLineDash([6, 5]);
           ctx.stroke();
           ctx.restore();
         });
@@ -1098,7 +1172,7 @@ class Blockchain:
         const pulse = 1 + 0.06 * Math.sin(Date.now() * 0.004);
         drawIsometricBallotVaultNucleus(ctx, cx, cy, pulse);
 
-        // 3. Draw Circular Acronym Nodes Along the Orbits (No awkward sliding boxes!)
+        // 3. Draw Circular Acronym Nodes Along the Orbits (No stray tether lines!)
         ATOMIC_NODES.forEach((node, idx) => {
           if (atomicOrbitRunning && hoveredAtomicIndex !== idx) {
             node.angle = (node.angle + node.speed) % (Math.PI * 2);
@@ -1115,27 +1189,14 @@ class Blockchain:
 
           const isHovered = idx === hoveredAtomicIndex;
           const isSelected = idx === selectedAtomicIndex || isHovered;
-          const radius = isHovered ? 22 : 19;
+          const radius = isHovered ? 23 : 20;
 
-          // Subtle energy tether when hovered/selected
-          if (isSelected) {
-            ctx.save();
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(x, y);
-            ctx.strokeStyle = node.color;
-            ctx.globalAlpha = 0.42;
-            ctx.lineWidth = 1.3;
-            ctx.stroke();
-            ctx.restore();
-          }
-
-          // Outer glow ring on the circular atom
+          // Outer glow halo on circular atom
           ctx.save();
           ctx.beginPath();
-          ctx.arc(x, y, radius + 4, 0, Math.PI * 2);
+          ctx.arc(x, y, radius + (isHovered ? 7 : 4), 0, Math.PI * 2);
           ctx.fillStyle = node.color;
-          ctx.globalAlpha = isSelected ? 0.24 : 0.10;
+          ctx.globalAlpha = isHovered ? 0.30 : isSelected ? 0.18 : 0.10;
           ctx.fill();
           ctx.restore();
 
@@ -1143,35 +1204,35 @@ class Blockchain:
           ctx.save();
           ctx.beginPath();
           ctx.arc(x, y, radius, 0, Math.PI * 2);
-          ctx.fillStyle = isSelected ? "#0F172A" : "#081020";
+          ctx.fillStyle = isHovered ? "#0F172A" : "#081020";
           ctx.fill();
-          ctx.lineWidth = isSelected ? 2.6 : 1.8;
+          ctx.lineWidth = isHovered ? 2.8 : 2.0;
           ctx.strokeStyle = node.color;
           ctx.stroke();
 
           ctx.fillStyle = "#FFFFFF";
-          ctx.font = "700 10.5px 'IBM Plex Mono', monospace";
+          ctx.font = "700 11px 'IBM Plex Mono', monospace";
           ctx.textAlign = "center";
           ctx.textBaseline = "middle";
           ctx.fillText(node.acronym, x, y + 0.5);
           ctx.restore();
         });
 
-        // 4. If user is hovering over a circular node, draw a sleek floating tooltip
+        // 4. Floating Tooltip on Hover
         if (hoveredAtomicIndex !== -1) {
           const hn = ATOMIC_NODES[hoveredAtomicIndex];
-          const tipW = 246;
-          const tipH = 46;
+          const tipW = 264;
+          const tipH = 48;
           let tx = hn._screenX - tipW / 2;
-          let ty = hn._screenY - 58;
-          if (tx < 10) tx = 10;
-          if (tx + tipW > W - 10) tx = W - tipW - 10;
-          if (ty < 10) ty = hn._screenY + 28;
+          let ty = hn._screenY - 62;
+          if (tx < 12) tx = 12;
+          if (tx + tipW > W - 12) tx = W - tipW - 12;
+          if (ty < 12) ty = hn._screenY + 30;
 
           ctx.save();
           ctx.fillStyle = "rgba(11, 21, 40, 0.96)";
           ctx.strokeStyle = hn.color;
-          ctx.lineWidth = 1.5;
+          ctx.lineWidth = 1.6;
           ctx.beginPath();
           ctx.roundRect(tx, ty, tipW, tipH, 6);
           ctx.fill();
@@ -1180,11 +1241,11 @@ class Blockchain:
           ctx.fillStyle = hn.color;
           ctx.font = "700 10.5px 'IBM Plex Mono', monospace";
           ctx.textAlign = "left";
-          ctx.fillText(hn.title, tx + 10, ty + 16);
+          ctx.fillText(hn.title, tx + 11, ty + 17);
 
           ctx.fillStyle = "#E2E8F0";
-          ctx.font = "400 10px 'DM Sans', sans-serif";
-          ctx.fillText(hn.shortDesc.slice(0, 44) + (hn.shortDesc.length > 44 ? "..." : ""), tx + 10, ty + 33);
+          ctx.font = "400 10.5px 'DM Sans', sans-serif";
+          ctx.fillText(hn.shortDesc.slice(0, 46) + (hn.shortDesc.length > 46 ? "..." : ""), tx + 11, ty + 34);
           ctx.restore();
         }
 
@@ -1376,6 +1437,9 @@ class Blockchain:
               voter_nullifier: voter.nullifier,
               homomorphic_commitment: tx.homomorphic_commitment,
               digital_signature: tx.digital_signature,
+              candidate_name: tx.candidate_name,
+              party_name: tx.party_name,
+              party_code: tx.party_code,
               area_name: tx.area_name
             };
           }
@@ -1561,7 +1625,7 @@ class Blockchain:
           .join("");
       }
 
-      // 5. Biometric Booth Ballot Sheet Table
+      // 5. Biometric Booth Ballot Sheet Table (Passes party image so confirmation popup shows large icon!)
       const ballotBody = document.getElementById("boothBallotTableBody");
       ballotBody.innerHTML = stateData.parties
         .map(
@@ -1573,7 +1637,7 @@ class Blockchain:
           <td><span class="party-code-badge">${p.areaname}</span></td>
           <td style="font-size:12.5px;color:var(--ink-secondary);">${p.manifesto || "Civic Infrastructure & Transparent Governance"}</td>
           <td>
-            <button class="btn-primary btn-sm" onclick="castEncryptedBallot('${p.candidatename.replace(/'/g, "\\'")}', '${p.partyname.replace(/'/g, "\\'")}', '${p.areaname.replace(/'/g, "\\'")}', '${p.party_code}')">
+            <button class="btn-primary btn-sm" onclick="castEncryptedBallot('${p.candidatename.replace(/'/g, "\\'")}', '${p.partyname.replace(/'/g, "\\'")}', '${p.areaname.replace(/'/g, "\\'")}', '${p.party_code}', '${p.image}')">
               Cast Encrypted Ballot ↗
             </button>
           </td>
@@ -1684,11 +1748,6 @@ class Blockchain:
 
     // ====================================================================
     // 6. UNIFIED BIOMETRIC POPUP WORKFLOW
-    //    - If Voter ID already has a registered image: displays the image
-    //      immediately, pre-fills voter details, and says:
-    //      "Voter details have been filled — please proceed for voting."
-    //    - If Voter ID has no registered image yet (or clicks Camera Capture):
-    //      accesses the camera to capture & register it to the selected ID!
     // ====================================================================
     function stopModalCameraStream() {
       if (modalCameraStream) {
@@ -1763,7 +1822,6 @@ class Blockchain:
       document.getElementById("biometricScanModal").classList.add("open");
 
       if (hasRegisteredImage) {
-        // CASE A: Voter ALREADY has a registered biometric portrait image!
         imgEl.style.display = "block";
         imgEl.src = voter.profile_image;
         videoEl.style.display = "none";
@@ -1776,7 +1834,6 @@ class Blockchain:
         stateLabel.style.color = "var(--emerald)";
         document.getElementById("modalReticleRight").textContent = "MATCH: 99.68%";
 
-        // Automatically mark voter details as filled for the voting booth
         applyPreFilledVoterSessionToBooth(voter);
 
         scanBox.innerHTML = `
@@ -1820,7 +1877,6 @@ class Blockchain:
           `;
         }
       } else {
-        // CASE B: Voter does NOT have a registered image yet -> Open Camera to Capture & Register to Selected ID!
         startModalCameraCaptureMode();
       }
     }
@@ -1864,7 +1920,6 @@ class Blockchain:
         canvasEl.style.display = "none";
         modalCameraActive = true;
       } catch (err) {
-        // If hardware webcam is unavailable/denied, render an interactive optical camera preview on canvasEl
         videoEl.style.display = "none";
         canvasEl.style.display = "block";
         modalCameraActive = false;
@@ -1927,7 +1982,6 @@ class Blockchain:
         } catch (err) {}
       }
 
-      // Re-open/refresh the modal in Registered state so it shows the newly registered image & "Proceed for voting" message!
       renderAllViews();
       openBiometricModal(voter.username);
     }
@@ -1952,7 +2006,172 @@ class Blockchain:
     }
 
     // ====================================================================
-    // 7. ADMIN CONSOLE ACTIONS (FORM-2A ADD PARTY, FORM-2B DELETE PARTY, RESET)
+    // 7. 5-SECOND AUTO-CLOSING VOTE CONFIRMATION POPUP MODAL
+    //    Shows Voter Portrait & Details + Large Party Icon + Mined Block Hash
+    // ====================================================================
+    function closeVoteConfirmationModal() {
+      if (voteConfirmCountdownInterval) {
+        clearInterval(voteConfirmCountdownInterval);
+        voteConfirmCountdownInterval = null;
+      }
+      if (voteConfirmAutoCloseTimeout) {
+        clearTimeout(voteConfirmAutoCloseTimeout);
+        voteConfirmAutoCloseTimeout = null;
+      }
+      document.getElementById("voteConfirmationModal").classList.remove("open");
+    }
+
+    function openVoteConfirmationModal(options) {
+      closeVoteConfirmationModal();
+
+      const {
+        isDuplicate,
+        voter,
+        candidateName,
+        partyName,
+        areaName,
+        partyCode,
+        partyImage,
+        blockIndex,
+        nonce,
+        previousHash,
+        currentHash,
+        commitment
+      } = options;
+
+      const cardEl = document.getElementById("voteConfirmationCard");
+      const badgeEl = document.getElementById("voteModalBadge");
+      const headingEl = document.getElementById("voteModalHeading");
+      const bodyEl = document.getElementById("voteModalBodyContent");
+      const countdownEl = document.getElementById("voteModalCountdownText");
+      const timerBarEl = document.getElementById("voteModalTimerBar");
+
+      const voterPortrait = (voter && voter.profile_image) ? voter.profile_image : "static/voters/ateeq.svg";
+      const voterFullName = (voter && voter.full_name) ? voter.full_name : (voter ? voter.username : "Registered Citizen");
+      const voterEpic = (voter && voter.epic_id) ? voter.epic_id : "TS/HYD/160920/003";
+      const voterNullifier = (voter && voter.nullifier) ? voter.nullifier : "zk_nullifier_verified";
+
+      if (isDuplicate) {
+        cardEl.style.borderTopColor = "var(--crimson)";
+        badgeEl.style.background = "var(--crimson-soft)";
+        badgeEl.style.color = "var(--crimson)";
+        badgeEl.style.borderColor = "rgba(220,38,38,0.35)";
+        badgeEl.textContent = "🔒 DOUBLE-VOTE PREVENTION TRIGGERED";
+        headingEl.textContent = `Ballot Already Cast by ${voterFullName}`;
+        timerBarEl.style.background = "var(--crimson)";
+
+        bodyEl.innerHTML = `
+          <div class="vote-confirm-hero" style="border-color:rgba(220,38,38,0.35);background:#FEF2F2;">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <img src="${voterPortrait}" alt="${voterFullName}" class="voter-avatar-thumb" style="width:72px;height:72px;border-color:var(--crimson);" />
+              <div>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--crimson);font-weight:700;">VOTER IDENTITY VERIFIED</div>
+                <div style="font-size:17px;font-weight:700;color:var(--ink-primary);">${voterFullName}</div>
+                <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-secondary);">@${voter.username} • EPIC: ${voterEpic}</div>
+              </div>
+            </div>
+
+            <div style="font-size:26px;color:var(--crimson);font-weight:700;">🔒</div>
+
+            <div style="display:flex;align-items:center;gap:14px;">
+              <img src="${partyImage || 'static/parties/nota.svg'}" alt="${partyName}" class="vote-confirm-party-emblem" style="border-color:var(--crimson);" />
+              <div>
+                <div style="font-family:var(--font-mono);font-size:11px;color:var(--primary-dark);font-weight:700;">RECORDED BALLOT CHOICE</div>
+                <div style="font-size:16.5px;font-weight:700;color:var(--ink-primary);">${candidateName}</div>
+                <div style="font-size:13px;color:var(--ink-secondary);font-weight:600;">${partyName} (${areaName})</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#0B1528;color:#F8FAFC;border-left:4px solid var(--crimson);border-radius:8px;padding:14px 16px;font-family:var(--font-mono);font-size:11.5px;line-height:1.65;">
+            <div style="color:#F87171;font-weight:700;margin-bottom:4px;">
+              ✕ One-Person-One-Vote Enforcement: Duplicate Ballot Rejected
+            </div>
+            <div><strong>Voter ZK Nullifier:</strong> ${voterNullifier}</div>
+            <div><strong>Previously Mined Block:</strong> #${blockIndex} (PoW Nonce: ${nonce})</div>
+            <div><strong>Immutable Block SHA-256:</strong> ${currentHash}</div>
+          </div>
+        `;
+      } else {
+        cardEl.style.borderTopColor = "var(--emerald)";
+        badgeEl.style.background = "var(--emerald-soft)";
+        badgeEl.style.color = "var(--emerald)";
+        badgeEl.style.borderColor = "var(--emerald)";
+        badgeEl.textContent = "✓ VOTE ACCEPTED & MINED IN BLOCKCHAIN";
+        headingEl.textContent = `Ballot Confirmed for ${voterFullName}`;
+        timerBarEl.style.background = "linear-gradient(90deg, var(--primary), #10B981)";
+
+        bodyEl.innerHTML = `
+          <div class="vote-confirm-hero">
+            <!-- Voter Info Block -->
+            <div style="display:flex;align-items:center;gap:14px;">
+              <img src="${voterPortrait}" alt="${voterFullName}" class="voter-avatar-thumb" style="width:74px;height:74px;border-width:3px;" />
+              <div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--primary-dark);font-weight:700;">VALIDATED VOTER</div>
+                <div style="font-size:17px;font-weight:700;color:var(--ink-primary);">${voterFullName}</div>
+                <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-secondary);">@${voter.username} • ${voterEpic}</div>
+                <div style="font-size:12px;color:var(--ink-muted);">${voter.address}</div>
+              </div>
+            </div>
+
+            <div style="font-family:var(--font-mono);font-size:22px;color:var(--emerald);font-weight:700;">✓ →</div>
+
+            <!-- Voted Party + Large Icon Block -->
+            <div style="display:flex;align-items:center;gap:14px;">
+              <img src="${partyImage || 'static/parties/nota.svg'}" alt="${partyName}" class="vote-confirm-party-emblem" />
+              <div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--emerald);font-weight:700;">VOTED CANDIDATE &amp; PARTY</div>
+                <div style="font-size:17px;font-weight:700;color:var(--ink-primary);">${candidateName}</div>
+                <div style="font-size:13.5px;color:var(--ink-secondary);font-weight:600;">${partyName}</div>
+                <span class="party-code-badge" style="margin-top:4px;">${partyCode || "PARTY"} • ${areaName}</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#0B1528;color:#F8FAFC;border-left:4px solid #10B981;border-radius:8px;padding:14px 16px;font-family:var(--font-mono);font-size:11.5px;line-height:1.65;word-break:break-all;">
+            <div style="color:#34D399;font-weight:700;font-size:12.5px;margin-bottom:4px;">
+              ✓ Proof-of-Work Block #${blockIndex} Mined &amp; Linked (Nonce: ${nonce})
+            </div>
+            <div><strong>Voter ZK Nullifier:</strong> ${voterNullifier}</div>
+            <div><strong>Previous Block Hash:</strong> ${previousHash}</div>
+            <div><strong>Current Block Hash:</strong> ${currentHash}</div>
+            <div><strong>Homomorphic Commitment:</strong> ${commitment}</div>
+          </div>
+        `;
+      }
+
+      // Start 5-Second Auto-Close Timer + Animated Progress Bar
+      let secondsLeft = 5;
+      countdownEl.textContent = `Auto-closing in ${secondsLeft}s`;
+      timerBarEl.style.transition = "none";
+      timerBarEl.style.width = "100%";
+
+      document.getElementById("voteConfirmationModal").classList.add("open");
+
+      // Trigger smooth 5s shrink animation
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          timerBarEl.style.transition = "width 5s linear";
+          timerBarEl.style.width = "0%";
+        });
+      });
+
+      voteConfirmCountdownInterval = setInterval(() => {
+        secondsLeft -= 1;
+        if (secondsLeft > 0) {
+          countdownEl.textContent = `Auto-closing in ${secondsLeft}s`;
+        } else {
+          countdownEl.textContent = "Closing...";
+        }
+      }, 1000);
+
+      voteConfirmAutoCloseTimeout = setTimeout(() => {
+        closeVoteConfirmationModal();
+      }, 5000);
+    }
+
+    // ====================================================================
+    // 8. ADMIN CONSOLE ACTIONS (FORM-2A ADD PARTY, FORM-2B DELETE PARTY, RESET)
     // ====================================================================
     async function handleAddParty(event) {
       event.preventDefault();
@@ -2078,7 +2297,7 @@ class Blockchain:
     }
 
     // ====================================================================
-    // 8. VOTER SIGNUP (FORM-6) & VOTER ROLL DELISTING (FORM-7)
+    // 9. VOTER SIGNUP (FORM-6) & VOTER ROLL DELISTING (FORM-7)
     // ====================================================================
     async function handleVoterSignup(event) {
       event.preventDefault();
@@ -2192,28 +2411,30 @@ class Blockchain:
     }
 
     // ====================================================================
-    // 9. BIOMETRIC BOOTH VOTER CHANGE & ENCRYPTED VOTE MINING
+    // 10. BIOMETRIC BOOTH VOTER CHANGE & ENCRYPTED VOTE MINING
+    //     (Triggers the 5-Second Auto-Closing Confirmation Popup!)
     // ====================================================================
     function onBoothVoterChange() {
       const selectedUsername = document.getElementById("boothVoterSelect").value;
       const voter = stateData.voters.find((v) => v.username === selectedUsername);
-      document.getElementById("voteReceiptContainer").style.display = "none";
       renderAllViews();
-      // Open the unified biometric popup automatically when selecting a voter in the booth!
       if (voter) {
         openBiometricModal(voter.username);
       }
     }
 
-    async function castEncryptedBallot(candName, partyName, areaName, partyCode) {
+    async function castEncryptedBallot(candName, partyName, areaName, partyCode, partyImage) {
       const selectedVoter = document.getElementById("boothVoterSelect").value;
-      const receiptEl = document.getElementById("voteReceiptContainer");
-      receiptEl.style.display = "block";
+      const voterObj = stateData.voters.find((v) => v.username === selectedVoter) || stateData.voters[0];
 
+      // Ensure voter biometrics/details have been verified first
       if (currentValidatedVoter !== selectedVoter) {
         openBiometricModal(selectedVoter);
         return;
       }
+
+      const matchedParty = stateData.parties.find((p) => p.candidatename === candName && p.partyname === partyName);
+      const resolvedPartyImg = partyImage || (matchedParty ? matchedParty.image : "static/parties/nota.svg");
 
       if (backendConnected) {
         const res = await fetch("/api/voter/cast-vote", {
@@ -2229,38 +2450,70 @@ class Blockchain:
         });
         const payload = await res.json();
         if (!res.ok) {
-          receiptEl.style.background = "var(--crimson)";
-          receiptEl.innerHTML = `<strong>✕ ${payload.result.message}</strong>`;
+          const existingReceipt = getVoterVoteReceiptClient(voterObj) || {};
+          const prevParty = stateData.parties.find((p) => p.partyname === existingReceipt.party_name) || matchedParty;
+          openVoteConfirmationModal({
+            isDuplicate: true,
+            voter: voterObj,
+            candidateName: existingReceipt.candidate_name || candName,
+            partyName: existingReceipt.party_name || partyName,
+            areaName: existingReceipt.area_name || areaName,
+            partyCode: existingReceipt.party_code || partyCode,
+            partyImage: prevParty ? prevParty.image : resolvedPartyImg,
+            blockIndex: existingReceipt.block_index || 1,
+            nonce: existingReceipt.nonce || 189,
+            previousHash: existingReceipt.previous_hash || "00...",
+            currentHash: existingReceipt.block_hash || "00...",
+            commitment: existingReceipt.homomorphic_commitment || "0x..."
+          });
           return;
         }
         const r = payload.result;
         stateData.parties = payload.state.parties;
         stateData.voters = payload.state.voters;
         stateData.blocks = payload.state.audit.blocks;
-        receiptEl.style.background = "var(--bg-navy)";
-        receiptEl.innerHTML = `
-          <div style="font-size:15px;font-weight:700;color:#34D399;margin-bottom:6px;">
-            ✓ Your Vote Accepted in Blockchain with below details
-          </div>
-          <strong>Validated Voter:</strong> ${selectedVoter} (Zero-Knowledge Nullifier: ${r.voter_nullifier})<br/>
-          <strong>Selected Candidate:</strong> ${r.candidate_name} — ${r.party_name}<br/>
-          <strong>Previous Hash:</strong> ${r.previous_hash}<br/>
-          <strong>Block No:</strong> ${r.block_index} (PoW Nonce: ${r.nonce})<br/>
-          <strong>Current Hash:</strong> ${r.current_hash}<br/>
-          <strong>Homomorphic Commitment:</strong> ${r.homomorphic_commitment}
-        `;
+        const updatedVoter = stateData.voters.find((v) => v.username === selectedVoter) || voterObj;
         renderAllViews();
+
+        openVoteConfirmationModal({
+          isDuplicate: false,
+          voter: updatedVoter,
+          candidateName: r.candidate_name,
+          partyName: r.party_name,
+          areaName: areaName,
+          partyCode: partyCode,
+          partyImage: resolvedPartyImg,
+          blockIndex: r.block_index,
+          nonce: r.nonce,
+          previousHash: r.previous_hash,
+          currentHash: r.current_hash,
+          commitment: r.homomorphic_commitment
+        });
         return;
       }
 
-      const voterObj = stateData.voters.find((v) => v.username === selectedVoter);
+      // Standalone Browser Mode Check for Double Voting
       if (voterObj && voterObj.has_voted) {
-        receiptEl.style.background = "var(--crimson)";
-        receiptEl.innerHTML =
-          `<strong>✕ Double-Vote Prevention Triggered:</strong> Voter '<code>${selectedVoter}</code>' (Nullifier: <code>${voterObj.nullifier}</code>) has already cast an immutable ballot in this election.`;
+        const existingReceipt = getVoterVoteReceiptClient(voterObj) || {};
+        const prevParty = stateData.parties.find((p) => p.partyname === existingReceipt.party_name) || matchedParty;
+        openVoteConfirmationModal({
+          isDuplicate: true,
+          voter: voterObj,
+          candidateName: existingReceipt.candidate_name || candName,
+          partyName: existingReceipt.party_name || partyName,
+          areaName: existingReceipt.area_name || areaName,
+          partyCode: existingReceipt.party_code || partyCode,
+          partyImage: prevParty ? prevParty.image : resolvedPartyImg,
+          blockIndex: existingReceipt.block_index || 1,
+          nonce: existingReceipt.nonce || 189,
+          previousHash: existingReceipt.previous_hash || "00...",
+          currentHash: existingReceipt.block_hash || "00...",
+          commitment: existingReceipt.homomorphic_commitment || "0x..."
+        });
         return;
       }
 
+      // Mine New Block in Standalone Browser Mode
       const lastBlock = stateData.blocks[stateData.blocks.length - 1];
       const newIndex = lastBlock.index + 1;
       const prevHash = lastBlock.stored_hash;
@@ -2305,26 +2558,28 @@ class Blockchain:
       });
 
       voterObj.has_voted = true;
-      const partyObj = stateData.parties.find((p) => p.candidatename === candName && p.partyname === partyName);
-      if (partyObj) partyObj.votes += 1;
+      if (matchedParty) matchedParty.votes += 1;
 
-      receiptEl.style.background = "var(--bg-navy)";
-      receiptEl.innerHTML = `
-        <div style="font-size:15px;font-weight:700;color:#34D399;margin-bottom:6px;">
-          ✓ Your Vote Accepted in Blockchain with below details
-        </div>
-        <strong>Validated Voter:</strong> ${selectedVoter} (Zero-Knowledge Nullifier: ${voterObj.nullifier})<br/>
-        <strong>Selected Candidate:</strong> ${candName} — ${partyName}<br/>
-        <strong>Previous Hash:</strong> ${prevHash}<br/>
-        <strong>Block No:</strong> ${newIndex} (PoW Nonce: ${nonce})<br/>
-        <strong>Current Hash:</strong> ${currentHash}<br/>
-        <strong>Homomorphic Commitment:</strong> ${commitment}
-      `;
       renderAllViews();
+
+      openVoteConfirmationModal({
+        isDuplicate: false,
+        voter: voterObj,
+        candidateName: candName,
+        partyName: partyName,
+        areaName: areaName,
+        partyCode: partyCode,
+        partyImage: resolvedPartyImg,
+        blockIndex: newIndex,
+        nonce: nonce,
+        previousHash: prevHash,
+        currentHash: currentHash,
+        commitment: commitment
+      });
     }
 
     // ====================================================================
-    // 10. ZK RECEIPT LOOKUP, CONSENSUS AUDIT & TAMPER SIMULATOR
+    // 11. ZK RECEIPT LOOKUP, CONSENSUS AUDIT & TAMPER SIMULATOR
     // ====================================================================
     function verifyZkReceiptLookup() {
       const sel = document.getElementById("zkVerifierSelect");
