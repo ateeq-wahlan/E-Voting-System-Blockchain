@@ -2,12 +2,12 @@
 
 <div align="center">
 
-[![Live Interactive Demo](https://img.shields.io/badge/%F0%9F%97%B3%EF%B8%8F_LIVE_INTERACTIVE_PLATFORM-LAUNCH_IN_BROWSER-0D7C66?style=for-the-badge&logoColor=white)](https://ateeq-wahlan.github.io/E-Voting-System-Blockchain/)
-[![GitHub Codespaces](https://img.shields.io/badge/%E2%98%81%EF%B8%8F_GITHUB_CODESPACES-RUN_PYTHON_BACKEND-0B192C?style=for-the-badge&logo=github&logoColor=white)](https://codespaces.new/ateeq-wahlan/E-Voting-System-Blockchain)
-[![Portfolio](https://img.shields.io/badge/ARCHITECT_PORTFOLIO-WAHLANOS.COM-0284C7?style=for-the-badge)](https://wahlanos.com)
+[![Live Interactive Demo](https://img.shields.io/badge/%F0%9F%97%B3%EF%B8%8F_LIVE_INTERACTIVE_DEMO-LAUNCH_IN_BROWSER-0D9488?style=for-the-badge&logoColor=white)](https://ateeq-wahlan.github.io/E-Voting-System-Blockchain/)
+[![GitHub Codespaces](https://img.shields.io/badge/%E2%98%81%EF%B8%8F_GITHUB_CODESPACES-RUN_PYTHON_BACKEND-0B1528?style=for-the-badge&logo=github&logoColor=white)](https://codespaces.new/ateeq-wahlan/E-Voting-System-Blockchain)
+[![Portfolio](https://img.shields.io/badge/ARCHITECT_PORTFOLIO-WAHLANOS.COM-1D4ED8?style=for-the-badge)](https://wahlanos.com)
 
-**Verifiable elections. Zero-trust consensus.**  
-*A Decentralized Electronic Voting Platform powered by SHA-256 Proof-of-Work Blockchain, Additive Homomorphic Ballot Commitments, Zero-Knowledge Voter Nullifiers, Role-Based Electoral Authority Controls, and Interactive 320×240 Human Biometric Verification.*
+**Cryptographic trust. Verifiable civic democracy.**  
+*A Decentralized Electronic Voting Platform powered by an Interactive Atomic Consensus Core, SHA-256 Proof-of-Work Blockchain (`difficulty = 2`), Additive Homomorphic Ballot Commitments, Zero-Knowledge Voter Nullifiers, Role-Based Electoral Commission Governance (`Form-2A/2B` & `Form-6/7`), and 320×240 Human Face Biometric Verification.*
 
 </div>
 
@@ -18,8 +18,8 @@
 You can explore the complete **CivicChain E-Voting Blockchain Platform** right now in your browser—no local installation or database setup required:
 
 1. **🌐 Zero-Install Interactive Web App (GitHub Pages):**  
-   👉 **[Launch Live CivicChain E-Voting Platform (`index.html`)](https://ateeq-wahlan.github.io/E-Voting-System-Blockchain/)**  
-   *(Includes the Interactive Atomic Consensus Reactor, 8-Party National & Regional Ballot Roster, Role-Locked EC Admin Console with `Form-2A` Registration & `Form-2B` Mandate Revocation, `Form-6` Voter Enrollment & `Form-7` Roll Delisting, Interactive Human Portrait Biometric Scanner Popup, Live Proof-of-Work Block Mining, Zero-Knowledge Receipt Verifier, and Cryptographic Tamper Attack Lab).*
+   👉 **[Launch Live E-Voting Blockchain Platform (`index.html`)](https://ateeq-wahlan.github.io/E-Voting-System-Blockchain/)**  
+   *(Includes the 60fps Interactive Atomic Consensus Reactor, Role-Based Access Control (`Public Viewer` vs. `EC Admin Authority`), Form-2A Party Gazette Registration, Form-2B Party Mandate Revocation, Form-6 Voter Enrollment, Form-7 Electoral Roll Delisting, Interactive Human Face Biometric Scan Popup Modal, Live Proof-of-Work Block Mining, Zero-Knowledge Receipt Verifier, and Tamper Attack Lab).*
 2. **☁️ One-Click Cloud Python Environment (GitHub Codespaces):**  
    👉 **[Open in GitHub Codespaces](https://codespaces.new/ateeq-wahlan/E-Voting-System-Blockchain)** to run the Python backend (`app.py` / `manage.py`), SQLite database (`evoting.db`), and pickled blockchain ledger (`blockchain_ledger.pkl`) in a live cloud container.
 
@@ -29,24 +29,26 @@ You can explore the complete **CivicChain E-Voting Blockchain Platform** right n
 
 | Attribute | Details |
 | :--- | :--- |
-| **Project Title** | **E-Voting System Using Blockchain Technology (`CivicChain`)** |
-| **Architect / Author** | **Ateeq Bin Mubarak Wahlan** |
+| **Project Title** | **CivicChain // E-Voting System Using Blockchain Technology** |
+| **Author / Architect** | **Ateeq Bin Mubarak Wahlan** |
 | **University Roll No.** | **`160920733003`** |
 | **Degree & Branch** | Bachelor of Engineering (B.E.) — Computer Science and Engineering |
-| **Academic Year** | **2023–2024** (Batch 2020–2024) |
 | **Institution** | **LIET (Osmania University)**, Hyderabad |
+| **Project Year** | **2023–2024** |
 | **Portfolio & GitHub** | **[wahlanos.com](https://wahlanos.com)** • **[github.com/ateeq-wahlan](https://github.com/ateeq-wahlan)** |
 
 ---
 
-## ✨ Key Architectural & Functional Highlights
+## ✨ Key Architectural Highlights
 
-- **Interactive Atomic Consensus Engine:** Real-time 60fps orbital visualization on the homepage showing the three core cryptographic rings (`CV BIOMETRICS`, `SHA-256 POW`, and `HOMOMORPHIC ZKP`) revolving around the zero-trust ballot nucleus with live click-to-inspect telemetry.
-- **Role-Based Access Control (`Public Viewer` vs. `EC Admin Authority`):** Distinct data visibility and authority scopes—Public Viewers see privacy-masked voter PII (`9849••••03`) and read-only audit views, while authenticated Electoral Commission Admins (`admin` / `admin`) unlock candidate gazette registration, mandate revocation, voter roll delisting, and full PII inspection.
-- **Party Gazette Registration (`Form-2A`) & Mandate Revocation (`Form-2B`):** Full lifecycle management of political parties and constituency candidates (`addparty`), allowing the EC Admin to register new candidates or disqualify/deregister existing party mandates.
-- **Voter Enrollment (`Form-6`) & Electoral Roll Delisting (`Form-7`):** Full citizen registration (`register`) and off-chain biometric credential revocation, demonstrating how revoking a voter's off-chain login credential preserves the on-chain immutability of any previously mined anonymous ballot (`zk_nullifier_...`).
-- **Interactive Human Portrait Biometric Scanner Popup (`320×240`):** Clicking any voter profile (including voters who have already voted) opens an optical biometric verification modal displaying their real human photograph, animated CNN laser landmark sweep, 99.68% confidence match, and on-chain block receipt.
-- **Cryptographic SHA-256 Proof-of-Work Engine (`Block.py` & `Blockchain.py`):** Every cast vote is encapsulated into a transaction, linked to the `previous_hash` of the preceding block, and mined at `difficulty = 2` (requiring a leading `'00'` SHA-256 digest prefix).
+- **Interactive 60fps Atomic Consensus Reactor:** Live orbital visualization on the homepage where the central ballot nucleus is orbited by 4 interactive cryptographic subsystems (**`CV BIOMETRICS`**, **`SHA-256 POW`**, **`ZK NULLIFIER`**, and **`HOMOMORPHIC ZKP`**)—click or hover any orbiting node to inspect real-time protocol telemetry.
+- **Role-Based Access Control (`Public Viewer Scope` vs. `EC Admin Authority Scope`):**
+  - **Public Viewer Mode (Default):** Masks sensitive citizen PII (`contact`, `email`) in the electoral roll while allowing full public verification of blockchain hashes, live tallies, and Zero-Knowledge ballot receipts.
+  - **EC Admin Authority Mode (`admin` / `admin`):** Unlocks administrative mutation operations (**Form-2A Party Registration**, **Form-2B Party Mandate Revocation**, **Form-7 Voter Roll Delisting**, and **Election Baseline Reset**) and unmasks full electoral roll records.
+- **Statutory Electoral Governance (`Form-2B` Party Deletion & `Form-7` Voter Delisting):**
+  - **Form-2B Electoral Mandate Revocation:** Deregisters a political party candidate from the active `addparty` ballot sheet under official statutory grounds (*RP Act Sec. 37 Candidacy Withdrawal*, *MCC Disqualification*, etc.).
+  - **Form-7 Electoral Roll Delisting:** Revokes a citizen's off-chain registration and polling-booth biometric credential while preserving on-chain cryptographic immutability for any historical anonymous ballot (`zk_nullifier_...`).
+- **Interactive Human Face Biometric Scan Popup Modal:** Clicking any citizen profile (including voters who have **already voted** as well as eligible voters) launches an optical biometric verification modal displaying their real human photograph, EPIC ID (`TS/HYD/160920/...`), animated laser landmark scan (`Take Snapshot (320×240)` → `Validate User`), and—for voters who already cast their ballot—their immutable Proof-of-Work Blockchain Receipt.
 
 ---
 
@@ -58,18 +60,18 @@ EVoting/
 ├── WORKFLOW_DOCUMENTATION.md       # End-to-End Architecture & Viva Walkthrough Guide
 ├── Block.py                        # Core SHA-256 Block Structure & compute_hash()
 ├── Blockchain.py                   # Proof-of-Work Ledger, BallotCipher & Chain Integrity Audit
-├── evoting_engine.py               # SQLite + Blockchain Ledger Orchestrator (Add/Delete Party & Voter)
+├── evoting_engine.py               # SQLite + Blockchain Ledger Orchestrator (Form-2A/2B & Form-6/7)
 ├── app.py                          # Zero-Dependency Python HTTP & REST JSON Server (Port 5070)
 ├── manage.py                       # CLI Wrapper (`python manage.py runserver` / `migrate`)
 ├── database.sql                    # Full MySQL / SQLite Schema (register, addparty & 3NF tables)
-├── test_evoting.py                 # Automated Verification Test Suite (PoW, RBAC, Revocation, Tamper)
+├── test_evoting.py                 # Automated Verification Test Suite (PoW, RBAC, Form-2B/7, Tamper)
 ├── Run_EVoting.command             # One-Click macOS Native Launcher
 ├── run.bat                         # One-Click Windows Launcher
 ├── requirements.txt                # Zero external dependencies required (Python 3 stdlib)
 ├── .devcontainer/devcontainer.json # One-Click GitHub Codespaces Cloud Configuration
 └── static/
-    ├── evoting_logo.svg            # Custom Electoral Ballot-Box & Blockchain Cube Emblem
-    ├── wahlanos_evoting.css        # CivicChain Design System (Outfit, DM Sans & IBM Plex Mono)
+    ├── evoting_logo.svg            # Custom Isometric Ballot-Box & Blockchain Vector Emblem
+    ├── wahlanos_evoting.css        # CivicChain Electoral Design System (Space Grotesk + IBM Plex Mono)
     └── parties/                    # 8 High-Resolution Party Symbol Vector Emblems (SVG)
 ```
 
@@ -96,5 +98,5 @@ python3 app.py
 ---
 
 <div align="center">
-  <sub>Architected by <strong>Ateeq Bin Mubarak Wahlan (160920733003)</strong> • <strong>LIET (Osmania University) • 2023–2024</strong> • <a href="https://wahlanos.com">wahlanos.com</a></sub>
+  <sub>Architected by <strong>Ateeq Bin Mubarak Wahlan (160920733003)</strong> • <strong>LIET (Osmania University) • 2023–2024</strong> • <a href="https://wahlanos.com">wahlanos.com</a> • <a href="https://github.com/ateeq-wahlan">github.com/ateeq-wahlan</a></sub>
 </div>

@@ -1,5 +1,5 @@
 -- ============================================================================
--- CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
+-- E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
 -- SQL Schema & Seed Data (MySQL & SQLite Compatible)
 -- ============================================================================
 -- Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
@@ -12,42 +12,39 @@ CREATE DATABASE IF NOT EXISTS evoting;
 USE evoting;
 
 -- ----------------------------------------------------------------------------
--- 1. Core Implementation Tables (`register` & `addparty`)
+-- 1. Core Electoral Roll & Party Registry Tables (`register` & `addparty`)
 -- ----------------------------------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS register (
     username VARCHAR(30) PRIMARY KEY,
-    full_name VARCHAR(80),
-    epic_id VARCHAR(30),
-    password VARCHAR(64),
-    contact VARCHAR(15),
-    email VARCHAR(50),
-    address VARCHAR(100),
-    profile_image VARCHAR(255) DEFAULT 'https://randomuser.me/api/portraits/men/32.jpg',
+    full_name VARCHAR(80) DEFAULT '',
+    epic_id VARCHAR(30) DEFAULT '',
+    password VARCHAR(64) NOT NULL,
+    contact VARCHAR(15) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    profile_image VARCHAR(180) DEFAULT 'https://randomuser.me/api/portraits/men/32.jpg',
     face_signature VARCHAR(64),
     registered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS addparty (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    candidatename VARCHAR(50),
-    partyname VARCHAR(80),
-    areaname VARCHAR(100),
-    image VARCHAR(120),
-    party_code VARCHAR(16),
-    manifesto VARCHAR(255)
+    candidatename VARCHAR(50) NOT NULL,
+    partyname VARCHAR(80) NOT NULL,
+    areaname VARCHAR(100) NOT NULL,
+    image VARCHAR(120) NOT NULL,
+    party_code VARCHAR(16) NOT NULL,
+    manifesto VARCHAR(255) DEFAULT ''
 );
 
 -- ----------------------------------------------------------------------------
 -- 2. 3NF Normalized Relational Tables (`Voter`, `Election`, `Ballot`, `Voting`)
 -- ----------------------------------------------------------------------------
 
--- 1NF: Voter Table
 CREATE TABLE IF NOT EXISTS Voter (
     Voter_ID INT PRIMARY KEY AUTO_INCREMENT,
     Username VARCHAR(30) UNIQUE NOT NULL,
-    Full_Name VARCHAR(80),
-    EPIC_ID VARCHAR(30),
     Password VARCHAR(64) NOT NULL,
     Email VARCHAR(50) NOT NULL,
     Address VARCHAR(100) NOT NULL,
@@ -55,7 +52,6 @@ CREATE TABLE IF NOT EXISTS Voter (
     Biometric_Hash VARCHAR(64)
 );
 
--- 2NF: Election Table
 CREATE TABLE IF NOT EXISTS Election (
     Election_ID INT PRIMARY KEY AUTO_INCREMENT,
     Election_Name VARCHAR(100) NOT NULL,
@@ -63,7 +59,6 @@ CREATE TABLE IF NOT EXISTS Election (
     End_Date DATE NOT NULL
 );
 
--- 3NF: Ballot Table
 CREATE TABLE IF NOT EXISTS Ballot (
     Ballot_ID INT PRIMARY KEY AUTO_INCREMENT,
     Election_ID INT NOT NULL,
@@ -72,7 +67,6 @@ CREATE TABLE IF NOT EXISTS Ballot (
     FOREIGN KEY (Election_ID) REFERENCES Election(Election_ID)
 );
 
--- 4NF / Transaction Log: Voting Table
 CREATE TABLE IF NOT EXISTS Voting (
     Vote_ID INT PRIMARY KEY AUTO_INCREMENT,
     Voter_ID INT NOT NULL,
@@ -87,7 +81,7 @@ CREATE TABLE IF NOT EXISTS Voting (
 );
 
 -- ----------------------------------------------------------------------------
--- 3. Default National & Regional Party Roster (8 Parties + Symbols)
+-- 3. Default National & Regional Party Roster (8 Parties + Official Symbols)
 -- ----------------------------------------------------------------------------
 
 INSERT INTO addparty (candidatename, partyname, areaname, image, party_code, manifesto) VALUES

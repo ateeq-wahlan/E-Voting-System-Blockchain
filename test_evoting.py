@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
+E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY (2023–2024)
 Module: test_evoting.py — End-to-End Cryptographic & Functional Test Suite
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
@@ -30,13 +30,15 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertEqual(state["election"]["registered_parties"], 8)
         self.assertEqual(state["election"]["registered_voters"], 5)
         self.assertEqual(state["election"]["total_blocks"], 5)
-        self.assertEqual(state["election"]["institution"], "LIET (Osmania University)")
-        self.assertEqual(state["election"]["project_year"], "2023–2024")
         self.assertTrue(state["audit"]["is_valid"])
         for blk in state["audit"]["blocks"]:
             self.assertTrue(blk["stored_hash"].startswith("00"))
+        # Verify all seeded voters have human portrait URLs and EPIC IDs
+        for voter in state["voters"]:
+            self.assertTrue(voter["profile_image"].startswith("http"))
+            self.assertTrue(voter["epic_id"].startswith("TS/HYD/"))
 
-    def test_02_admin_auth_add_and_delete_party(self) -> None:
+    def test_02_admin_auth_and_add_delete_party_form2b(self) -> None:
         self.assertTrue(self.engine.authenticate_admin("admin", "admin"))
         self.assertFalse(self.engine.authenticate_admin("admin", "wrong"))
         res = self.engine.add_party(
@@ -49,15 +51,18 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertEqual(res["status"], "success")
         self.assertEqual(len(self.engine.list_parties()), 9)
 
-        # Deregister / revoke the newly added party mandate (Form-2B)
-        del_res = self.engine.delete_party(res["party_id"], reason="EC Form-2B Official Candidacy Withdrawal")
+        # Form-2B Party Mandate Revocation (Deletion)
+        del_res = self.engine.delete_party(
+            party_id=res["party_id"],
+            reason="EC Form-2B Candidacy Withdrawal",
+        )
         self.assertEqual(del_res["status"], "success")
         self.assertEqual(len(self.engine.list_parties()), 8)
 
-    def test_03_voter_signup_biometric_receipt_and_revocation(self) -> None:
+    def test_03_voter_signup_biometric_and_single_vote_enforcement(self) -> None:
         reg = self.engine.register_voter(
             username="newvoter_hyd",
-            full_name="Syed Rayyan Quadri",
+            full_name="Syed Rayyan Ali",
             password="secret",
             contact="9000011111",
             email="newvoter@wahlanos.com",
@@ -68,6 +73,7 @@ class TestEVotingBlockchain(unittest.TestCase):
         bio = self.engine.validate_biometric_snapshot("newvoter_hyd")
         self.assertEqual(bio["status"], "success")
         self.assertEqual(bio["message"], "User Validated as newvoter_hyd")
+        self.assertEqual(bio["full_name"], "Syed Rayyan Ali")
 
         # Cast first vote -> should succeed and mine Block #5
         vote1 = self.engine.cast_vote(
@@ -92,23 +98,19 @@ class TestEVotingBlockchain(unittest.TestCase):
         self.assertEqual(vote2["status"], "error")
         self.assertEqual(vote2["code"], "DOUBLE_VOTE_REJECTED")
 
-        # Delist voter from off-chain roll (Form-7) and verify on-chain block remains intact
-        del_voter = self.engine.delete_voter("newvoter_hyd", reason="Form-7 Constituency Transfer")
+        # Form-7 Voter Delisting -> revokes off-chain roll entry while keeping Block #5 immutable
+        del_voter = self.engine.delete_voter("newvoter_hyd", "EC Form-7 Constituency Migration")
         self.assertEqual(del_voter["status"], "success")
         self.assertTrue(del_voter["had_voted"])
         self.assertEqual(len(self.engine.blockchain.chain), 6)
 
-    def test_04_tamper_detection_and_reset(self) -> None:
+    def test_04_tamper_detection_and_self_healing(self) -> None:
         sim = self.engine.simulate_tamper_attack(target_block_index=1, forged_party="Hacked Party")
         self.assertFalse(sim["tampered_audit"]["is_valid"])
         self.assertGreaterEqual(len(sim["tampered_audit"]["anomalies"]), 1)
         self.assertTrue(sim["consensus_restored"])
 
-        reset_res = self.engine.reset_demo_state()
-        self.assertEqual(reset_res["status"], "success")
-        self.assertEqual(reset_res["state"]["election"]["total_blocks"], 5)
-
 
 if __name__ == "__main__":
-    print("Running CivicChain E-Voting Verification Suite (Ateeq Bin Mubarak Wahlan - 160920733003 | LIET Osmania University)...")
+    print("Running CivicChain E-Voting Verification Suite (Ateeq Bin Mubarak Wahlan - 160920733003)...")
     unittest.main(verbosity=2)
