@@ -5,7 +5,7 @@ E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
 Module: manage.py — Compatibility CLI Wrapper (`python manage.py runserver`)
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
-Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
+WahlanOS:    https://wahlanos.com ↗ | https://github.com/ateeq-wahlan
 ================================================================================
 """
 

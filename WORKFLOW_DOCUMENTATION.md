@@ -3,7 +3,7 @@
 **Architect:** Ateeq Bin Mubarak Wahlan (Roll No: `160920733003`)  
 **Institution:** LIET (Osmania University), Hyderabad  
 **Academic Year:** 2023–2024 (B.E. Computer Science & Engineering)  
-**Portfolio:** [wahlanos.com](https://wahlanos.com) • **GitHub:** [github.com/ateeq-wahlan](https://github.com/ateeq-wahlan)
+**Web:** [WahlanOS.com ↗](https://wahlanos.com) • **GitHub:** [github.com/ateeq-wahlan](https://github.com/ateeq-wahlan)
 
 ---
 

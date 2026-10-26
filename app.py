@@ -5,7 +5,7 @@ E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
 Module: app.py — Zero-Dependency HTTP/JSON & Static Web Application Server
 ================================================================================
 Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
-Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
+WahlanOS:    https://wahlanos.com ↗ | https://github.com/ateeq-wahlan
 Institution: LIET (Osmania University ’23)
 ================================================================================
 """

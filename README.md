@@ -35,7 +35,7 @@ You can explore the complete **CivicChain E-Voting Blockchain Platform** right n
 | **Degree & Branch** | Bachelor of Engineering (B.E.) — Computer Science and Engineering |
 | **Institution** | **LIET (Osmania University)**, Hyderabad |
 | **Project Year** | **2023–2024** |
-| **Portfolio & GitHub** | **[wahlanos.com](https://wahlanos.com)** • **[github.com/ateeq-wahlan](https://github.com/ateeq-wahlan)** |
+| **Web & GitHub** | **[wahlanos.com](https://wahlanos.com)** • **[github.com/ateeq-wahlan](https://github.com/ateeq-wahlan)** |
 
 ---
 

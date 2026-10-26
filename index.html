@@ -7,8 +7,1205 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="static/evoting_logo.svg" />
-  <link rel="stylesheet" href="static/wahlanos_evoting.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNpdmljQmciIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBEN0M2NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwQjE5MkMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRBY2NlbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM0RDM5OSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMEI5ODEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gT3V0ZXIgU292ZXJlaWduIEhleGFnb24gLyBTaGllbGQgRnJhbWUgLS0+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9InVybCgjY2l2aWNCZykiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2Utb3BhY2l0eT0iMC40NSIvPgogIDwhLS0gQmxvY2tjaGFpbiBJc29tZXRyaWMgQ3ViZSBCYXNlIChCYWxsb3QgQm94KSAtLT4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMjFMNTAgMjlWNDdMMzIgNTVMMTQgNDdWMjlaIiBmaWxsPSIjMEIxOTJDIiBmaWxsLW9wYWNpdHk9IjAuNyIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMzdMNTAgMjkiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0zMiAzN1Y1NSIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+CiAgPCEtLSBCYWxsb3QgU2xvdCBvbiBUb3Agb2YgQ3ViZSAtLT4KICA8cGF0aCBkPSJNMjQgMjcuNUw0MCAyNy41IiBzdHJva2U9IiNBN0YzRDAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFZlcmlmaWVkIEJhbGxvdCBDYXJkIEluc2VydGluZyBpbnRvIFNsb3QgLS0+CiAgPHJlY3QgeD0iMjIiIHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTciIHJ4PSIzIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgPCEtLSBDaGVja21hcmsgb24gQmFsbG90IC0tPgogIDxwYXRoIGQ9Ik0yNy41IDE4LjVMMzAuOCAyMS44TDM3IDE1LjIiIHN0cm9rZT0iIzBEN0M2NiIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gQ3J5cHRvZ3JhcGhpYyBOb2RlIERvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSI1NSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+Cjwvc3ZnPgo=" />
+  <style id="inlined-wahlanos-evoting-css">
+/* ============================================================================
+   CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
+   Independent Electoral & Cryptographic Design System
+   Architect: Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
+   Institution: LIET (Osmania University ’23) | WahlanOS.com
+   ============================================================================ */
+
+:root {
+  --bg-page: #F1F5F9;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #E2E8F0;
+  --bg-elevated: #F8FAFC;
+  --bg-navy: #0B1528;
+  --bg-navy-card: #111F38;
+  --ink-primary: #0F172A;
+  --ink-secondary: #334155;
+  --ink-muted: #64748B;
+  --primary: #0D9488;
+  --primary-dark: #0F766E;
+  --primary-soft: rgba(13, 148, 136, 0.10);
+  --primary-border: rgba(13, 148, 136, 0.30);
+  --indigo: #1D4ED8;
+  --indigo-soft: rgba(29, 78, 216, 0.09);
+  --emerald: #059669;
+  --emerald-soft: rgba(5, 150, 105, 0.12);
+  --crimson: #DC2626;
+  --crimson-soft: rgba(220, 38, 38, 0.10);
+  --amber: #D97706;
+  --amber-soft: rgba(217, 119, 6, 0.12);
+  --border-hairline: #CBD5E1;
+  --border-strong: #94A3B8;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  --shadow-modal: 0 24px 60px rgba(11, 21, 40, 0.38);
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-page);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .brand-wordmark, .nav-tab, .kpi-value, .btn-primary, .btn-secondary, .btn-danger {
+  font-family: var(--font-display);
+}
+
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+a:hover {
+  color: var(--indigo);
+}
+
+/* ============================================================================
+   TOP COMMAND HEADER (Clean Horizontal Layout)
+   ============================================================================ */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-navy);
+  color: #F8FAFC;
+  border-bottom: 2px solid var(--primary);
+  padding: 0 32px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 20px rgba(11, 21, 40, 0.22);
+}
+
+.brand-cluster {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.evoting-logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.32);
+  flex-shrink: 0;
+}
+
+.brand-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-wordmark {
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #94A3B8;
+  letter-spacing: 0.04em;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.role-scope-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  color: #E2E8F0;
+  transition: all 0.18s ease;
+}
+
+.role-scope-pill:hover {
+  border-color: #34D399;
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.role-scope-pill.admin-unlocked {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10B981;
+  color: #6EE7B7;
+}
+
+.nav-cta {
+  padding: 8px 15px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: #F8FAFC;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-cta:hover {
+  border-color: #34D399;
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* ============================================================================
+   TELEMETRY STATUS STRIP & HORIZONTAL NAVIGATION RIBBON
+   ============================================================================ */
+.status-strip {
+  padding: 9px 32px;
+  border-bottom: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  background: #E2E8F0;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.22);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.75; }
+}
+
+.nav-ribbon-bar {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 12px 32px;
+  position: sticky;
+  top: 74px;
+  z-index: 90;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.nav-links {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-tab {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  padding: 9px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.16s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-tab:hover {
+  color: var(--ink-primary);
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.nav-tab.active {
+  color: #FFFFFF;
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+}
+
+/* ============================================================================
+   MAIN CONTAINER & OVERVIEW HERO WITH BALANCED LEFT & RIGHT CARDS
+   ============================================================================ */
+.main-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 32px 32px 72px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 1.12fr;
+  gap: 28px;
+  align-items: stretch;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-hairline);
+  margin-bottom: 28px;
+}
+
+.hero-left-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.hero-title {
+  font-size: 40px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+  color: var(--ink-primary);
+}
+
+.hero-title .teal-accent {
+  color: var(--primary-dark);
+  display: block;
+}
+
+.hero-lead {
+  font-size: 14.8px;
+  color: var(--ink-secondary);
+  margin-bottom: 16px;
+  line-height: 1.62;
+}
+
+.hero-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.hero-spec-item {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-left: 3px solid var(--primary);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.hero-spec-item .spec-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-spec-item .spec-val {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
+
+.hero-meta-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.meta-chip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  padding: 7px 10px;
+  border-radius: 6px;
+  color: var(--ink-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  border: 1px solid var(--primary-dark);
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.16s ease;
+}
+
+.btn-primary:hover {
+  background: #115E59;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-surface);
+  color: var(--ink-primary);
+  border: 1px solid var(--border-strong);
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.16s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary-dark);
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+}
+
+.btn-danger {
+  background: var(--crimson-soft);
+  color: var(--crimson);
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.btn-danger:hover {
+  background: var(--crimson);
+  color: #FFFFFF;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* ============================================================================
+   FULL-BLEED INTERACTIVE ATOMIC CONSENSUS REACTOR CARD (Zero Dead Space)
+   ============================================================================ */
+.blueprint-card {
+  background: var(--bg-navy);
+  color: #F8FAFC;
+  border: 1px solid #1E293B;
+  border-top: 4px solid #10B981;
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.blueprint-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  white-space: nowrap;
+  gap: 12px;
+}
+
+.orbit-status-cluster {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.orbit-state-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.orbit-state-badge.live {
+  color: #34D399;
+}
+
+.orbit-state-badge.paused {
+  color: #F87171;
+}
+
+.orbit-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.orbit-dot.live {
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: blinkLiveOrbit 1.15s ease-in-out infinite;
+}
+
+.orbit-dot.paused {
+  background: #EF4444;
+  box-shadow: 0 0 8px #EF4444;
+}
+
+@keyframes blinkLiveOrbit {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(0.85); }
+}
+
+.orbit-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  color: #E2E8F0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.orbit-toggle-btn:hover {
+  border-color: #34D399;
+  color: #FFFFFF;
+}
+
+.atomic-canvas-wrap {
+  flex: 1;
+  min-height: 356px;
+  background-color: #070F1E;
+  background-image:
+    radial-gradient(circle at center, rgba(16, 185, 129, 0.18) 0%, transparent 68%),
+    linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 100% 100%, 26px 26px, 26px 26px;
+  border: 1px solid #1E293B;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#atomicConsensusCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.atomic-compact-bar {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(52, 211, 153, 0.30);
+  border-radius: 6px;
+  padding: 8px 13px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ============================================================================
+   KPI TELEMETRY ROW
+   ============================================================================ */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.kpi-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.kpi-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+}
+
+.kpi-value {
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-primary);
+}
+
+.kpi-sub {
+  font-size: 12.5px;
+  color: var(--ink-secondary);
+  margin-top: 4px;
+}
+
+/* ============================================================================
+   TAB PANELS, CARDS & GRIDS
+   ============================================================================ */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.three-col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.panel-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-hairline);
+  flex-wrap: wrap;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-primary);
+}
+
+.panel-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-border);
+  font-weight: 600;
+}
+
+/* Role-Based Lock Banner */
+.rbac-lock-banner {
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.96));
+  color: #F8FAFC;
+  border: 1px solid #334155;
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Forms & Custom Styled Dropdown Select */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  background: var(--bg-elevated);
+  color: var(--ink-primary);
+  transition: all 0.15s ease;
+}
+
+.form-select {
+  width: 100%;
+  padding: 11px 44px 11px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  background-color: var(--bg-elevated);
+  color: var(--ink-primary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230F766E' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+/* Party Roster Grid */
+.party-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 18px;
+}
+
+.party-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.party-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-card);
+  background: #FFFFFF;
+}
+
+.party-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.party-symbol-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.party-code-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+/* Human Voter Profile Cards & Avatars */
+.voter-avatar-thumb {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+  flex-shrink: 0;
+  background: #0B1528;
+}
+
+.voter-booth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.voter-profile-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.voter-profile-card:hover, .voter-profile-card.selected {
+  border-color: var(--primary);
+  background: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(13, 148, 136, 0.12);
+}
+
+/* Tables */
+.data-table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 11px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-secondary);
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-hairline);
+  vertical-align: middle;
+}
+
+.reticle-overlay {
+  position: absolute;
+  inset: 14px;
+  border: 1.5px dashed rgba(52, 211, 153, 0.8);
+  border-radius: 8px;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 8px 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #6EE7B7;
+  background: linear-gradient(to top, rgba(8, 16, 32, 0.82) 0%, transparent 35%);
+}
+
+/* Laser Scan Line Animation for Popup */
+.laser-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #10B981, #34D399, #10B981, transparent);
+  box-shadow: 0 0 14px 3px rgba(16, 185, 129, 0.85);
+  z-index: 10;
+  display: none;
+}
+
+.laser-scan-line.scanning {
+  display: block;
+  animation: scanSweep 1.35s ease-in-out infinite;
+}
+
+@keyframes scanSweep {
+  0% { top: 8%; }
+  50% { top: 88%; }
+  100% { top: 8%; }
+}
+
+/* Receipt Banner */
+.receipt-banner {
+  background: var(--bg-navy);
+  border-left: 5px solid #10B981;
+  color: #F8FAFC;
+  padding: 18px 22px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin-top: 18px;
+  word-break: break-all;
+}
+
+/* Blockchain Block Cards */
+.block-chain-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.block-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-left: 5px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+
+.block-card.tampered {
+  border-left-color: var(--crimson);
+  background: #FEF2F2;
+}
+
+.hash-mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--bg-subtle);
+  padding: 4px 8px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+/* ============================================================================
+   POPUP MODALS (Biometric Scanner, 5-Sec Vote Confirmation Popup, Admin Login)
+   ============================================================================ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(11, 21, 40, 0.74);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-top: 5px solid var(--primary);
+  border-radius: var(--radius-lg);
+  max-width: 820px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-modal);
+  padding: 26px 28px;
+}
+
+.modal-portrait-stage {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  background: #081020;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-portrait-stage img,
+.modal-portrait-stage video,
+.modal-portrait-stage canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vote Cast Confirmation Modal Styles (5-Second Auto-Closing Timer) */
+.vote-confirm-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.vote-confirm-party-emblem {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #FFFFFF;
+  border: 3px solid var(--primary);
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.22);
+  flex-shrink: 0;
+}
+
+.vote-timer-track {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.vote-timer-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary), #10B981);
+  border-radius: 999px;
+  transition: width 1s linear;
+}
+
+/* ============================================================================
+   STRUCTURED ARCHITECTURAL FOOTER (No Source Repo Button, Clean Hierarchy)
+   ============================================================================ */
+.site-footer {
+  border-top: 2px solid var(--border-hairline);
+  padding: 40px 32px 34px;
+  margin-top: 64px;
+  background: var(--bg-navy);
+  color: #E2E8F0;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.footer-brand-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 8px 20px;
+  border-radius: 999px;
+}
+
+.footer-attribution-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: var(--radius-md);
+}
+
+.footer-architect-line {
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.footer-credentials-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #CBD5E1;
+}
+
+.footer-cred-pill {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 4px 11px;
+  border-radius: 6px;
+}
+
+.footer-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: #94A3B8;
+}
+
+.footer-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.footer-link-pill {
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: rgba(13, 148, 136, 0.18);
+  border: 1px solid rgba(52, 211, 153, 0.38);
+  color: #6EE7B7;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-link-pill:hover {
+  background: #0D9488;
+  color: #FFFFFF;
+}
+
+@media (max-width: 980px) {
+  .hero-grid, .two-col-grid, .three-col-grid, .kpi-grid, .hero-meta-strip {
+    grid-template-columns: 1fr;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+  .hero-title {
+    font-size: 34px;
+  }
+  .top-nav {
+    height: auto;
+    padding: 14px 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-ribbon-bar {
+    top: 0;
+    position: relative;
+  }
+}
+
+</style>
 </head>
 <body>
 
@@ -17,7 +1214,7 @@
        ==================================================================== -->
   <header class="top-nav">
     <div class="brand-cluster">
-      <img src="static/evoting_logo.svg" alt="CivicChain Ballot Block Emblem" class="evoting-logo-img" />
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNpdmljQmciIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBEN0M2NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwQjE5MkMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRBY2NlbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM0RDM5OSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMEI5ODEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gT3V0ZXIgU292ZXJlaWduIEhleGFnb24gLyBTaGllbGQgRnJhbWUgLS0+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9InVybCgjY2l2aWNCZykiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2Utb3BhY2l0eT0iMC40NSIvPgogIDwhLS0gQmxvY2tjaGFpbiBJc29tZXRyaWMgQ3ViZSBCYXNlIChCYWxsb3QgQm94KSAtLT4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMjFMNTAgMjlWNDdMMzIgNTVMMTQgNDdWMjlaIiBmaWxsPSIjMEIxOTJDIiBmaWxsLW9wYWNpdHk9IjAuNyIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMzdMNTAgMjkiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0zMiAzN1Y1NSIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+CiAgPCEtLSBCYWxsb3QgU2xvdCBvbiBUb3Agb2YgQ3ViZSAtLT4KICA8cGF0aCBkPSJNMjQgMjcuNUw0MCAyNy41IiBzdHJva2U9IiNBN0YzRDAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFZlcmlmaWVkIEJhbGxvdCBDYXJkIEluc2VydGluZyBpbnRvIFNsb3QgLS0+CiAgPHJlY3QgeD0iMjIiIHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTciIHJ4PSIzIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgPCEtLSBDaGVja21hcmsgb24gQmFsbG90IC0tPgogIDxwYXRoIGQ9Ik0yNy41IDE4LjVMMzAuOCAyMS44TDM3IDE1LjIiIHN0cm9rZT0iIzBEN0M2NiIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gQ3J5cHRvZ3JhcGhpYyBOb2RlIERvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSI1NSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+Cjwvc3ZnPgo=" alt="CivicChain Ballot Block Emblem" class="evoting-logo-img" />
       <div class="brand-title-wrap">
         <div class="brand-wordmark">
           <span>CIVICCHAIN // E-VOTING</span>
@@ -262,14 +1459,14 @@ class Blockchain:
               <div class="form-group">
                 <label class="form-label">National / Regional Political Party</label>
                 <select id="partyNameSelect" class="form-select">
-                  <option value="Bharatiya Janata Party (BJP)" data-code="BJP" data-img="static/parties/bjp.svg">Bharatiya Janata Party (BJP)</option>
-                  <option value="Indian National Congress (INC)" data-code="INC" data-img="static/parties/inc.svg">Indian National Congress (INC)</option>
-                  <option value="Aam Aadmi Party (AAP)" data-code="AAP" data-img="static/parties/aap.svg">Aam Aadmi Party (AAP)</option>
-                  <option value="Bharat Rashtra Samithi (BRS)" data-code="BRS" data-img="static/parties/brs.svg">Bharat Rashtra Samithi (BRS)</option>
-                  <option value="All India Majlis-e-Ittehadul Muslimeen (AIMIM)" data-code="AIMIM" data-img="static/parties/aimim.svg">All India Majlis-e-Ittehadul Muslimeen (AIMIM)</option>
-                  <option value="Bahujan Samaj Party (BSP)" data-code="BSP" data-img="static/parties/bsp.svg">Bahujan Samaj Party (BSP)</option>
-                  <option value="Communist Party of India (Marxist) (CPI-M)" data-code="CPI-M" data-img="static/parties/cpim.svg">Communist Party of India (Marxist) (CPI-M)</option>
-                  <option value="Independent / Civic Reform Front" data-code="IND" data-img="static/parties/nota.svg">Independent / Civic Reform Front</option>
+                  <option value="Bharatiya Janata Party (BJP)" data-code="BJP" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmpwR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjk5MzMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNGRjZCMDAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTM4ODA4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0idXJsKCNianBHcmFkKSIgc3Ryb2tlPSIjMTM4ODA4IiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NiIgZmlsbD0iI0ZGRkRGOSIvPgogIDwhLS0gU3R5bGl6ZWQgTG90dXMgRW1ibGVtIC0tPgogIDxwYXRoIGQ9Ik02MCAyMiBDNjcgMzUgNzEgNDggNjAgNjIgQzQ5IDQ4IDUzIDM1IDYwIDIyIFoiIGZpbGw9IiNGRjZCMDAiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTYwIDYyIEM3MCA0MiA4NiAzOCA4OCA1MiBDODUgNjIgNzIgNjUgNjAgNjIgWiIgZmlsbD0iI0ZGODUzMyIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNNjAgNjIgQzUwIDQyIDM0IDM4IDMyIDUyIEMzNSA2MiA0OCA2NSA2MCA2MiBaIiBmaWxsPSIjRkY4NTMzIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwYXRoIGQ9Ik02MCA2MiBDNzYgNTQgOTQgNTYgOTIgNjcgQzg1IDczIDcxIDcwIDYwIDYyIFoiIGZpbGw9IiNGRkEzNjYiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTYwIDYyIEM0NCA1NCAyNiA1NiAyOCA2NyBDMzUgNzMgNDkgNzAgNjAgNjIgWiIgZmlsbD0iI0ZGQTM2NiIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIFN0ZW0gYW5kIEJhc2UgLS0+CiAgPHBhdGggZD0iTTYwIDYyIEw2MCA4NCIgc3Ryb2tlPSIjMTM4ODA4IiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTM2IDc4IFE2MCA5MCA4NCA3OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTM4ODA4IiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iODAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTUxNzFCIj5CSlA8L3RleHQ+Cjwvc3ZnPgo=">Bharatiya Janata Party (BJP)</option>
+                  <option value="Indian National Congress (INC)" data-code="INC" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iaW5jVHJpIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjk5MzMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIzMyUiIHN0b3AtY29sb3I9IiNGRjk5MzMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIzNCUiIHN0b3AtY29sb3I9IiNGRkZGRkYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2NiUiIHN0b3AtY29sb3I9IiNGRkZGRkYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2NyUiIHN0b3AtY29sb3I9IiMxMzg4MDgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTM4ODA4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0idXJsKCNpbmNUcmkpIiBzdHJva2U9IiMwMDUyRkYiIHN0cm9rZS13aWR0aD0iNCIvPgogIDwhLS0gT3BlbiBQYWxtIEVtYmxlbSAtLT4KICA8ZyBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik00NCA2MiBMNDQgMzggQzQ0IDM1IDQ5IDM1IDQ5IDM4IEw0OSA1NQogICAgICAgICAgICAgTDUyIDMxIEM1MiAyOCA1NyAyOCA1NyAzMSBMNTcgNTQKICAgICAgICAgICAgIEw2MCAyOCBDNjAgMjUgNjUgMjUgNjUgMjggTDY1IDU0CiAgICAgICAgICAgICBMNjggMzMgQzY4IDMwIDczIDMwIDczIDMzIEw3MyA2MwogICAgICAgICAgICAgTDc4IDUwIEM4MCA0NyA4NCA1MCA4MiA1NCBMNzQgNzUKICAgICAgICAgICAgIEM3MSA4MiA2NCA4NSA1NiA4NSBDNDggODUgNDQgNzggNDQgNjggWiIvPgogIDwvZz4KICA8Y2lyY2xlIGN4PSI1OSIgY3k9IjY3IiByPSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDUyRkYiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgPHRleHQgeD0iNjAiIHk9IjEwMiIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMC41IiBmb250LXdlaWdodD0iODAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZGRkZGIj5JTkM8L3RleHQ+Cjwvc3ZnPgo=">Indian National Congress (INC)</option>
+                  <option value="Aam Aadmi Party (AAP)" data-code="AAP" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzAwNTJGRiIgc3Ryb2tlPSIjMEEyMzUxIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQnJvb20gRW1ibGVtIC0tPgogIDxnIHRyYW5zZm9ybT0icm90YXRlKC0zMiA2MCA2MCkiPgogICAgPHJlY3QgeD0iNTYiIHk9IjIwIiB3aWR0aD0iOCIgaGVpZ2h0PSIzNCIgcng9IjMiIGZpbGw9IiM4QjVBMkIiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cmVjdCB4PSI1MiIgeT0iNTAiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2IiByeD0iMiIgZmlsbD0iIzAwNTJGRiIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogICAgPHBhdGggZD0iTTUyIDU2IEw0MiA4OCBMNzggODggTDY4IDU2IFoiIGZpbGw9IiNFQUIzMDgiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSB4MT0iNTYiIHkxPSI1NiIgeDI9IjUwIiB5Mj0iODgiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgIDxsaW5lIHgxPSI2MCIgeTE9IjU2IiB4Mj0iNjAiIHkyPSI4OCIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPGxpbmUgeDE9IjY0IiB5MT0iNTYiIHgyPSI3MCIgeTI9Ijg4IiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPC9nPgogIDx0ZXh0IHg9IjYwIiB5PSI5OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzAwNTJGRiI+QUFQPC90ZXh0Pgo8L3N2Zz4K">Aam Aadmi Party (AAP)</option>
+                  <option value="Bharat Rashtra Samithi (BRS)" data-code="BRS" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iI0VDNDg5OSIgc3Ryb2tlPSIjOUQxNzREIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0ZGRjVGOSIvPgogIDwhLS0gQW1iYXNzYWRvciBDYXIgRW1ibGVtIC0tPgogIDxwYXRoIGQ9Ik0zMCA2NiBMMzYgNDggQzM4IDQ0IDQzIDQyIDQ4IDQyIEw3MiA0MiBDNzcgNDIgODIgNDQgODQgNDggTDkwIDY2IFoiIGZpbGw9IiNFQzQ4OTkiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHJlY3QgeD0iMjQiIHk9IjYyIiB3aWR0aD0iNzIiIGhlaWdodD0iMTYiIHJ4PSI2IiBmaWxsPSIjREIyNzc3IiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwYXRoIGQ9Ik00MSA0NyBMNTcgNDcgTDU3IDU5IEwzNiA1OSBaIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHBhdGggZD0iTTYyIDQ3IEw3OCA0NyBMODMgNTkgTDYyIDU5IFoiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8Y2lyY2xlIGN4PSIzOCIgY3k9Ijc4IiByPSI4IiBmaWxsPSIjMTUxNzFCIi8+CiAgPGNpcmNsZSBjeD0iMzgiIGN5PSI3OCIgcj0iMy41IiBmaWxsPSIjRkZGRkZGIi8+CiAgPGNpcmNsZSBjeD0iODIiIGN5PSI3OCIgcj0iOCIgZmlsbD0iIzE1MTcxQiIvPgogIDxjaXJjbGUgY3g9IjgyIiBjeT0iNzgiIHI9IjMuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDx0ZXh0IHg9IjYwIiB5PSI5OSIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlEMTc0RCI+QlJTPC90ZXh0Pgo8L3N2Zz4K">Bharat Rashtra Samithi (BRS)</option>
+                  <option value="All India Majlis-e-Ittehadul Muslimeen (AIMIM)" data-code="AIMIM" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzA1OTY2OSIgc3Ryb2tlPSIjMDY0RTNCIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0VDRkRGNSIvPgogIDwhLS0gS2l0ZSBFbWJsZW0gLS0+CiAgPHBvbHlnb24gcG9pbnRzPSI2MCwyNCA4NCw1MiA2MCw4MCAzNiw1MiIgZmlsbD0iIzEwQjk4MSIgc3Ryb2tlPSIjMDY0RTNCIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxsaW5lIHgxPSI2MCIgeTE9IjI0IiB4Mj0iNjAiIHkyPSI4MCIgc3Ryb2tlPSIjMDY0RTNCIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMzYgNTIgUTYwIDQwIDg0IDUyIiBmaWxsPSJub25lIiBzdHJva2U9IiMwNjRFM0IiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjAsODAgNTMsOTAgNjcsOTAiIGZpbGw9IiMwNTk2NjkiIHN0cm9rZT0iIzA2NEUzQiIgc3Ryb2tlLXdpZHRoPSIxLjgiLz4KICA8dGV4dCB4PSI2MCIgeT0iMTAxIiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iODAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDY0RTNCIj5BSU1JTTwvdGV4dD4KPC9zdmc+Cg==">All India Majlis-e-Ittehadul Muslimeen (AIMIM)</option>
+                  <option value="Bahujan Samaj Party (BSP)" data-code="BSP" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzFENEVEOCIgc3Ryb2tlPSIjMUUzQThBIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0VGRjZGRiIvPgogIDwhLS0gU3R5bGl6ZWQgRWxlcGhhbnQgRW1ibGVtIC0tPgogIDxwYXRoIGQ9Ik0zNiA1MiBDMzYgMzggNTAgMzQgNjYgMzYgQzc4IDM2IDg0IDQ0IDg0IDU2IEw4NCA3OCBMNzUgNzggTDc1IDY0IEw2NCA2NCBMNjQgNzggTDU1IDc4IEw1NSA2MiBMNDYgNjIgTDQ2IDc4IEwzNyA3OCBMMzcgNTggQzMyIDU4IDI5IDY0IDI5IDcwIEwyNCA3MCBDMjQgNTggMzAgNTIgMzYgNTIgWiIgZmlsbD0iIzI1NjNFQiIgc3Ryb2tlPSIjMUUzQThBIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI0NCIgY3k9IjQ2IiByPSIyLjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8cGF0aCBkPSJNMzMgNTYgUTI4IDYwIDMyIDYzIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8dGV4dCB4PSI2MCIgeT0iOTkiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxRTNBOEEiPkJTUDwvdGV4dD4KPC9zdmc+Cg==">Bahujan Samaj Party (BSP)</option>
+                  <option value="Communist Party of India (Marxist) (CPI-M)" data-code="CPI-M" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iI0RDMjYyNiIgc3Ryb2tlPSIjN0YxRDFEIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0ZFRjJGMiIvPgogIDwhLS0gU3RhciAmIEdlYXIgQ2l2aWMgRW1ibGVtIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iNjAsMjYgNjcsNDQgODYsNDQgNzEsNTYgNzYsNzQgNjAsNjMgNDQsNzQgNDksNTYgMzQsNDQgNTMsNDQiIGZpbGw9IiNEQzI2MjYiIHN0cm9rZT0iIzdGMUQxRCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI1MyIgcj0iNyIgZmlsbD0iI0ZFRjJGMiIvPgogIDx0ZXh0IHg9IjYwIiB5PSI5OSIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzdGMUQxRCI+Q1BJLU08L3RleHQ+Cjwvc3ZnPgo=">Communist Party of India (Marxist) (CPI-M)</option>
+                  <option value="Independent / Civic Reform Front" data-code="IND" data-img="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzE1MTcxQiIgc3Ryb2tlPSIjNEI1NTYzIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQmFsbG90IENyb3NzIEljb24gLS0+CiAgPHJlY3QgeD0iMzgiIHk9IjM0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPGxpbmUgeDE9IjQ2IiB5MT0iNDIiIHgyPSI3NCIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iNDIiIHgyPSI0NiIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwLjUiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNTE3MUIiPk5PVEE8L3RleHQ+Cjwvc3ZnPgo=">Independent / Civic Reform Front</option>
                 </select>
               </div>
               <div class="form-group">
@@ -397,10 +1594,10 @@ class Blockchain:
               <label class="form-label">Biometric Face Registration Mode</label>
               <select id="regPortraitPreset" class="form-select">
                 <option value="">📷 Capture Live via Camera Popup at Voting Booth (Unregistered Photo)</option>
-                <option value="static/voters/ateeq.svg">Pre-Registered EPIC Portrait #1 (Hyderabad Roll)</option>
-                <option value="static/voters/azizullah.svg">Pre-Registered EPIC Portrait #2 (Tolichowki Roll)</option>
-                <option value="static/voters/priyanka.svg">Pre-Registered EPIC Portrait #3 (Secunderabad Roll)</option>
-                <option value="static/voters/zubair.svg">Pre-Registered EPIC Portrait #4 (Charminar Roll)</option>
+                <option value="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==">Pre-Registered EPIC Portrait #1 (Hyderabad Roll)</option>
+                <option value="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMiIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTMyNTNEIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBBMTQyNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjIiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0RDQTg4MiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNCRjg4NjAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMjY1IiBmaWxsPSJ1cmwoI2JnMikiLz4KICA8ZyBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjQ1Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTMiIHgyPSIzNjAiIHkyPSI1MyIvPjxsaW5lIHgxPSIwIiB5MT0iMTA2IiB4Mj0iMzYwIiB5Mj0iMTA2Ii8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE1OSIgeDI9IjM2MCIgeTI9IjE1OSIvPjxsaW5lIHgxPSIwIiB5MT0iMjEyIiB4Mj0iMzYwIiB5Mj0iMjEyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSIwIiB4Mj0iNzIiIHkyPSIyNjUiLz48bGluZSB4MT0iMTQ0IiB5MT0iMCIgeDI9IjE0NCIgeTI9IjI2NSIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjAiIHgyPSIyMTYiIHkyPSIyNjUiLz48bGluZSB4MT0iMjg4IiB5MT0iMCIgeDI9IjI4OCIgeTI9IjI2NSIvPgogIDwvZz4KICA8IS0tIEZvcm1hbCBLdXJ0YSAvIE5laHJ1IEphY2tldCAtLT4KICA8cGF0aCBkPSJNODQgMjY1IEM5MCAyMDYsIDEyOCAxOTAsIDE4MCAxOTAgQzIzMiAxOTAsIDI3MCAyMDYsIDI3NiAyNjUgWiIgZmlsbD0iIzFFM0E1RiIvPgogIDxwYXRoIGQ9Ik0xNTggMTkwIEwxODAgMjMyIEwyMDIgMTkwIFoiIGZpbGw9IiNFMkU4RjAiLz4KICA8cmVjdCB4PSIxNjIiIHk9IjE1MiIgd2lkdGg9IjM2IiBoZWlnaHQ9IjQ0IiByeD0iMTQiIGZpbGw9IiNCODgyNUIiLz4KICA8ZWxsaXBzZSBjeD0iMTMyIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE0IiBmaWxsPSIjQkY4ODYwIi8+CiAgPGVsbGlwc2UgY3g9IjIyOCIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iI0JGODg2MCIvPgogIDxwYXRoIGQ9Ik0xMzQgOTQgQzEzNCA1OCwgMjI2IDU4LCAyMjYgOTQgQzIyNiAxMzYsIDIxMCAxNjYsIDE4MCAxNjYgQzE1MCAxNjYsIDEzNCAxMzYsIDEzNCA5NCBaIiBmaWxsPSJ1cmwoI3NraW4yKSIvPgogIDwhLS0gSGFpciAtLT4KICA8cGF0aCBkPSJNMTMyIDk1IEMxMzAgNTYsIDE1NCA0NSwgMTgwIDQ1IEMyMDYgNDUsIDIzMCA1NiwgMjI4IDk1IEMyMjIgNzYsIDIwNiA2NywgMTgwIDY3IEMxNTQgNjcsIDEzOCA3NiwgMTMyIDk1IFoiIGZpbGw9IiMxRjI5MzciLz4KICA8IS0tIEdsYXNzZXMgLS0+CiAgPGcgc3Ryb2tlPSIjOTRBM0I4IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9InJnYmEoNTYsMTg5LDI0OCwwLjA4KSI+CiAgICA8cmVjdCB4PSIxNDUiIHk9Ijk5IiB3aWR0aD0iMjgiIGhlaWdodD0iMTciIHJ4PSI0Ii8+CiAgICA8cmVjdCB4PSIxODciIHk9Ijk5IiB3aWR0aD0iMjgiIGhlaWdodD0iMTciIHJ4PSI0Ii8+CiAgICA8bGluZSB4MT0iMTczIiB5MT0iMTA2IiB4Mj0iMTg3IiB5Mj0iMTA2Ii8+CiAgPC9nPgogIDwhLS0gRXllcyAtLT4KICA8Y2lyY2xlIGN4PSIxNTkiIGN5PSIxMDciIHI9IjMuNCIgZmlsbD0iIzExMTgyNyIvPgogIDxjaXJjbGUgY3g9IjIwMSIgY3k9IjEwNyIgcj0iMy40IiBmaWxsPSIjMTExODI3Ii8+CiAgPHBhdGggZD0iTTE0OCA5NCBRMTU5IDkwIDE3MCA5NCIgc3Ryb2tlPSIjMUYyOTM3IiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xOTAgOTQgUTIwMSA5MCAyMTIgOTQiIHN0cm9rZT0iIzFGMjkzNyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTgwIDEwNiBMMTc4IDEyNyBRMTgwIDEzMCAxODQgMTI3IiBzdHJva2U9IiM5QTY4NDQiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgogIDwhLS0gTXVzdGFjaGUgJiBHb2F0ZWUgLS0+CiAgPHBhdGggZD0iTTE2NCAxMzkgUTE4MCAxMzMgMTk2IDEzOSIgc3Ryb2tlPSIjMUYyOTM3IiBzdHJva2Utd2lkdGg9IjMuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTE2OCAxNDUgUTE4MCAxNTEgMTkyIDE0NSIgc3Ryb2tlPSIjNkIyMUE4IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPjxwYXRoIGQ9Ik0yNDggNDggTDI0OCAzNCBMMjMyIDM0Ii8+CiAgICA8cGF0aCBkPSJNMTEyIDE2OCBMMTEyIDE4MiBMMTI4IDE4MiIvPjxwYXRoIGQ9Ik0yNDggMTY4IEwyNDggMTgyIEwyMzIgMTgyIi8+CiAgPC9nPgo8L3N2Zz4K">Pre-Registered EPIC Portrait #2 (Tolichowki Roll)</option>
+                <option value="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTQyNjNCIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjMiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0U4QkU5QSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDRjlDNzQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMjY1IiBmaWxsPSJ1cmwoI2JnMykiLz4KICA8ZyBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjQ1Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTMiIHgyPSIzNjAiIHkyPSI1MyIvPjxsaW5lIHgxPSIwIiB5MT0iMTA2IiB4Mj0iMzYwIiB5Mj0iMTA2Ii8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE1OSIgeDI9IjM2MCIgeTI9IjE1OSIvPjxsaW5lIHgxPSIwIiB5MT0iMjEyIiB4Mj0iMzYwIiB5Mj0iMjEyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSIwIiB4Mj0iNzIiIHkyPSIyNjUiLz48bGluZSB4MT0iMTQ0IiB5MT0iMCIgeDI9IjE0NCIgeTI9IjI2NSIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjAiIHgyPSIyMTYiIHkyPSIyNjUiLz48bGluZSB4MT0iMjg4IiB5MT0iMCIgeDI9IjI4OCIgeTI9IjI2NSIvPgogIDwvZz4KICA8IS0tIExvbmcgSGFpciBCZWhpbmQgU2hvdWxkZXJzIC0tPgogIDxwYXRoIGQ9Ik0xMjIgOTYgQzExNiAxNDUsIDExOCAxOTIsIDEyOCAyMjAgTDIzMiAyMjAgQzI0MiAxOTIsIDI0NCAxNDUsIDIzOCA5NiBaIiBmaWxsPSIjMTgxODFCIi8+CiAgPCEtLSBGb3JtYWwgVGVhbCBTdWl0IC8gQ29sbGFyIC0tPgogIDxwYXRoIGQ9Ik04OCAyNjUgQzk0IDIwOCwgMTMwIDE5MCwgMTgwIDE5MCBDMjMwIDE5MCwgMjY2IDIwOCwgMjcyIDI2NSBaIiBmaWxsPSIjMEY3NjZFIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNTQsMTkwIDE4MCwyMzYgMjA2LDE5MCIgZmlsbD0iI0ZERkJGNyIvPgogIDwhLS0gTmVjayAtLT4KICA8cmVjdCB4PSIxNjQiIHk9IjE1MiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQ0IiByeD0iMTQiIGZpbGw9IiNDOTk1NkUiLz4KICA8IS0tIEZhY2UgLS0+CiAgPHBhdGggZD0iTTEzNyA5NSBDMTM3IDYwLCAyMjMgNjAsIDIyMyA5NSBDMjIzIDEzNSwgMjA2IDE2NCwgMTgwIDE2NCBDMTU0IDE2NCwgMTM3IDEzNSwgMTM3IDk1IFoiIGZpbGw9InVybCgjc2tpbjMpIi8+CiAgPCEtLSBIYWlyIENyb3duIC0tPgogIDxwYXRoIGQ9Ik0xMzIgMTAyIEMxMzAgNTgsIDE1MiA0NCwgMTgwIDQ0IEMyMDggNDQsIDIzMCA1OCwgMjI4IDEwMiBDMjIwIDc4LCAyMDAgNjgsIDE4MCA2OCBDMTYwIDY4LCAxNDAgNzgsIDEzMiAxMDIgWiIgZmlsbD0iIzE4MTgxQiIvPgogIDwhLS0gQmluZGkgLS0+CiAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iOTEiIHI9IjIuMiIgZmlsbD0iI0RDMjYyNiIvPgogIDwhLS0gRXllYnJvd3MgJiBFeWVzIC0tPgogIDxwYXRoIGQ9Ik0xNDkgOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIyLjYiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTEgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIyLjYiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxlbGxpcHNlIGN4PSIxNjAiIGN5PSIxMDciIHJ4PSI3LjgiIHJ5PSI0LjQiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMDciIHI9IjMuNSIgZmlsbD0iIzFDMTkxNyIvPgogIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIxMDciIHJ4PSI3LjgiIHJ5PSI0LjQiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNSIgZmlsbD0iIzFDMTkxNyIvPgogIDxwYXRoIGQ9Ik0xODAgMTA2IEwxNzggMTI2IFExODAgMTI5IDE4NCAxMjYiIHN0cm9rZT0iI0EzNzA0QyIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPCEtLSBTbWlsZSAtLT4KICA8cGF0aCBkPSJNMTY3IDE0MSBRMTgwIDE0OSAxOTMgMTQxIiBzdHJva2U9IiNCOTFDMUMiIHN0cm9rZS13aWR0aD0iMi42IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPjxwYXRoIGQ9Ik0yNDggNDggTDI0OCAzNCBMMjMyIDM0Ii8+CiAgICA8cGF0aCBkPSJNMTEyIDE2OCBMMTEyIDE4MiBMMTI4IDE4MiIvPjxwYXRoIGQ9Ik0yNDggMTY4IEwyNDggMTgyIEwyMzIgMTgyIi8+CiAgPC9nPgo8L3N2Zz4K">Pre-Registered EPIC Portrait #3 (Secunderabad Roll)</option>
+                <option value="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnNCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA4MTExRSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0Q2QTE3QSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNCODgwNTgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMjY1IiBmaWxsPSJ1cmwoI2JnNCkiLz4KICA8ZyBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjQ1Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTMiIHgyPSIzNjAiIHkyPSI1MyIvPjxsaW5lIHgxPSIwIiB5MT0iMTA2IiB4Mj0iMzYwIiB5Mj0iMTA2Ii8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE1OSIgeDI9IjM2MCIgeTI9IjE1OSIvPjxsaW5lIHgxPSIwIiB5MT0iMjEyIiB4Mj0iMzYwIiB5Mj0iMjEyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSIwIiB4Mj0iNzIiIHkyPSIyNjUiLz48bGluZSB4MT0iMTQ0IiB5MT0iMCIgeDI9IjE0NCIgeTI9IjI2NSIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjAiIHgyPSIyMTYiIHkyPSIyNjUiLz48bGluZSB4MT0iMjg4IiB5MT0iMCIgeDI9IjI4OCIgeTI9IjI2NSIvPgogIDwvZz4KICA8cGF0aCBkPSJNODQgMjY1IEM5MCAyMDYsIDEyOCAxOTAsIDE4MCAxOTAgQzIzMiAxOTAsIDI3MCAyMDYsIDI3NiAyNjUgWiIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTU4LDE5MCAxODAsMjM2IDIwMiwxOTAiIGZpbGw9IiNGMUY1RjkiLz4KICA8cmVjdCB4PSIxNjEiIHk9IjE1MiIgd2lkdGg9IjM4IiBoZWlnaHQ9IjQ0IiByeD0iMTQiIGZpbGw9IiNBRjc4NTAiLz4KICA8ZWxsaXBzZSBjeD0iMTMyIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE0IiBmaWxsPSIjQjg4MDU4Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOCIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iI0I4ODA1OCIvPgogIDxwYXRoIGQ9Ik0xMzQgOTQgQzEzNCA1OCwgMjI2IDU4LCAyMjYgOTQgQzIyNiAxMzYsIDIxMCAxNjYsIDE4MCAxNjYgQzE1MCAxNjYsIDEzNCAxMzYsIDEzNCA5NCBaIiBmaWxsPSJ1cmwoI3NraW40KSIvPgogIDxwYXRoIGQ9Ik0xMzEgOTQgQzEzMCA1NiwgMTUyIDQ0LCAxODAgNDQgQzIwOCA0NCwgMjMwIDU2LCAyMjkgOTQgQzIyMiA3NSwgMjA2IDY2LCAxODAgNjYgQzE1NCA2NiwgMTM4IDc1LCAxMzEgOTQgWiIgZmlsbD0iIzA5MEQxNiIvPgogIDwhLS0gRnVsbCBHcm9vbWVkIEJlYXJkIC0tPgogIDxwYXRoIGQ9Ik0xMzUgMTIwIEMxMzcgMTUyLCAxNTUgMTY4LCAxODAgMTY4IEMyMDUgMTY4LCAyMjMgMTUyLCAyMjUgMTIwIEMyMjAgMTQwLCAyMDQgMTU0LCAxODAgMTU0IEMxNTYgMTU0LCAxNDAgMTQwLCAxMzUgMTIwIFoiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9IjAuODgiLz4KICA8cGF0aCBkPSJNMTQ4IDk2IFExNjAgOTEgMTcxIDk1IiBzdHJva2U9IiMwOTBEMTYiIHN0cm9rZS13aWR0aD0iMy4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTg5IDk1IFEyMDAgOTEgMjEyIDk2IiBzdHJva2U9IiMwOTBEMTYiIHN0cm9rZS13aWR0aD0iMy4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNCIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUMxOTE3Ii8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjQiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFDMTkxNyIvPgogIDxwYXRoIGQ9Ik0xODAgMTA1IEwxNzcgMTI3IFExODAgMTMwIDE4NSAxMjciIHN0cm9rZT0iIzhDNUEzOCIgc3Ryb2tlLXdpZHRoPSIyLjIiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNMTY3IDE0MyBRMTgwIDE0OSAxOTMgMTQzIiBzdHJva2U9IiNGOEZBRkMiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGcgc3Ryb2tlPSIjMTBCOTgxIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuODUiPgogICAgPHBhdGggZD0iTTExMiA0OCBMMTEyIDM0IEwxMjggMzQiLz48cGF0aCBkPSJNMjQ4IDQ4IEwyNDggMzQgTDIzMiAzNCIvPgogICAgPHBhdGggZD0iTTExMiAxNjggTDExMiAxODIgTDEyOCAxODIiLz48cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==">Pre-Registered EPIC Portrait #4 (Charminar Roll)</option>
               </select>
             </div>
             <button type="submit" class="btn-primary">Enroll Citizen in Electoral Roll (Form-6) ↗</button>
@@ -638,7 +1835,7 @@ class Blockchain:
 
           <div class="modal-portrait-stage">
             <div id="modalLaserLine" class="laser-scan-line"></div>
-            <img id="modalVoterPortraitImg" src="static/voters/ateeq.svg" alt="Registered Voter Biometric Portrait" />
+            <img id="modalVoterPortraitImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="Registered Voter Biometric Portrait" />
             <video id="modalWebcamVideo" autoplay playsinline muted style="display:none;"></video>
             <canvas id="modalCaptureCanvas" width="360" height="270" style="display:none;"></canvas>
 
@@ -738,7 +1935,7 @@ class Blockchain:
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand-row">
-        <img src="static/evoting_logo.svg" alt="CivicChain Emblem" style="width:26px;height:26px;border-radius:6px;" />
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNpdmljQmciIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBEN0M2NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwQjE5MkMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRBY2NlbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM0RDM5OSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMEI5ODEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gT3V0ZXIgU292ZXJlaWduIEhleGFnb24gLyBTaGllbGQgRnJhbWUgLS0+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9InVybCgjY2l2aWNCZykiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2Utb3BhY2l0eT0iMC40NSIvPgogIDwhLS0gQmxvY2tjaGFpbiBJc29tZXRyaWMgQ3ViZSBCYXNlIChCYWxsb3QgQm94KSAtLT4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMjFMNTAgMjlWNDdMMzIgNTVMMTQgNDdWMjlaIiBmaWxsPSIjMEIxOTJDIiBmaWxsLW9wYWNpdHk9IjAuNyIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMzdMNTAgMjkiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0zMiAzN1Y1NSIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+CiAgPCEtLSBCYWxsb3QgU2xvdCBvbiBUb3Agb2YgQ3ViZSAtLT4KICA8cGF0aCBkPSJNMjQgMjcuNUw0MCAyNy41IiBzdHJva2U9IiNBN0YzRDAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFZlcmlmaWVkIEJhbGxvdCBDYXJkIEluc2VydGluZyBpbnRvIFNsb3QgLS0+CiAgPHJlY3QgeD0iMjIiIHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTciIHJ4PSIzIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgPCEtLSBDaGVja21hcmsgb24gQmFsbG90IC0tPgogIDxwYXRoIGQ9Ik0yNy41IDE4LjVMMzAuOCAyMS44TDM3IDE1LjIiIHN0cm9rZT0iIzBEN0M2NiIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gQ3J5cHRvZ3JhcGhpYyBOb2RlIERvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSI1NSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+Cjwvc3ZnPgo=" alt="CivicChain Emblem" style="width:26px;height:26px;border-radius:6px;" />
         <strong style="font-family:var(--font-display);font-size:15px;color:#FFFFFF;letter-spacing:-0.01em;">
           CIVICCHAIN // E-VOTING SYSTEM USING BLOCKCHAIN TECHNOLOGY
         </strong>
@@ -777,14 +1974,14 @@ class Blockchain:
        ==================================================================== -->
   <script>
     const INITIAL_PARTIES = [
-      { id: 1, candidatename: "Rajeshwar Rao Deshmukh", partyname: "Bharatiya Janata Party (BJP)", areaname: "Jubilee Hills", image: "static/parties/bjp.svg", party_code: "BJP", manifesto: "Digital Infrastructure, Urban Mobility & Industrial Growth Corridors", votes: 0 },
-      { id: 2, candidatename: "Dr. Ananya Reddy", partyname: "Indian National Congress (INC)", areaname: "Santosh Nagar", image: "static/parties/inc.svg", party_code: "INC", manifesto: "Universal Healthcare Access, Youth Employment & Civic Welfare", votes: 1 },
-      { id: 3, candidatename: "Vikramaditya Sharma", partyname: "Aam Aadmi Party (AAP)", areaname: "Secunderabad", image: "static/parties/aap.svg", party_code: "AAP", manifesto: "Model Public Schools, Mohalla Clinics & Zero-Corruption Governance", votes: 1 },
-      { id: 4, candidatename: "K. Chandrasekhar Goud", partyname: "Bharat Rashtra Samithi (BRS)", areaname: "Tolichowki", image: "static/parties/brs.svg", party_code: "BRS", manifesto: "IT Corridor Expansion, 24x7 Clean Water & Metro Connectivity", votes: 1 },
-      { id: 5, candidatename: "Syed Zafarullah Quadri", partyname: "All India Majlis-e-Ittehadul Muslimeen (AIMIM)", areaname: "Charminar", image: "static/parties/aimim.svg", party_code: "AIMIM", manifesto: "Old City Heritage Renewal, Minority Education & Healthcare Centers", votes: 1 },
-      { id: 6, candidatename: "Prabhakar Rao Ambedkar", partyname: "Bahujan Samaj Party (BSP)", areaname: "Mallepally", image: "static/parties/bsp.svg", party_code: "BSP", manifesto: "Social Justice, Equal Opportunity & Grassroots Empowerment", votes: 0 },
-      { id: 7, candidatename: "Comrade Sitaramacharyulu", partyname: "Communist Party of India (Marxist) (CPI-M)", areaname: "Mehdipatnam", image: "static/parties/cpim.svg", party_code: "CPI-M", manifesto: "Labour Rights, Public Transport Subsidies & Affordable Housing", votes: 0 },
-      { id: 8, candidatename: "None of the Above (NOTA)", partyname: "NOTA — Official Electoral Option", areaname: "All Constituencies", image: "static/parties/nota.svg", party_code: "NOTA", manifesto: "Constitutional Right to Reject All Listed Candidates", votes: 0 }
+      { id: 1, candidatename: "Rajeshwar Rao Deshmukh", partyname: "Bharatiya Janata Party (BJP)", areaname: "Jubilee Hills", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmpwR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjk5MzMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNGRjZCMDAiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTM4ODA4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0idXJsKCNianBHcmFkKSIgc3Ryb2tlPSIjMTM4ODA4IiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NiIgZmlsbD0iI0ZGRkRGOSIvPgogIDwhLS0gU3R5bGl6ZWQgTG90dXMgRW1ibGVtIC0tPgogIDxwYXRoIGQ9Ik02MCAyMiBDNjcgMzUgNzEgNDggNjAgNjIgQzQ5IDQ4IDUzIDM1IDYwIDIyIFoiIGZpbGw9IiNGRjZCMDAiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTYwIDYyIEM3MCA0MiA4NiAzOCA4OCA1MiBDODUgNjIgNzIgNjUgNjAgNjIgWiIgZmlsbD0iI0ZGODUzMyIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNNjAgNjIgQzUwIDQyIDM0IDM4IDMyIDUyIEMzNSA2MiA0OCA2NSA2MCA2MiBaIiBmaWxsPSIjRkY4NTMzIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwYXRoIGQ9Ik02MCA2MiBDNzYgNTQgOTQgNTYgOTIgNjcgQzg1IDczIDcxIDcwIDYwIDYyIFoiIGZpbGw9IiNGRkEzNjYiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTYwIDYyIEM0NCA1NCAyNiA1NiAyOCA2NyBDMzUgNzMgNDkgNzAgNjAgNjIgWiIgZmlsbD0iI0ZGQTM2NiIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIFN0ZW0gYW5kIEJhc2UgLS0+CiAgPHBhdGggZD0iTTYwIDYyIEw2MCA4NCIgc3Ryb2tlPSIjMTM4ODA4IiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTM2IDc4IFE2MCA5MCA4NCA3OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTM4ODA4IiBzdHJva2Utd2lkdGg9IjMuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iODAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTUxNzFCIj5CSlA8L3RleHQ+Cjwvc3ZnPgo=", party_code: "BJP", manifesto: "Digital Infrastructure, Urban Mobility & Industrial Growth Corridors", votes: 0 },
+      { id: 2, candidatename: "Dr. Ananya Reddy", partyname: "Indian National Congress (INC)", areaname: "Santosh Nagar", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iaW5jVHJpIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjk5MzMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIzMyUiIHN0b3AtY29sb3I9IiNGRjk5MzMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIzNCUiIHN0b3AtY29sb3I9IiNGRkZGRkYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2NiUiIHN0b3AtY29sb3I9IiNGRkZGRkYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2NyUiIHN0b3AtY29sb3I9IiMxMzg4MDgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTM4ODA4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0idXJsKCNpbmNUcmkpIiBzdHJva2U9IiMwMDUyRkYiIHN0cm9rZS13aWR0aD0iNCIvPgogIDwhLS0gT3BlbiBQYWxtIEVtYmxlbSAtLT4KICA8ZyBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik00NCA2MiBMNDQgMzggQzQ0IDM1IDQ5IDM1IDQ5IDM4IEw0OSA1NQogICAgICAgICAgICAgTDUyIDMxIEM1MiAyOCA1NyAyOCA1NyAzMSBMNTcgNTQKICAgICAgICAgICAgIEw2MCAyOCBDNjAgMjUgNjUgMjUgNjUgMjggTDY1IDU0CiAgICAgICAgICAgICBMNjggMzMgQzY4IDMwIDczIDMwIDczIDMzIEw3MyA2MwogICAgICAgICAgICAgTDc4IDUwIEM4MCA0NyA4NCA1MCA4MiA1NCBMNzQgNzUKICAgICAgICAgICAgIEM3MSA4MiA2NCA4NSA1NiA4NSBDNDggODUgNDQgNzggNDQgNjggWiIvPgogIDwvZz4KICA8Y2lyY2xlIGN4PSI1OSIgY3k9IjY3IiByPSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDUyRkYiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgPHRleHQgeD0iNjAiIHk9IjEwMiIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMC41IiBmb250LXdlaWdodD0iODAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZGRkZGIj5JTkM8L3RleHQ+Cjwvc3ZnPgo=", party_code: "INC", manifesto: "Universal Healthcare Access, Youth Employment & Civic Welfare", votes: 1 },
+      { id: 3, candidatename: "Vikramaditya Sharma", partyname: "Aam Aadmi Party (AAP)", areaname: "Secunderabad", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzAwNTJGRiIgc3Ryb2tlPSIjMEEyMzUxIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQnJvb20gRW1ibGVtIC0tPgogIDxnIHRyYW5zZm9ybT0icm90YXRlKC0zMiA2MCA2MCkiPgogICAgPHJlY3QgeD0iNTYiIHk9IjIwIiB3aWR0aD0iOCIgaGVpZ2h0PSIzNCIgcng9IjMiIGZpbGw9IiM4QjVBMkIiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cmVjdCB4PSI1MiIgeT0iNTAiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2IiByeD0iMiIgZmlsbD0iIzAwNTJGRiIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogICAgPHBhdGggZD0iTTUyIDU2IEw0MiA4OCBMNzggODggTDY4IDU2IFoiIGZpbGw9IiNFQUIzMDgiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSB4MT0iNTYiIHkxPSI1NiIgeDI9IjUwIiB5Mj0iODgiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgIDxsaW5lIHgxPSI2MCIgeTE9IjU2IiB4Mj0iNjAiIHkyPSI4OCIgc3Ryb2tlPSIjMTUxNzFCIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPGxpbmUgeDE9IjY0IiB5MT0iNTYiIHgyPSI3MCIgeTI9Ijg4IiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPC9nPgogIDx0ZXh0IHg9IjYwIiB5PSI5OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzAwNTJGRiI+QUFQPC90ZXh0Pgo8L3N2Zz4K", party_code: "AAP", manifesto: "Model Public Schools, Mohalla Clinics & Zero-Corruption Governance", votes: 1 },
+      { id: 4, candidatename: "K. Chandrasekhar Goud", partyname: "Bharat Rashtra Samithi (BRS)", areaname: "Tolichowki", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iI0VDNDg5OSIgc3Ryb2tlPSIjOUQxNzREIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0ZGRjVGOSIvPgogIDwhLS0gQW1iYXNzYWRvciBDYXIgRW1ibGVtIC0tPgogIDxwYXRoIGQ9Ik0zMCA2NiBMMzYgNDggQzM4IDQ0IDQzIDQyIDQ4IDQyIEw3MiA0MiBDNzcgNDIgODIgNDQgODQgNDggTDkwIDY2IFoiIGZpbGw9IiNFQzQ4OTkiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHJlY3QgeD0iMjQiIHk9IjYyIiB3aWR0aD0iNzIiIGhlaWdodD0iMTYiIHJ4PSI2IiBmaWxsPSIjREIyNzc3IiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwYXRoIGQ9Ik00MSA0NyBMNTcgNDcgTDU3IDU5IEwzNiA1OSBaIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHBhdGggZD0iTTYyIDQ3IEw3OCA0NyBMODMgNTkgTDYyIDU5IFoiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iIzE1MTcxQiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8Y2lyY2xlIGN4PSIzOCIgY3k9Ijc4IiByPSI4IiBmaWxsPSIjMTUxNzFCIi8+CiAgPGNpcmNsZSBjeD0iMzgiIGN5PSI3OCIgcj0iMy41IiBmaWxsPSIjRkZGRkZGIi8+CiAgPGNpcmNsZSBjeD0iODIiIGN5PSI3OCIgcj0iOCIgZmlsbD0iIzE1MTcxQiIvPgogIDxjaXJjbGUgY3g9IjgyIiBjeT0iNzgiIHI9IjMuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDx0ZXh0IHg9IjYwIiB5PSI5OSIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlEMTc0RCI+QlJTPC90ZXh0Pgo8L3N2Zz4K", party_code: "BRS", manifesto: "IT Corridor Expansion, 24x7 Clean Water & Metro Connectivity", votes: 1 },
+      { id: 5, candidatename: "Syed Zafarullah Quadri", partyname: "All India Majlis-e-Ittehadul Muslimeen (AIMIM)", areaname: "Charminar", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzA1OTY2OSIgc3Ryb2tlPSIjMDY0RTNCIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0VDRkRGNSIvPgogIDwhLS0gS2l0ZSBFbWJsZW0gLS0+CiAgPHBvbHlnb24gcG9pbnRzPSI2MCwyNCA4NCw1MiA2MCw4MCAzNiw1MiIgZmlsbD0iIzEwQjk4MSIgc3Ryb2tlPSIjMDY0RTNCIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxsaW5lIHgxPSI2MCIgeTE9IjI0IiB4Mj0iNjAiIHkyPSI4MCIgc3Ryb2tlPSIjMDY0RTNCIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMzYgNTIgUTYwIDQwIDg0IDUyIiBmaWxsPSJub25lIiBzdHJva2U9IiMwNjRFM0IiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjAsODAgNTMsOTAgNjcsOTAiIGZpbGw9IiMwNTk2NjkiIHN0cm9rZT0iIzA2NEUzQiIgc3Ryb2tlLXdpZHRoPSIxLjgiLz4KICA8dGV4dCB4PSI2MCIgeT0iMTAxIiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iODAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDY0RTNCIj5BSU1JTTwvdGV4dD4KPC9zdmc+Cg==", party_code: "AIMIM", manifesto: "Old City Heritage Renewal, Minority Education & Healthcare Centers", votes: 1 },
+      { id: 6, candidatename: "Prabhakar Rao Ambedkar", partyname: "Bahujan Samaj Party (BSP)", areaname: "Mallepally", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzFENEVEOCIgc3Ryb2tlPSIjMUUzQThBIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0VGRjZGRiIvPgogIDwhLS0gU3R5bGl6ZWQgRWxlcGhhbnQgRW1ibGVtIC0tPgogIDxwYXRoIGQ9Ik0zNiA1MiBDMzYgMzggNTAgMzQgNjYgMzYgQzc4IDM2IDg0IDQ0IDg0IDU2IEw4NCA3OCBMNzUgNzggTDc1IDY0IEw2NCA2NCBMNjQgNzggTDU1IDc4IEw1NSA2MiBMNDYgNjIgTDQ2IDc4IEwzNyA3OCBMMzcgNTggQzMyIDU4IDI5IDY0IDI5IDcwIEwyNCA3MCBDMjQgNTggMzAgNTIgMzYgNTIgWiIgZmlsbD0iIzI1NjNFQiIgc3Ryb2tlPSIjMUUzQThBIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI0NCIgY3k9IjQ2IiByPSIyLjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8cGF0aCBkPSJNMzMgNTYgUTI4IDYwIDMyIDYzIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8dGV4dCB4PSI2MCIgeT0iOTkiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxRTNBOEEiPkJTUDwvdGV4dD4KPC9zdmc+Cg==", party_code: "BSP", manifesto: "Social Justice, Equal Opportunity & Grassroots Empowerment", votes: 0 },
+      { id: 7, candidatename: "Comrade Sitaramacharyulu", partyname: "Communist Party of India (Marxist) (CPI-M)", areaname: "Mehdipatnam", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iI0RDMjYyNiIgc3Ryb2tlPSIjN0YxRDFEIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0ZFRjJGMiIvPgogIDwhLS0gU3RhciAmIEdlYXIgQ2l2aWMgRW1ibGVtIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iNjAsMjYgNjcsNDQgODYsNDQgNzEsNTYgNzYsNzQgNjAsNjMgNDQsNzQgNDksNTYgMzQsNDQgNTMsNDQiIGZpbGw9IiNEQzI2MjYiIHN0cm9rZT0iIzdGMUQxRCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI1MyIgcj0iNyIgZmlsbD0iI0ZFRjJGMiIvPgogIDx0ZXh0IHg9IjYwIiB5PSI5OSIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzdGMUQxRCI+Q1BJLU08L3RleHQ+Cjwvc3ZnPgo=", party_code: "CPI-M", manifesto: "Labour Rights, Public Transport Subsidies & Affordable Housing", votes: 0 },
+      { id: 8, candidatename: "None of the Above (NOTA)", partyname: "NOTA — Official Electoral Option", areaname: "All Constituencies", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzE1MTcxQiIgc3Ryb2tlPSIjNEI1NTYzIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQmFsbG90IENyb3NzIEljb24gLS0+CiAgPHJlY3QgeD0iMzgiIHk9IjM0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPGxpbmUgeDE9IjQ2IiB5MT0iNDIiIHgyPSI3NCIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iNDIiIHgyPSI0NiIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwLjUiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNTE3MUIiPk5PVEE8L3RleHQ+Cjwvc3ZnPgo=", party_code: "NOTA", manifesto: "Constitutional Right to Reject All Listed Candidates", votes: 0 }
     ];
 
     const INITIAL_VOTERS = [
@@ -795,7 +1992,7 @@ class Blockchain:
         contact: "9849016003",
         email: "ateeq@wahlanos.com",
         address: "Himayath Sagar, Jubilee Hills, Hyderabad",
-        profile_image: "static/voters/ateeq.svg",
+        profile_image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==",
         face_signature: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
         has_voted: false,
         nullifier: "zk_nullifier_8f41c92a7b10e3d944a1208b"
@@ -807,7 +2004,7 @@ class Blockchain:
         contact: "9652881908",
         email: "karimi@gmail.com",
         address: "Tolichowki Main Road, Hyderabad",
-        profile_image: "static/voters/azizullah.svg",
+        profile_image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMiIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTMyNTNEIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBBMTQyNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjIiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0RDQTg4MiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNCRjg4NjAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMjY1IiBmaWxsPSJ1cmwoI2JnMikiLz4KICA8ZyBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjQ1Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTMiIHgyPSIzNjAiIHkyPSI1MyIvPjxsaW5lIHgxPSIwIiB5MT0iMTA2IiB4Mj0iMzYwIiB5Mj0iMTA2Ii8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE1OSIgeDI9IjM2MCIgeTI9IjE1OSIvPjxsaW5lIHgxPSIwIiB5MT0iMjEyIiB4Mj0iMzYwIiB5Mj0iMjEyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSIwIiB4Mj0iNzIiIHkyPSIyNjUiLz48bGluZSB4MT0iMTQ0IiB5MT0iMCIgeDI9IjE0NCIgeTI9IjI2NSIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjAiIHgyPSIyMTYiIHkyPSIyNjUiLz48bGluZSB4MT0iMjg4IiB5MT0iMCIgeDI9IjI4OCIgeTI9IjI2NSIvPgogIDwvZz4KICA8IS0tIEZvcm1hbCBLdXJ0YSAvIE5laHJ1IEphY2tldCAtLT4KICA8cGF0aCBkPSJNODQgMjY1IEM5MCAyMDYsIDEyOCAxOTAsIDE4MCAxOTAgQzIzMiAxOTAsIDI3MCAyMDYsIDI3NiAyNjUgWiIgZmlsbD0iIzFFM0E1RiIvPgogIDxwYXRoIGQ9Ik0xNTggMTkwIEwxODAgMjMyIEwyMDIgMTkwIFoiIGZpbGw9IiNFMkU4RjAiLz4KICA8cmVjdCB4PSIxNjIiIHk9IjE1MiIgd2lkdGg9IjM2IiBoZWlnaHQ9IjQ0IiByeD0iMTQiIGZpbGw9IiNCODgyNUIiLz4KICA8ZWxsaXBzZSBjeD0iMTMyIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE0IiBmaWxsPSIjQkY4ODYwIi8+CiAgPGVsbGlwc2UgY3g9IjIyOCIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iI0JGODg2MCIvPgogIDxwYXRoIGQ9Ik0xMzQgOTQgQzEzNCA1OCwgMjI2IDU4LCAyMjYgOTQgQzIyNiAxMzYsIDIxMCAxNjYsIDE4MCAxNjYgQzE1MCAxNjYsIDEzNCAxMzYsIDEzNCA5NCBaIiBmaWxsPSJ1cmwoI3NraW4yKSIvPgogIDwhLS0gSGFpciAtLT4KICA8cGF0aCBkPSJNMTMyIDk1IEMxMzAgNTYsIDE1NCA0NSwgMTgwIDQ1IEMyMDYgNDUsIDIzMCA1NiwgMjI4IDk1IEMyMjIgNzYsIDIwNiA2NywgMTgwIDY3IEMxNTQgNjcsIDEzOCA3NiwgMTMyIDk1IFoiIGZpbGw9IiMxRjI5MzciLz4KICA8IS0tIEdsYXNzZXMgLS0+CiAgPGcgc3Ryb2tlPSIjOTRBM0I4IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9InJnYmEoNTYsMTg5LDI0OCwwLjA4KSI+CiAgICA8cmVjdCB4PSIxNDUiIHk9Ijk5IiB3aWR0aD0iMjgiIGhlaWdodD0iMTciIHJ4PSI0Ii8+CiAgICA8cmVjdCB4PSIxODciIHk9Ijk5IiB3aWR0aD0iMjgiIGhlaWdodD0iMTciIHJ4PSI0Ii8+CiAgICA8bGluZSB4MT0iMTczIiB5MT0iMTA2IiB4Mj0iMTg3IiB5Mj0iMTA2Ii8+CiAgPC9nPgogIDwhLS0gRXllcyAtLT4KICA8Y2lyY2xlIGN4PSIxNTkiIGN5PSIxMDciIHI9IjMuNCIgZmlsbD0iIzExMTgyNyIvPgogIDxjaXJjbGUgY3g9IjIwMSIgY3k9IjEwNyIgcj0iMy40IiBmaWxsPSIjMTExODI3Ii8+CiAgPHBhdGggZD0iTTE0OCA5NCBRMTU5IDkwIDE3MCA5NCIgc3Ryb2tlPSIjMUYyOTM3IiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xOTAgOTQgUTIwMSA5MCAyMTIgOTQiIHN0cm9rZT0iIzFGMjkzNyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTgwIDEwNiBMMTc4IDEyNyBRMTgwIDEzMCAxODQgMTI3IiBzdHJva2U9IiM5QTY4NDQiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgogIDwhLS0gTXVzdGFjaGUgJiBHb2F0ZWUgLS0+CiAgPHBhdGggZD0iTTE2NCAxMzkgUTE4MCAxMzMgMTk2IDEzOSIgc3Ryb2tlPSIjMUYyOTM3IiBzdHJva2Utd2lkdGg9IjMuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTE2OCAxNDUgUTE4MCAxNTEgMTkyIDE0NSIgc3Ryb2tlPSIjNkIyMUE4IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPjxwYXRoIGQ9Ik0yNDggNDggTDI0OCAzNCBMMjMyIDM0Ii8+CiAgICA8cGF0aCBkPSJNMTEyIDE2OCBMMTEyIDE4MiBMMTI4IDE4MiIvPjxwYXRoIGQ9Ik0yNDggMTY4IEwyNDggMTgyIEwyMzIgMTgyIi8+CiAgPC9nPgo8L3N2Zz4K",
         face_signature: "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
         has_voted: true,
         nullifier: "zk_nullifier_3e92a17b85c04f1298d1a4c2"
@@ -819,7 +2016,7 @@ class Blockchain:
         contact: "9988776655",
         email: "priyanka.r@gmail.com",
         address: "Trimulgherry, Secunderabad, Hyderabad",
-        profile_image: "static/voters/priyanka.svg",
+        profile_image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTQyNjNCIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjMiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0U4QkU5QSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDRjlDNzQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMjY1IiBmaWxsPSJ1cmwoI2JnMykiLz4KICA8ZyBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjQ1Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTMiIHgyPSIzNjAiIHkyPSI1MyIvPjxsaW5lIHgxPSIwIiB5MT0iMTA2IiB4Mj0iMzYwIiB5Mj0iMTA2Ii8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE1OSIgeDI9IjM2MCIgeTI9IjE1OSIvPjxsaW5lIHgxPSIwIiB5MT0iMjEyIiB4Mj0iMzYwIiB5Mj0iMjEyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSIwIiB4Mj0iNzIiIHkyPSIyNjUiLz48bGluZSB4MT0iMTQ0IiB5MT0iMCIgeDI9IjE0NCIgeTI9IjI2NSIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjAiIHgyPSIyMTYiIHkyPSIyNjUiLz48bGluZSB4MT0iMjg4IiB5MT0iMCIgeDI9IjI4OCIgeTI9IjI2NSIvPgogIDwvZz4KICA8IS0tIExvbmcgSGFpciBCZWhpbmQgU2hvdWxkZXJzIC0tPgogIDxwYXRoIGQ9Ik0xMjIgOTYgQzExNiAxNDUsIDExOCAxOTIsIDEyOCAyMjAgTDIzMiAyMjAgQzI0MiAxOTIsIDI0NCAxNDUsIDIzOCA5NiBaIiBmaWxsPSIjMTgxODFCIi8+CiAgPCEtLSBGb3JtYWwgVGVhbCBTdWl0IC8gQ29sbGFyIC0tPgogIDxwYXRoIGQ9Ik04OCAyNjUgQzk0IDIwOCwgMTMwIDE5MCwgMTgwIDE5MCBDMjMwIDE5MCwgMjY2IDIwOCwgMjcyIDI2NSBaIiBmaWxsPSIjMEY3NjZFIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNTQsMTkwIDE4MCwyMzYgMjA2LDE5MCIgZmlsbD0iI0ZERkJGNyIvPgogIDwhLS0gTmVjayAtLT4KICA8cmVjdCB4PSIxNjQiIHk9IjE1MiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQ0IiByeD0iMTQiIGZpbGw9IiNDOTk1NkUiLz4KICA8IS0tIEZhY2UgLS0+CiAgPHBhdGggZD0iTTEzNyA5NSBDMTM3IDYwLCAyMjMgNjAsIDIyMyA5NSBDMjIzIDEzNSwgMjA2IDE2NCwgMTgwIDE2NCBDMTU0IDE2NCwgMTM3IDEzNSwgMTM3IDk1IFoiIGZpbGw9InVybCgjc2tpbjMpIi8+CiAgPCEtLSBIYWlyIENyb3duIC0tPgogIDxwYXRoIGQ9Ik0xMzIgMTAyIEMxMzAgNTgsIDE1MiA0NCwgMTgwIDQ0IEMyMDggNDQsIDIzMCA1OCwgMjI4IDEwMiBDMjIwIDc4LCAyMDAgNjgsIDE4MCA2OCBDMTYwIDY4LCAxNDAgNzgsIDEzMiAxMDIgWiIgZmlsbD0iIzE4MTgxQiIvPgogIDwhLS0gQmluZGkgLS0+CiAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iOTEiIHI9IjIuMiIgZmlsbD0iI0RDMjYyNiIvPgogIDwhLS0gRXllYnJvd3MgJiBFeWVzIC0tPgogIDxwYXRoIGQ9Ik0xNDkgOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIyLjYiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTEgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIyLjYiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxlbGxpcHNlIGN4PSIxNjAiIGN5PSIxMDciIHJ4PSI3LjgiIHJ5PSI0LjQiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMDciIHI9IjMuNSIgZmlsbD0iIzFDMTkxNyIvPgogIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIxMDciIHJ4PSI3LjgiIHJ5PSI0LjQiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNSIgZmlsbD0iIzFDMTkxNyIvPgogIDxwYXRoIGQ9Ik0xODAgMTA2IEwxNzggMTI2IFExODAgMTI5IDE4NCAxMjYiIHN0cm9rZT0iI0EzNzA0QyIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPCEtLSBTbWlsZSAtLT4KICA8cGF0aCBkPSJNMTY3IDE0MSBRMTgwIDE0OSAxOTMgMTQxIiBzdHJva2U9IiNCOTFDMUMiIHN0cm9rZS13aWR0aD0iMi42IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPjxwYXRoIGQ9Ik0yNDggNDggTDI0OCAzNCBMMjMyIDM0Ii8+CiAgICA8cGF0aCBkPSJNMTEyIDE2OCBMMTEyIDE4MiBMMTI4IDE4MiIvPjxwYXRoIGQ9Ik0yNDggMTY4IEwyNDggMTgyIEwyMzIgMTgyIi8+CiAgPC9nPgo8L3N2Zz4K",
         face_signature: "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
         has_voted: true,
         nullifier: "zk_nullifier_7a19d44e20b81c6533f09e11"
@@ -831,7 +2028,7 @@ class Blockchain:
         contact: "9123456780",
         email: "zubair.charminar@gmail.com",
         address: "Laad Bazaar, Charminar, Hyderabad",
-        profile_image: "static/voters/zubair.svg",
+        profile_image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnNCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA4MTExRSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0Q2QTE3QSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNCODgwNTgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMjY1IiBmaWxsPSJ1cmwoI2JnNCkiLz4KICA8ZyBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjQ1Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTMiIHgyPSIzNjAiIHkyPSI1MyIvPjxsaW5lIHgxPSIwIiB5MT0iMTA2IiB4Mj0iMzYwIiB5Mj0iMTA2Ii8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE1OSIgeDI9IjM2MCIgeTI9IjE1OSIvPjxsaW5lIHgxPSIwIiB5MT0iMjEyIiB4Mj0iMzYwIiB5Mj0iMjEyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSIwIiB4Mj0iNzIiIHkyPSIyNjUiLz48bGluZSB4MT0iMTQ0IiB5MT0iMCIgeDI9IjE0NCIgeTI9IjI2NSIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjAiIHgyPSIyMTYiIHkyPSIyNjUiLz48bGluZSB4MT0iMjg4IiB5MT0iMCIgeDI9IjI4OCIgeTI9IjI2NSIvPgogIDwvZz4KICA8cGF0aCBkPSJNODQgMjY1IEM5MCAyMDYsIDEyOCAxOTAsIDE4MCAxOTAgQzIzMiAxOTAsIDI3MCAyMDYsIDI3NiAyNjUgWiIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTU4LDE5MCAxODAsMjM2IDIwMiwxOTAiIGZpbGw9IiNGMUY1RjkiLz4KICA8cmVjdCB4PSIxNjEiIHk9IjE1MiIgd2lkdGg9IjM4IiBoZWlnaHQ9IjQ0IiByeD0iMTQiIGZpbGw9IiNBRjc4NTAiLz4KICA8ZWxsaXBzZSBjeD0iMTMyIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE0IiBmaWxsPSIjQjg4MDU4Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOCIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iI0I4ODA1OCIvPgogIDxwYXRoIGQ9Ik0xMzQgOTQgQzEzNCA1OCwgMjI2IDU4LCAyMjYgOTQgQzIyNiAxMzYsIDIxMCAxNjYsIDE4MCAxNjYgQzE1MCAxNjYsIDEzNCAxMzYsIDEzNCA5NCBaIiBmaWxsPSJ1cmwoI3NraW40KSIvPgogIDxwYXRoIGQ9Ik0xMzEgOTQgQzEzMCA1NiwgMTUyIDQ0LCAxODAgNDQgQzIwOCA0NCwgMjMwIDU2LCAyMjkgOTQgQzIyMiA3NSwgMjA2IDY2LCAxODAgNjYgQzE1NCA2NiwgMTM4IDc1LCAxMzEgOTQgWiIgZmlsbD0iIzA5MEQxNiIvPgogIDwhLS0gRnVsbCBHcm9vbWVkIEJlYXJkIC0tPgogIDxwYXRoIGQ9Ik0xMzUgMTIwIEMxMzcgMTUyLCAxNTUgMTY4LCAxODAgMTY4IEMyMDUgMTY4LCAyMjMgMTUyLCAyMjUgMTIwIEMyMjAgMTQwLCAyMDQgMTU0LCAxODAgMTU0IEMxNTYgMTU0LCAxNDAgMTQwLCAxMzUgMTIwIFoiIGZpbGw9IiMxMTE4MjciIG9wYWNpdHk9IjAuODgiLz4KICA8cGF0aCBkPSJNMTQ4IDk2IFExNjAgOTEgMTcxIDk1IiBzdHJva2U9IiMwOTBEMTYiIHN0cm9rZS13aWR0aD0iMy4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTg5IDk1IFEyMDAgOTEgMjEyIDk2IiBzdHJva2U9IiMwOTBEMTYiIHN0cm9rZS13aWR0aD0iMy4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNCIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUMxOTE3Ii8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjQiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFDMTkxNyIvPgogIDxwYXRoIGQ9Ik0xODAgMTA1IEwxNzcgMTI3IFExODAgMTMwIDE4NSAxMjciIHN0cm9rZT0iIzhDNUEzOCIgc3Ryb2tlLXdpZHRoPSIyLjIiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNMTY3IDE0MyBRMTgwIDE0OSAxOTMgMTQzIiBzdHJva2U9IiNGOEZBRkMiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGcgc3Ryb2tlPSIjMTBCOTgxIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuODUiPgogICAgPHBhdGggZD0iTTExMiA0OCBMMTEyIDM0IEwxMjggMzQiLz48cGF0aCBkPSJNMjQ4IDQ4IEwyNDggMzQgTDIzMiAzNCIvPgogICAgPHBhdGggZD0iTTExMiAxNjggTDExMiAxODIgTDEyOCAxODIiLz48cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==",
         face_signature: "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683",
         has_voted: true,
         nullifier: "zk_nullifier_5c82f01944d2a8b711e309f4"
@@ -843,7 +2040,7 @@ class Blockchain:
         contact: "9701234509",
         email: "farhan.hyd@outlook.com",
         address: "Santosh Nagar Colony, Hyderabad",
-        profile_image: "static/voters/farhan.svg",
+        profile_image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnNSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTIyNDNBIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTIyMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjUiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0U0Qjg5MiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODk0NkIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzNjAiIGhlaWdodD0iMjY1IiBmaWxsPSJ1cmwoI2JnNSkiLz4KICA8ZyBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjQ1Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iNTMiIHgyPSIzNjAiIHkyPSI1MyIvPjxsaW5lIHgxPSIwIiB5MT0iMTA2IiB4Mj0iMzYwIiB5Mj0iMTA2Ii8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjE1OSIgeDI9IjM2MCIgeTI9IjE1OSIvPjxsaW5lIHgxPSIwIiB5MT0iMjEyIiB4Mj0iMzYwIiB5Mj0iMjEyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSIwIiB4Mj0iNzIiIHkyPSIyNjUiLz48bGluZSB4MT0iMTQ0IiB5MT0iMCIgeDI9IjE0NCIgeTI9IjI2NSIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjAiIHgyPSIyMTYiIHkyPSIyNjUiLz48bGluZSB4MT0iMjg4IiB5MT0iMCIgeDI9IjI4OCIgeTI9IjI2NSIvPgogIDwvZz4KICA8cGF0aCBkPSJNODQgMjY1IEM5MCAyMDYsIDEyOCAxOTAsIDE4MCAxOTAgQzIzMiAxOTAsIDI3MCAyMDYsIDI3NiAyNjUgWiIgZmlsbD0iIzMzNDE1NSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTU2LDE5MCAxODAsMjM4IDIwNCwxOTAiIGZpbGw9IiNGRkZGRkYiLz4KICA8cmVjdCB4PSIxNjIiIHk9IjE1MiIgd2lkdGg9IjM2IiBoZWlnaHQ9IjQ0IiByeD0iMTQiIGZpbGw9IiNDMDhCNjMiLz4KICA8ZWxsaXBzZSBjeD0iMTMyIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE0IiBmaWxsPSIjQzg5NDZCIi8+CiAgPGVsbGlwc2UgY3g9IjIyOCIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iI0M4OTQ2QiIvPgogIDxwYXRoIGQ9Ik0xMzQgOTQgQzEzNCA1OCwgMjI2IDU4LCAyMjYgOTQgQzIyNiAxMzYsIDIxMCAxNjUsIDE4MCAxNjUgQzE1MCAxNjUsIDEzNCAxMzYsIDEzNCA5NCBaIiBmaWxsPSJ1cmwoI3NraW41KSIvPgogIDxwYXRoIGQ9Ik0xMzIgOTUgQzEzMCA1NiwgMTUyIDQ0LCAxODAgNDQgQzIwOCA0NCwgMjMwIDU2LCAyMjggOTUgQzIyMSA3NSwgMjA0IDY2LCAxODAgNjYgQzE1NiA2NiwgMTM5IDc1LCAxMzIgOTUgWiIgZmlsbD0iIzI3MjcyQSIvPgogIDxwYXRoIGQ9Ik0xNDggOTYgUTE2MCA5MSAxNzEgOTUiIHN0cm9rZT0iIzI3MjcyQSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTg5IDk1IFEyMDAgOTEgMjEyIDk2IiBzdHJva2U9IiMyNzI3MkEiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGVsbGlwc2UgY3g9IjE2MCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjQiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxMDciIHI9IjMuNSIgZmlsbD0iIzFDMTkxNyIvPgogIDxlbGxpcHNlIGN4PSIyMDAiIGN5PSIxMDciIHJ4PSI4IiByeT0iNC40IiBmaWxsPSIjRkZGRkZGIi8+CiAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMTA3IiByPSIzLjUiIGZpbGw9IiMxQzE5MTciLz4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc4IDEyNiBRMTgwIDEyOSAxODQgMTI2IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xNjcgMTQyIFExODAgMTUwIDE5MyAxNDIiIHN0cm9rZT0iIzdDMkQxMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxnIHN0cm9rZT0iIzEwQjk4MSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjg1Ij4KICAgIDxwYXRoIGQ9Ik0xMTIgNDggTDExMiAzNCBMMTI4IDM0Ii8+PHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+PHBhdGggZD0iTTI0OCAxNjggTDI0OCAxODIgTDIzMiAxODIiLz4KICA8L2c+Cjwvc3ZnPgo=",
         face_signature: "7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451",
         has_voted: true,
         nullifier: "zk_nullifier_9d04e61288a3c7f520b18c66"
@@ -1527,7 +2724,7 @@ class Blockchain:
       votersBody.innerHTML = stateData.voters
         .map((v) => {
           const hasImg = Boolean(v.profile_image && v.profile_image.trim() !== "");
-          const thumbSrc = hasImg ? v.profile_image : "static/evoting_logo.svg";
+          const thumbSrc = hasImg ? v.profile_image : "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNpdmljQmciIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBEN0M2NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwQjE5MkMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRBY2NlbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM0RDM5OSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMEI5ODEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gT3V0ZXIgU292ZXJlaWduIEhleGFnb24gLyBTaGllbGQgRnJhbWUgLS0+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9InVybCgjY2l2aWNCZykiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2Utb3BhY2l0eT0iMC40NSIvPgogIDwhLS0gQmxvY2tjaGFpbiBJc29tZXRyaWMgQ3ViZSBCYXNlIChCYWxsb3QgQm94KSAtLT4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMjFMNTAgMjlWNDdMMzIgNTVMMTQgNDdWMjlaIiBmaWxsPSIjMEIxOTJDIiBmaWxsLW9wYWNpdHk9IjAuNyIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMzdMNTAgMjkiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0zMiAzN1Y1NSIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+CiAgPCEtLSBCYWxsb3QgU2xvdCBvbiBUb3Agb2YgQ3ViZSAtLT4KICA8cGF0aCBkPSJNMjQgMjcuNUw0MCAyNy41IiBzdHJva2U9IiNBN0YzRDAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFZlcmlmaWVkIEJhbGxvdCBDYXJkIEluc2VydGluZyBpbnRvIFNsb3QgLS0+CiAgPHJlY3QgeD0iMjIiIHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTciIHJ4PSIzIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgPCEtLSBDaGVja21hcmsgb24gQmFsbG90IC0tPgogIDxwYXRoIGQ9Ik0yNy41IDE4LjVMMzAuOCAyMS44TDM3IDE1LjIiIHN0cm9rZT0iIzBEN0M2NiIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gQ3J5cHRvZ3JhcGhpYyBOb2RlIERvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSI1NSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+Cjwvc3ZnPgo=";
           return `
         <tr>
           <td>
@@ -1602,7 +2799,7 @@ class Blockchain:
           .map((v) => {
             const isSel = v.username === activeBoothUser;
             const hasImg = Boolean(v.profile_image && v.profile_image.trim() !== "");
-            const thumbSrc = hasImg ? v.profile_image : "static/evoting_logo.svg";
+            const thumbSrc = hasImg ? v.profile_image : "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNpdmljQmciIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBEN0M2NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwQjE5MkMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRBY2NlbnQiIHgxPSIwIiB5MT0iMCIgeDI9IjY0IiB5Mj0iNjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM0RDM5OSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMEI5ODEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gT3V0ZXIgU292ZXJlaWduIEhleGFnb24gLyBTaGllbGQgRnJhbWUgLS0+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTQiIGZpbGw9InVybCgjY2l2aWNCZykiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2Utb3BhY2l0eT0iMC40NSIvPgogIDwhLS0gQmxvY2tjaGFpbiBJc29tZXRyaWMgQ3ViZSBCYXNlIChCYWxsb3QgQm94KSAtLT4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMjFMNTAgMjlWNDdMMzIgNTVMMTQgNDdWMjlaIiBmaWxsPSIjMEIxOTJDIiBmaWxsLW9wYWNpdHk9IjAuNyIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNMTQgMjlMMzIgMzdMNTAgMjkiIHN0cm9rZT0iIzM0RDM5OSIgc3Ryb2tlLXdpZHRoPSIxLjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0zMiAzN1Y1NSIgc3Ryb2tlPSIjMzREMzk5IiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+CiAgPCEtLSBCYWxsb3QgU2xvdCBvbiBUb3Agb2YgQ3ViZSAtLT4KICA8cGF0aCBkPSJNMjQgMjcuNUw0MCAyNy41IiBzdHJva2U9IiNBN0YzRDAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFZlcmlmaWVkIEJhbGxvdCBDYXJkIEluc2VydGluZyBpbnRvIFNsb3QgLS0+CiAgPHJlY3QgeD0iMjIiIHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTciIHJ4PSIzIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgPCEtLSBDaGVja21hcmsgb24gQmFsbG90IC0tPgogIDxwYXRoIGQ9Ik0yNy41IDE4LjVMMzAuOCAyMS44TDM3IDE1LjIiIHN0cm9rZT0iIzBEN0M2NiIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwhLS0gQ3J5cHRvZ3JhcGhpYyBOb2RlIERvdHMgLS0+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyOSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSI1NSIgcj0iMi41IiBmaWxsPSIjMzREMzk5Ii8+Cjwvc3ZnPgo=";
             return `
             <div class="voter-profile-card ${isSel ? "selected" : ""}" onclick="openBiometricModal('${v.username}')">
               <div style="display:flex;align-items:center;gap:11px;">
@@ -1773,7 +2970,7 @@ class Blockchain:
 
       document.getElementById("biometricValidationBanner").innerHTML = `
         <div style="display:flex;align-items:center;gap:14px;">
-          <img src="${voter.profile_image || 'static/voters/ateeq.svg'}" alt="${voter.username}" class="voter-avatar-thumb" style="width:54px;height:54px;" />
+          <img src="${voter.profile_image || 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg=='}" alt="${voter.username}" class="voter-avatar-thumb" style="width:54px;height:54px;" />
           <div>
             <div style="color:var(--emerald);font-weight:700;font-size:14px;">
               ✓ Registered Biometric Image Verified &amp; Voter Details Filled — Please proceed for voting below
@@ -1939,7 +3136,7 @@ class Blockchain:
         ctx.font = "600 11px 'IBM Plex Mono', monospace";
         ctx.fillText(`OPTICAL CAMERA STREAM // ID: @${voter.username}`, 14, 24);
       };
-      fallbackImg.src = "static/voters/ateeq.svg";
+      fallbackImg.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==";
     }
 
     async function captureAndRegisterModalPhoto() {
@@ -1950,7 +3147,7 @@ class Blockchain:
       const canvasEl = document.getElementById("modalCaptureCanvas");
       const ctx = canvasEl.getContext("2d");
 
-      let capturedDataUrl = "static/voters/ateeq.svg";
+      let capturedDataUrl = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==";
       if (modalCameraActive && videoEl.style.display !== "none") {
         ctx.drawImage(videoEl, 0, 0, canvasEl.width, canvasEl.height);
         capturedDataUrl = canvasEl.toDataURL("image/png");
@@ -1958,7 +3155,7 @@ class Blockchain:
         try {
           capturedDataUrl = canvasEl.toDataURL("image/png");
         } catch (e) {
-          capturedDataUrl = "static/voters/ateeq.svg";
+          capturedDataUrl = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==";
         }
       }
 
@@ -2046,7 +3243,7 @@ class Blockchain:
       const countdownEl = document.getElementById("voteModalCountdownText");
       const timerBarEl = document.getElementById("voteModalTimerBar");
 
-      const voterPortrait = (voter && voter.profile_image) ? voter.profile_image : "static/voters/ateeq.svg";
+      const voterPortrait = (voter && voter.profile_image) ? voter.profile_image : "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjY1IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTEyMjM5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA5MTMyMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvdzEiIGN4PSI1MCUiIGN5PSI0MiUiIHI9IjUyJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwRDk0ODgiIHN0b3Atb3BhY2l0eT0iMC4yOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTEzMjIiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2tpbjEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0UyQjQ4RCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNDODkzNjkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN1aXQxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEYxNzJBIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2NSIgZmlsbD0idXJsKCNiZzEpIi8+CiAgPHJlY3Qgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjUiIGZpbGw9InVybCgjZ2xvdzEpIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIEdyaWQgLS0+CiAgPGcgc3Ryb2tlPSIjMUUzQTVGIiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC40NSI+CiAgICA8bGluZSB4MT0iMCIgeTE9IjUzIiB4Mj0iMzYwIiB5Mj0iNTMiLz48bGluZSB4MT0iMCIgeTE9IjEwNiIgeDI9IjM2MCIgeTI9IjEwNiIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSIxNTkiIHgyPSIzNjAiIHkyPSIxNTkiLz48bGluZSB4MT0iMCIgeTE9IjIxMiIgeDI9IjM2MCIgeTI9IjIxMiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMCIgeDI9IjcyIiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjE0NCIgeTE9IjAiIHgyPSIxNDQiIHkyPSIyNjUiLz4KICAgIDxsaW5lIHgxPSIyMTYiIHkxPSIwIiB4Mj0iMjE2IiB5Mj0iMjY1Ii8+PGxpbmUgeDE9IjI4OCIgeTE9IjAiIHgyPSIyODgiIHkyPSIyNjUiLz4KICA8L2c+CiAgPCEtLSBTaG91bGRlcnMgLyBCbGF6ZXIgJiBDcmlzcCBTaGlydCAtLT4KICA8cGF0aCBkPSJNODIgMjY1IEM4NiAyMDUsIDEyNiAxODgsIDE4MCAxODggQzIzNCAxODgsIDI3NCAyMDUsIDI3OCAyNjUgWiIgZmlsbD0idXJsKCNzdWl0MSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1NiwxODggMTgwLDI0NCAyMDQsMTg4IiBmaWxsPSIjRjhGQUZDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNzUsMjAyIDE4NSwyMDIgMTg3LDI1NSAxNzMsMjU1IiBmaWxsPSIjMEQ5NDg4Ii8+CiAgPCEtLSBOZWNrIC0tPgogIDxyZWN0IHg9IjE2MSIgeT0iMTUyIiB3aWR0aD0iMzgiIGhlaWdodD0iNDQiIHJ4PSIxNCIgZmlsbD0iI0M0OEU2NCIvPgogIDwhLS0gRWFycyAtLT4KICA8ZWxsaXBzZSBjeD0iMTMxIiBjeT0iMTE2IiByeD0iOCIgcnk9IjE1IiBmaWxsPSIjQzg5MzY5Ii8+CiAgPGVsbGlwc2UgY3g9IjIyOSIgY3k9IjExNiIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M4OTM2OSIvPgogIDwhLS0gSGVhZCAvIEZhY2UgQ29udG91ciAtLT4KICA8cGF0aCBkPSJNMTMzIDk0IEMxMzMgNTgsIDIyNyA1OCwgMjI3IDk0IEMyMjcgMTM2LCAyMTIgMTY3LCAxODAgMTY3IEMxNDggMTY3LCAxMzMgMTM2LCAxMzMgOTQgWiIgZmlsbD0idXJsKCNza2luMSkiLz4KICA8IS0tIEhhaXIgKFN0eWxlZCBEYXJrIFdhdmVzKSAtLT4KICA8cGF0aCBkPSJNMTMwIDk4IEMxMjggNjAsIDE1MiA0NCwgMTgyIDQ0IEMyMTQgNDQsIDIzMiA2MiwgMjMwIDk4IEMyMjUgNzgsIDIxMiA2OCwgMTgwIDY4IEMxNTAgNjgsIDEzNiA3OCwgMTMwIDk4IFoiIGZpbGw9IiMxODE4MUIiLz4KICA8IS0tIFdlbGwtR3Jvb21lZCBMaWdodCBCZWFyZCAvIEphdyBTaGFkb3cgLS0+CiAgPHBhdGggZD0iTTEzNSAxMjQgQzEzOCAxNTIsIDE1NiAxNjcsIDE4MCAxNjcgQzIwNCAxNjcsIDIyMiAxNTIsIDIyNSAxMjQgQzIyMSAxNDIsIDIwNiAxNTYsIDE4MCAxNTYgQzE1NCAxNTYsIDEzOSAxNDIsIDEzNSAxMjQgWiIgZmlsbD0iIzI3MjcyQSIgb3BhY2l0eT0iMC43MiIvPgogIDxwYXRoIGQ9Ik0xNjIgMTQyIFExODAgMTM2IDE5OCAxNDIgUTE4MCAxNDAgMTYyIDE0MiBaIiBmaWxsPSIjMjcyNzJBIiBvcGFjaXR5PSIwLjgiLz4KICA8IS0tIEV5ZWJyb3dzIC0tPgogIDxwYXRoIGQ9Ik0xNDggOTcgUTE2MCA5MiAxNzEgOTYiIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik0xODkgOTYgUTIwMCA5MiAyMTIgOTciIHN0cm9rZT0iIzE4MTgxQiIgc3Ryb2tlLXdpZHRoPSIzLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDwhLS0gRXllcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTYwIiBjeT0iMTA3IiByeD0iOCIgcnk9IjQuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjEwNyIgcj0iMy42IiBmaWxsPSIjMUUxQjE4Ii8+CiAgPGNpcmNsZSBjeD0iMTU4LjgiIGN5PSIxMDUuOCIgcj0iMS4xIiBmaWxsPSIjRkZGRkZGIi8+CiAgPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjEwNyIgcng9IjgiIHJ5PSI0LjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMDciIHI9IjMuNiIgZmlsbD0iIzFFMUIxOCIvPgogIDxjaXJjbGUgY3g9IjE5OC44IiBjeT0iMTA1LjgiIHI9IjEuMSIgZmlsbD0iI0ZGRkZGRiIvPgogIDwhLS0gTm9zZSAtLT4KICA8cGF0aCBkPSJNMTgwIDEwNSBMMTc3IDEyNyBRMTgwIDEzMCAxODUgMTI3IiBzdHJva2U9IiM5QzZCNDYiIHN0cm9rZS13aWR0aD0iMi4yIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8IS0tIFNtaWxlIC8gTW91dGggLS0+CiAgPHBhdGggZD0iTTE2NyAxNDQgUTE4MCAxNTEgMTkzIDE0NCIgc3Ryb2tlPSIjN0MyRDEyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTdWJ0bGUgQmlvbWV0cmljIFJldGljbGUgQ29ybmVycyAtLT4KICA8ZyBzdHJva2U9IiMxMEI5ODEiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC44NSI+CiAgICA8cGF0aCBkPSJNMTEyIDQ4IEwxMTIgMzQgTDEyOCAzNCIvPgogICAgPHBhdGggZD0iTTI0OCA0OCBMMjQ4IDM0IEwyMzIgMzQiLz4KICAgIDxwYXRoIGQ9Ik0xMTIgMTY4IEwxMTIgMTgyIEwxMjggMTgyIi8+CiAgICA8cGF0aCBkPSJNMjQ4IDE2OCBMMjQ4IDE4MiBMMjMyIDE4MiIvPgogIDwvZz4KPC9zdmc+Cg==";
       const voterFullName = (voter && voter.full_name) ? voter.full_name : (voter ? voter.username : "Registered Citizen");
       const voterEpic = (voter && voter.epic_id) ? voter.epic_id : "TS/HYD/160920/003";
       const voterNullifier = (voter && voter.nullifier) ? voter.nullifier : "zk_nullifier_verified";
@@ -2074,7 +3271,7 @@ class Blockchain:
             <div style="font-size:26px;color:var(--crimson);font-weight:700;">🔒</div>
 
             <div style="display:flex;align-items:center;gap:14px;">
-              <img src="${partyImage || 'static/parties/nota.svg'}" alt="${partyName}" class="vote-confirm-party-emblem" style="border-color:var(--crimson);" />
+              <img src="${partyImage || 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzE1MTcxQiIgc3Ryb2tlPSIjNEI1NTYzIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQmFsbG90IENyb3NzIEljb24gLS0+CiAgPHJlY3QgeD0iMzgiIHk9IjM0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPGxpbmUgeDE9IjQ2IiB5MT0iNDIiIHgyPSI3NCIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iNDIiIHgyPSI0NiIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwLjUiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNTE3MUIiPk5PVEE8L3RleHQ+Cjwvc3ZnPgo='}" alt="${partyName}" class="vote-confirm-party-emblem" style="border-color:var(--crimson);" />
               <div>
                 <div style="font-family:var(--font-mono);font-size:11px;color:var(--primary-dark);font-weight:700;">RECORDED BALLOT CHOICE</div>
                 <div style="font-size:16.5px;font-weight:700;color:var(--ink-primary);">${candidateName}</div>
@@ -2118,7 +3315,7 @@ class Blockchain:
 
             <!-- Voted Party + Large Icon Block -->
             <div style="display:flex;align-items:center;gap:14px;">
-              <img src="${partyImage || 'static/parties/nota.svg'}" alt="${partyName}" class="vote-confirm-party-emblem" />
+              <img src="${partyImage || 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzE1MTcxQiIgc3Ryb2tlPSIjNEI1NTYzIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQmFsbG90IENyb3NzIEljb24gLS0+CiAgPHJlY3QgeD0iMzgiIHk9IjM0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPGxpbmUgeDE9IjQ2IiB5MT0iNDIiIHgyPSI3NCIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iNDIiIHgyPSI0NiIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwLjUiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNTE3MUIiPk5PVEE8L3RleHQ+Cjwvc3ZnPgo='}" alt="${partyName}" class="vote-confirm-party-emblem" />
               <div>
                 <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--emerald);font-weight:700;">VOTED CANDIDATE &amp; PARTY</div>
                 <div style="font-size:17px;font-weight:700;color:var(--ink-primary);">${candidateName}</div>
@@ -2184,7 +3381,7 @@ class Blockchain:
       const selectedOpt = selectEl.options[selectEl.selectedIndex];
       const partyName = selectEl.value;
       const partyCode = selectedOpt.getAttribute("data-code") || "IND";
-      const partyImg = selectedOpt.getAttribute("data-img") || "static/parties/nota.svg";
+      const partyImg = selectedOpt.getAttribute("data-img") || "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzE1MTcxQiIgc3Ryb2tlPSIjNEI1NTYzIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQmFsbG90IENyb3NzIEljb24gLS0+CiAgPHJlY3QgeD0iMzgiIHk9IjM0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPGxpbmUgeDE9IjQ2IiB5MT0iNDIiIHgyPSI3NCIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iNDIiIHgyPSI0NiIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwLjUiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNTE3MUIiPk5PVEE8L3RleHQ+Cjwvc3ZnPgo=";
       const areaName = document.getElementById("partyAreaName").value.trim();
       const manifesto = document.getElementById("partyManifesto").value.trim();
       const fb = document.getElementById("addPartyFeedback");
@@ -2434,7 +3631,7 @@ class Blockchain:
       }
 
       const matchedParty = stateData.parties.find((p) => p.candidatename === candName && p.partyname === partyName);
-      const resolvedPartyImg = partyImage || (matchedParty ? matchedParty.image : "static/parties/nota.svg");
+      const resolvedPartyImg = partyImage || (matchedParty ? matchedParty.image : "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI1NiIgZmlsbD0iIzE1MTcxQiIgc3Ryb2tlPSIjNEI1NTYzIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI0Y2RjVGMCIvPgogIDwhLS0gQmFsbG90IENyb3NzIEljb24gLS0+CiAgPHJlY3QgeD0iMzgiIHk9IjM0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMxNTE3MUIiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgPGxpbmUgeDE9IjQ2IiB5MT0iNDIiIHgyPSI3NCIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iNDIiIHgyPSI0NiIgeTI9IjcwIiBzdHJva2U9IiNEQzI2MjYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHRleHQgeD0iNjAiIHk9Ijk5IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwLjUiIGZvbnQtd2VpZ2h0PSI4MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxNTE3MUIiPk5PVEE8L3RleHQ+Cjwvc3ZnPgo=");
 
       if (backendConnected) {
         const res = await fetch("/api/voter/cast-vote", {

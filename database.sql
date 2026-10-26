@@ -3,7 +3,7 @@
 -- SQL Schema & Seed Data (MySQL & SQLite Compatible)
 -- ============================================================================
 -- Author:      Ateeq Bin Mubarak Wahlan (Roll No: 160920733003)
--- Portfolio:   https://wahlanos.com | https://github.com/ateeq-wahlan
+-- WahlanOS:    https://wahlanos.com ↗ | https://github.com/ateeq-wahlan
 -- Institution: LIET (Osmania University)
 -- Academic Yr: 2023–2024 (B.E. Computer Science & Engineering)
 -- ============================================================================
